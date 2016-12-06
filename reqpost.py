@@ -52,6 +52,7 @@ def printProdID(content):
 
     print "done"+time.strftime('%Y-%m-%d %H:%M:%S')
 
+
 if __name__ == "__main__":
     print "start"+time.strftime('%Y-%m-%d %H:%M:%S')
     url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=HAT"
