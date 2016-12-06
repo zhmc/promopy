@@ -57,4 +57,4 @@ for item in ids:
     ProdID = item.find('input',class_="ProdID").get('value')
     print ProdID
 
-print "Page1_done"+time.strftime('%Y-%m-%d %H:%M:%S')
+print "Page2_done"+time.strftime('%Y-%m-%d %H:%M:%S')
