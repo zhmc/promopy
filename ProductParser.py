@@ -56,7 +56,7 @@ class Prodouct(object):
         # Size_Values
         csv_row += self.Size_Values + ","
 
-        print csv_row
+        # print csv_row
         return csv_row
 
 
@@ -170,16 +170,21 @@ def parser(productObject):
     当Artwork & Proofs板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
 
     当一个商品有几个upcharge（包括Sample Charge，Imprint Method Charge，Artwork Charge，Rush Service Charge）
-    出现时，在csv中第一条记录中的upcharge type项暂时定为记录Sample Charge，别的就接着主记录行，用一行填上upcharge相关信息
+    出现时，在csv中第一条记录中的upcharge type项暂时定为记录Imprint Method Charge（如果有），别的就接着主记录行，用一行填上upcharge相关信息
     """
     ImprintDiv = allData[2]
     ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
+    BlockMap = {}
     ImprintDic = {}
 
+    # 获取到ImprintDiv里面的各个板块
     for dataFieldBlock in ImprintData:
         BlockName = dataFieldBlock.find("h5").get_text().strip()
         BlockValue = dataFieldBlock
+        BlockMap[BlockName] = BlockValue
 
+    # 遍历这几个板块
+    for k in d.keys()
 
     for k in range(len(ImprintData)):
         try:
@@ -194,4 +199,4 @@ def parser(productObject):
     return productObject
 
 if __name__ == "__main__":
-    print parser(Prodouct("http://promomart.espwebsite.com/ProductDetails/?productId=550923254")).to_csv_row
+    a = parser(Prodouct("http://promomart.espwebsite.com/ProductDetails/?productId=550923254")).to_csv_row
