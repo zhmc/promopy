@@ -1,0 +1,45 @@
+# 展示一下怎么查看库存
+
+
+csv表格文件中第一项XID不用去获取，（这是后来自动生成的
+问客服
+
+#csv中第I列summary怎么得到？
+
+
+#第M列 keyword怎么确定？
+
+#csv文件中N列product_color是不是必须保持格式：Medium Blue=Blue,Medium Pink=Pink,Medium Green=Green	
+	这其中判断逻辑是什么？(royal blue ,birght red)
+客服
+
+
+#第AC列 Linename怎么确定？
+店铺名称，加工成自己的店名称
+
+
+# 若imprint charge和sample charge同时存在，那么sample charge在csv中要另起一行，见表273,274行
+# csv文件中CB列D1是什么意思
+全部是R
+
+# csv文件中DR列UD1是什么意思
+全部是Z
+
+#第ED列 Confirmed_Thru_Date怎么确定？
+写邮件
+
+
+# Artwork字段是什么
+imprint里面
+
+# 第FA列294行 E-commerce ready， Product_Status，Workflow_Status	从页面上看不到
+这几个全部是None
+
+
+
+# 对图形界面的需求
+
+
+功能：展示80条商品的信息，能够删除选中的某几条信息。最后能够将信息导出成CSV文件
+
+类似XX.net一样，一个本地运行的网站
