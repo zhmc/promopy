@@ -19,6 +19,9 @@ class Prodouct(object):
     Price_table = [[], []]
     Price_Includes = ""
 
+    Imprint_Method = ""
+    Sold_Unimprinted = ""
+
     def __init__(self, url):
         self.url = url
 
@@ -160,8 +163,32 @@ def parser(productObject):
     except:
         pass
 
+
+    """
+    这个地方ImpritDiv里面分为几个板块（如果有），其中Imprint Information板块是始终出现的，
+    当Imprint Method板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
+    当Artwork & Proofs板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
+
+    当一个商品有几个upcharge（包括Sample Charge，Imprint Method Charge，Artwork Charge，Rush Service Charge）
+    出现时，在csv中第一条记录中的upcharge type项暂时定为记录Sample Charge，别的就接着主记录行，用一行填上upcharge相关信息
+    """
     ImprintDiv = allData[2]
-    ImprintData = ImprintDiv.findAll("div", class_="dataFieldBlock")
+    ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
+    ImprintDic = {}
+
+    for dataFieldBlock in ImprintData:
+        BlockName = dataFieldBlock.find("h5").get_text().strip()
+        BlockValue = dataFieldBlock
+
+
+    for k in range(len(ImprintData)):
+        try:
+            ImprintKey = ImprintData[k].find("label").get_text().strip()
+            ImprintValue = ImprintData[k].get_text().replace(ImprintKey, "").strip()
+            ImprintDic[ImprintKey] = ImprintValue
+
+        except Exception, e:
+            print e
 
 
     return productObject
