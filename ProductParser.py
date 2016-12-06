@@ -114,7 +114,7 @@ def parser(productObject):
 
     Product_Detail = allData[1]
     Product_Detail_Data = Product_Detail.findAll("div", class_="dataFieldBlock")
-    print len(Product_Detail_Data)
+    # print len(Product_Detail_Data) 这个地方发现长度有点不太对，不能依次按顺序取数据，必须得按照键值对取数据
     ProductDetailDic = {}
     for k in range(len(Product_Detail_Data)):
         try:
@@ -124,7 +124,6 @@ def parser(productObject):
             value = raw_value.replace(attr, "").strip()
             ProductDetailDic[attr] = value
             if attr == "Samples":
-                # value = value.replace("\t","")
                 sample_list = value.split("\n")
                 sample_list_clean = []
                 for si in range(len(sample_list)):
@@ -161,7 +160,8 @@ def parser(productObject):
     except:
         pass
 
-    ImprintDiv = Product_Detail = allData[1]
+    ImprintDiv = allData[2]
+    ImprintData = ImprintDiv.findAll("div", class_="dataFieldBlock")
 
 
     return productObject
