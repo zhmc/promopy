@@ -199,13 +199,18 @@ def parser(productObject):
     return productObject
 
 
+"""这个函数是获取Pricing大块中的table和Price Includes信息"""
+def getPricing(bsObj):
+    pass
+
+
 """这个函数是获取ProductDetail大块中的除了Samples板块的基本信息"""
-def getImprintInformation(bsObj):
+def getProductDetail(bsObj):
     pass
 
 
 """这个函数是获取ProductDetail大块中的Samples板块（如果有），会生成csv中的sample charge"""
-def getImprintInformation(bsObj):
+def getSampleCharge(bsObj):
     pass
 
 
