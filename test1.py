@@ -1,3 +1,4 @@
+# -*- coding:utf-8-*-
 from bs4 import BeautifulSoup
 import requests
 
@@ -21,28 +22,40 @@ for dataFieldBlock in ImprintData:
     BlockMap[BlockName] = BlockValue
 
 for key in BlockMap.keys():
-    
+
+    # 提取Imprint Information板块的信息
     if key == "Imprint Information":
         block = BlockMap[key]
         InfoList = block.findAll("div", class_="dataFieldBlock")
-        ImprintBasicInfo ={}
+
         # 默认Sold_Unimprinted是No，也就是不填
         ImprintBasicInfo["Sold_Unimprinted"] = ""
         # 默认Personalization是No，也就是不填
         ImprintBasicInfo["Personalization"] = ""
         # 默认Imprint_Size是No，也就是不填
         ImprintBasicInfo["Imprint_Size"] = ""
-        for info in InfoList:
-            if "Imprint Method:" in info.get_text().strip():
-                ImprintBasicInfo["Imprint Method"] = info.get_text().strip().replace("Imprint Method:","").strip()
-            elif "Imprint Color:" in info.get_text().strip():
-                ImprintBasicInfo["Imprint Color"] = info.get_text().strip().replace("Imprint Color:","").strip()
-            elif "Sold_Unimprinted:" in info.get_text().strip():
-                if "Yes" in info.get_text().strip().replace("Sold_Unimprinted:","").strip():
+        for i in range(len(InfoList)):
+            text = InfoList[i].get_text().strip()
+            # print text
+            if "Imprint Method" in text:
+                ImprintBasicInfo["Imprint Method"] = text.replace("Imprint Method","").strip()
+            elif "Imprint Color" in text:
+                ImprintBasicInfo["Imprint Color"] = text.replace("Imprint Color","").strip()
+            elif "Sold Unimprinted" in text:
+                if "Yes" in text.replace("Sold_Unimprinted","").strip():
                     ImprintBasicInfo["Sold_Unimprinted"] = "Y"
-            elif "Personalization:" in info.get_text().strip():
-                if "Yes" in info.get_text().strip().replace("Personalization:","").strip():
+            elif "Personalization" in text:
+                if "Yes" in text.replace("Personalization:","").strip():
                     ImprintBasicInfo["Personalization"] = "Y"
+            elif "Imprint Size" in text:
+                ImprintBasicInfo["Imprint_Size"] = text.replace("Imprint Size","").strip()
+
+    # 提取Imprint Location板块的信息（如果有）  这里之考虑了简单的情况（只有一行）
+    if key == "Imprint Location":
+        text = BlockMap[key].get_text().strip()
+        ImprintBasicInfo["Imprint Location"] = text.replace("Imprint Location","").strip()
 
 
 
+
+print ImprintBasicInfo
