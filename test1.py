@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-url = "http://promomart.espwebsite.com/ProductDetails/?productId=551125026"
+url = "http://promomart.espwebsite.com/ProductDetails/?productId=551144004"
 headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 html = requests.get(url, headers=headers).content
@@ -13,7 +13,7 @@ ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
 BlockMap = {}
 ImprintDic = {}
 ImprintMethodName = ""
-ImprintCharge = {}
+ImprintBasicInfo = {}
 
 for dataFieldBlock in ImprintData:
     BlockName = dataFieldBlock.find("h5").get_text().strip()
@@ -21,25 +21,16 @@ for dataFieldBlock in ImprintData:
     BlockMap[BlockName] = BlockValue
 
 for key in BlockMap.keys():
-    block = BlockMap[key]
-    if key == "Imprint Method":
-        # print key, BlockMap[key]
-        ImprintMethodName = block.find("div", class_="setDetail dataFieldBlock").get_text().strip()
-        if "Charge Type" in block.get_text().strip():
-            ImprintCharge['Upcharge_Name'] = ImprintMethodName
-            ImprintCharge['Upcharge_Criteria_1'] = "IMMD:" + ImprintMethodName
-            ImprintCharge['Upcharge_Type'] = "Imprint Method Charge"
-            if "Per Order" in block.get_text().strip():
-                ImprintCharge['Upcharge_Level'] = "Per Order"
-            else:
-                ImprintCharge['Upcharge_Level'] = "Other"
-            ImprintCharge['Service_Charge'] = "Required"
-            ImprintChargeTable = {}
-            ImprintQuantity = block.find("th").get_text().strip()
-            ImprintPrice = block.find("td").get_text().strip()
-            ImprintChargeTable['UQ1'] = ImprintQuantity
-            ImprintChargeTable['UP1'] = ImprintPrice
-            ImprintCharge['QuantityPirceTable'] = ImprintChargeTable
+    
+    if key == "Imprint Information":
+        block = BlockMap[key]
+        InfoList = block.findAll("div", class_="dataFieldBlock")
+        for info in InfoList:
+            if "Imprint Method:" in info.get_text().strip():
+                ImprintBasicInfo["Imprint Method"] = info.get_text().strip().replace("Imprint Method:","").strip()
+            elif "Imprint Color:" in info.get_text().strip():
+                ImprintBasicInfo["Imprint Color"] = info.get_text().strip().replace("Imprint Color:","").strip()
 
 
-print ImprintMethodName, ImprintCharge
+
+

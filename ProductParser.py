@@ -214,9 +214,24 @@ def getSampleCharge(bsObj):
     pass
 
 
-"""这个函数是获取Imprint大块中的Imprint Information板块（肯定有）"""
+"""这个函数是获取Imprint大块中的Imprint Information板块（肯定有）, 同时获取可能存在的Imprint Location板块"""
 def getImprintInformation(bsObj):
-    pass
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    ImprintDiv = allData[2]
+    ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
+    BlockMap = {}
+    ImprintCharge = {}
+
+    for dataFieldBlock in ImprintData:
+        BlockName = dataFieldBlock.find("h5").get_text().strip()
+        BlockValue = dataFieldBlock
+        BlockMap[BlockName] = BlockValue
+
+    for key in BlockMap.keys():
+        block = BlockMap[key]
+        #if key == "Imprint Information":
+        block = BlockMap[key]
+
 
 
 """这个函数是获取Imprint大块中的Imprint Method板块（如果有）"""
@@ -233,13 +248,16 @@ def getImprintMethod(bsObj):
         BlockMap[BlockName] = BlockValue
 
     for key in BlockMap.keys():
-        block = BlockMap[key]
         if key == "Imprint Method":
+            block = BlockMap[key]
             # print key, BlockMap[key]
             ImprintMethodName = block.find("div", class_="setDetail dataFieldBlock").get_text().strip()
-            # 如果文中出现charge type，就为ImprintCharge填充数据，如果不出现，那么len(ImprintCharge)=0
+            # 只要有Imprint Method板块，len(ImprintCharge) > 0
+            ImprintCharge['Upcharge_Name'] = ImprintMethodName
+            
+            # 如果文中出现charge type，就为ImprintCharge填充数据，如果不出现，那么len(ImprintCharge)=1
             if "Charge Type" in block.get_text().strip():
-                ImprintCharge['Upcharge_Name'] = ImprintMethodName
+                
                 ImprintCharge['Upcharge_Criteria_1'] = "IMMD:" + ImprintMethodName
                 ImprintCharge['Upcharge_Type'] = "Imprint Method Charge"
                 if "Per Order" in block.get_text().strip():
@@ -247,11 +265,13 @@ def getImprintMethod(bsObj):
                 else:
                     ImprintCharge['Upcharge_Level'] = "Other"
                 ImprintCharge['Service_Charge'] = "Required"
+                # 加价table
                 ImprintChargeTable = {}
-                ImprintQuantity = block.find("th").get_text().strip()
+                ImprintQuantity = block.findAll("tr")[0].findAll("th")[1].get_text().strip()
                 ImprintPrice = block.find("td").get_text().strip()
                 ImprintChargeTable['UQ1'] = ImprintQuantity
                 ImprintChargeTable['UP1'] = ImprintPrice
+                ImprintChargeTable['UD1'] = "Z"
                 ImprintCharge['QuantityPirceTable'] = ImprintChargeTable
                 if "Price Includes:" in block.get_text().strip():
                     index = block.get_text().strip().index("Price Includes:")
@@ -264,13 +284,55 @@ def getImprintMethod(bsObj):
 
 """这个函数是获取Imprint大块中的Artwork & Proofs板块（如果有）"""
 def getArtwork_Proofs(bsObj):
-    pass
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    ImprintDiv = allData[2]
+    ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
+    BlockMap = {}
+    ArtworkCharge = {}
+
+    for dataFieldBlock in ImprintData:
+        BlockName = dataFieldBlock.find("h5").get_text().strip()
+        BlockValue = dataFieldBlock
+        BlockMap[BlockName] = BlockValue
+
+    for key in BlockMap.keys():
+        if key == "Artwork & Proofs":
+            block = BlockMap[key]
+            ArtworkName = block.find("div", class_="setDetail dataFieldBlock").get_text().strip()
+            # 只要有Artwork & Proofs板块，len(ArtworkCharge) > 0
+            ArtworkCharge['Upcharge_Name'] = ArtworkName
+
+            # 如果有Artwork & Proofs板块但是内容很简单，没有charge type, 那么前面找ArtworkName会找不到
+            if len(ArtworkCharge['Upcharge_Name']) == 0:
+                ArtworkCharge['Upcharge_Name'] = block.get_text().strip().replace("Artwork & Proofs","").strip()
+
+            # 如果文中出现charge type，就为ArtworkCharge填充数据，如果不出现，那么len(ArtworkCharge)=1
+            if "Charge Type" in block.get_text().strip():
+                ArtworkCharge['Upcharge_Criteria_1'] = "ARTW:" + ArtworkName
+                ArtworkCharge['Upcharge_Type'] = "Artwork Charge"
+                ArtworkCharge['Upcharge_Level'] = "Other"
+                ArtworkCharge['Service_Charge'] = "Optional"
+                # 加价table
+                ArtworkChargeTable = {}
+                ArtworkQuantity = block.findAll("tr")[0].findAll("th")[1].get_text().strip()
+                ArtworkPrice = block.find("td").get_text().strip()
+                ArtworkChargeTable['UQ1'] = ArtworkQuantity
+                ArtworkChargeTable['UP1'] = ArtworkPrice
+                ArtworkChargeTable['UD1'] = "Z"
+                ArtworkCharge['QuantityPirceTable'] = ArtworkChargeTable
+                if "Price Includes:" in block.get_text().strip():
+                    index = block.get_text().strip().index("Price Includes:")
+                    ArtworkChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
+                    ArtworkCharge['Upcharge_Details'] = ArtworkChargeDetail
+
+    return ArtworkCharge
+
 
 
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551051126"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=550923254"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
 
-    print getImprintMethod(bsObj)
+    print getArtwork_Proofs(bsObj)
