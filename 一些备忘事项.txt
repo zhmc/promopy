@@ -1,3 +1,33 @@
+
+#第S列 Theme字段无法从页面上找到信息，怎么确定？
+暂定空
+
+#K列
+#第T列，Tradename字段全是空
+#从第V列到AA列，连续几列字段全为空
+#第AJ,AK两列字段全为空
+#第AM列Spec_Sample字段全为空
+
+#第AV列Shipper_Bills_By字段无法从页面上找到信息，怎么确定？
+暂定空
+
+#从第AZ列到BD列，连续几列字段全为空
+
+#BF，BG全空
+#CL全空
+#CN全空
+#CP全空
+#CT全空
+#EC，从EE到EO全空
+#EQ，ER, ET, EU, EX, EY全空
+
+#一个很重要的问题：页面上Production and Shipping大块中的Production Information小版块中，
+#Production Time，Rush Service，Rush Time等信息在表格中没找到
+解决：表格中从第AN列到AR列用到这些信息
+
+
+上次沟通：
+
 # 展示一下怎么查看库存
 
 
@@ -5,9 +35,10 @@ csv表格文件中第一项XID不用去获取，（这是后来自动生成的
 问客服
 
 #csv中第I列summary怎么得到？
-
+无法
 
 #第M列 keyword怎么确定？
+无法
 
 #csv文件中N列product_color是不是必须保持格式：Medium Blue=Blue,Medium Pink=Pink,Medium Green=Green	
 	这其中判断逻辑是什么？(royal blue ,birght red)
@@ -26,7 +57,7 @@ csv表格文件中第一项XID不用去获取，（这是后来自动生成的
 全部是Z
 
 #第ED列 Confirmed_Thru_Date怎么确定？
-写邮件
+写邮件（后来说明是自己添加的）
 
 
 # Artwork字段是什么

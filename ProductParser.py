@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 import requests
 
+
 class Prodouct(object):
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
@@ -143,8 +144,9 @@ def parser(productObject):
                         sample_charge['UP1'] = sample_list_clean[key + 1]
                 sample_charge['Upcharge_Details'] = sample_list_clean[-1].replace("Price Includes:", "").strip()
 
-        except:
-            pass
+        except Exception,e:
+            print e
+
     # print ProductDetailDic
     # print ProductDetailDic.get("Samples")
     print "sample_charge"
@@ -160,8 +162,8 @@ def parser(productObject):
             Size_Group = "Volume/Weight"
         print "Size_group,Size_values"
         print Size_Group, Size_Values
-    except:
-        pass
+    except Exception,e:
+            print e
 
 
     """
@@ -266,7 +268,7 @@ def getImprintInformation(bsObj):
     return ImprintBasicInfo
 
 
-"""这个函数是获取Imprint大块中的Imprint Method板块（如果有）"""
+"""这个函数是获取Imprint大块中的Imprint Method板块（如果有，会产生ImprintCharge"""
 def getImprintMethod(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
     ImprintDiv = allData[2]
@@ -314,7 +316,7 @@ def getImprintMethod(bsObj):
 
 
 
-"""这个函数是获取Imprint大块中的Artwork & Proofs板块（如果有）"""
+"""这个函数是获取Imprint大块中的Artwork & Proofs板块（如果有，会产生ArtworkCharge）"""
 def getArtwork_Proofs(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
     ImprintDiv = allData[2]
@@ -358,6 +360,18 @@ def getArtwork_Proofs(bsObj):
                     ArtworkCharge['Upcharge_Details'] = ArtworkChargeDetail
 
     return ArtworkCharge
+
+
+"""这个函数是获取Production and Shipping大块中Production Information小版块的信息
+获取Production Time，Rush Service，Rush Time，Shipping Weight，Shipping_Info等字段"""
+def getProductionInformation(bsObj):
+    pass
+
+
+"""这个函数是获取Production and Shipping大块中Rush Time小版块的信息,如果有这个版块，那么产生一个Rush Service Charge的UPcharge
+获取Production Time，Rush Service，Rush Time，Shipping Weight，Shipping_Info等字段"""
+def getRushServiceCharge(bsObj):
+    pass
 
 
 """这个函数是获取Production and Shipping大块中的信息"""
