@@ -1,7 +1,7 @@
 # -*- coding:utf-8-*-
 from bs4 import BeautifulSoup
 import requests
-
+import re
 
 class Prodouct(object):
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
@@ -357,6 +357,9 @@ def getArtwork_Proofs(bsObj):
                 if "Price Includes:" in block.get_text().strip():
                     index = block.get_text().strip().index("Price Includes:")
                     ArtworkChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
+                    # 如果Detail中有N/A,那么设为空
+                    if "N/A" in ArtworkChargeDetail:
+                        ArtworkChargeDetail = ""
                     ArtworkCharge['Upcharge_Details'] = ArtworkChargeDetail
 
     return ArtworkCharge
@@ -365,7 +368,68 @@ def getArtwork_Proofs(bsObj):
 """这个函数是获取Production and Shipping大块中Production Information小版块的信息
 获取Production Time，Rush Service，Rush Time，Shipping Weight，Shipping_Info等字段"""
 def getProductionInformation(bsObj):
-    pass
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    Production_ShippingDiv = allData[3]
+    Production_ShippingData = Production_ShippingDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
+    ProductionInformation = {}
+
+    for dataFieldBlock in Production_ShippingData:
+        # 这个地方有个坑，别的标题都是<h5>，这个Production Information的标题是<h6>
+        if "h6" in dataFieldBlock.prettify():
+            BlockName = dataFieldBlock.find("h6").get_text().strip()
+            if BlockName == "Production Information":
+                ProductionInfoList = dataFieldBlock.findAll("div", class_="dataFieldBlock")
+                for ProdInfo in ProductionInfoList:
+                    ProdInfoClean = ProdInfo.get_text().strip()
+                    if "Production Time" in ProdInfoClean:
+                        rawtext = ProdInfoClean.replace("Production Time","").strip()
+                        if "-" in rawtext:
+                            begin = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(1)
+                            end = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(2)
+                            # print begin,end
+                            ProductionInformation["Production_Time"] = str(begin)+","+str(end)
+                        else:
+                            begin = re.match(r'(\d+?) business days',rawtext).group(1)
+                            ProductionInformation["Production_Time"] = str(begin)
+                    elif "Rush Service" in ProdInfoClean:
+                        if "Yes" in ProdInfoClean:
+                            ProductionInformation["Rush_Service"] = "Y"
+                        else:
+                            ProductionInformation["Rush_Service"] = ""
+                    elif "Rush Time" in ProdInfoClean:
+                        rawtext = ProdInfoClean.replace("Rush Time", "").strip()
+                        if "-" in rawtext:
+                            begin = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(1)
+                            end = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(2)
+                            # print begin,end
+                            ProductionInformation["Rush_Time"] = str(begin)+":"+","+str(end)+":"
+                        else:
+                            begin = re.match(r'(\d+?) business days',rawtext).group(1)
+                            ProductionInformation["Rush_Time"] = str(begin)+":"
+                    elif "Shipping Weight" in ProdInfoClean:
+                        rawtext = ProdInfoClean.replace("Shipping Weight", "").strip()
+                        if "kg" in rawtext :
+                            pass
+                        elif "oz" in rawtext:
+                            pass
+                        elif "lbs" in rawtext:
+                            pass
+                        elif "grams" in rawtext:
+                            pass
+                        else:
+                            pass
+
+
+
+
+        elif "h5" in dataFieldBlock.prettify():
+            BlockName = dataFieldBlock.find("h5").get_text().strip()
+            if BlockName == "Production Information":
+                pass
+
+
+    return ProductionInformation
+
 
 
 """这个函数是获取Production and Shipping大块中Rush Time小版块的信息,如果有这个版块，那么产生一个Rush Service Charge的UPcharge
@@ -374,17 +438,24 @@ def getRushServiceCharge(bsObj):
     pass
 
 
-"""这个函数是获取Production and Shipping大块中的信息"""
+"""这个函数是获取Production and Shipping大块除去上面两个版块中的信息，包括Origin，Shipping Weight，Shipping_Info，Ship_Plain_Box"""
 # 需要Origin，Shipping Weight（grams	。lbs）与后面是；隔开，Shipping_Info，Ship_Plain_Box（好像都是N）
 # Comp_Cert（这是Safety and Compliance大块中的）
 def getProduction_Shipping(bsObj):
     pass
 
 
+"""最终写入csv文件中的时候，每个字段都要加上两个双引号，来保证不被逗号分隔错"""
+def addQuot(rawstr):
+    str1 = str(rawstr)
+    str2 = '"'+str1+'"'
+    return str2
+
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=550923254"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=550544575"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
 
-    print getImprintInformation(bsObj)
+    print getProductionInformation(bsObj)
+

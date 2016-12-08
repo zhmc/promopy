@@ -1,4 +1,11 @@
 
+一些典型商品页
+RushServiceCharge:     http://promomart.espwebsite.com/ProductDetails/?productId=551120432
+ImprintMethodCharge:   http://promomart.espwebsite.com/ProductDetails/?productId=551051126
+Artwork Charge:        http://promomart.espwebsite.com/ProductDetails/?productId=551115615
+Shipping_Weight(lbs):  http://promomart.espwebsite.com/ProductDetails/?productId=551052003
+Shipping_Weight(kg,oz,lbs,grams)
+
 #第S列 Theme字段无法从页面上找到信息，怎么确定？
 暂定空
 
@@ -24,6 +31,9 @@
 #一个很重要的问题：页面上Production and Shipping大块中的Production Information小版块中，
 #Production Time，Rush Service，Rush Time等信息在表格中没找到
 解决：表格中从第AN列到AR列用到这些信息
+
+# 第U列Origin字段是不是都改成CHINA？
+暂定全是CHINA
 
 
 上次沟通：
