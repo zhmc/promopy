@@ -154,7 +154,7 @@ def parser(productObject):
 
     try:
         Size_Values = ProductDetailDic.get("Size")
-        if "Length" in Size_Values or "Width" in Size_Values or "Height" in Size_Values or "x" in Size_Values:
+        if "Length" in Size_Values or "Width" in Size_Values or "Height" in Size_Values or '"' in Size_Values:
             Size_Group = "Dimension"
         elif "M" in Size_Values or "L" in Size_Values or "S" in Size_Values:
             Size_Group = "Standard & Numbered"
@@ -206,15 +206,128 @@ def getPricing(bsObj):
     pass
 
 
-"""这个函数是获取ProductDetail大块中的除了Samples板块的基本信息"""
+"""这个函数是获取ProductDetail大块中的除了Samples板块的基本信息
+字段包括Category，Size_Group, Size_Values"""
 def getProductDetail(bsObj):
-    pass
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    ProductDetailDiv = allData[1]
+    ProductDetailData = ProductDetailDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
+    ProductDetailData2 = ProductDetailDiv.findAll("div", class_="dataFieldBlock")
 
+    ProductDetail = {}
+
+    for dataFieldBlock in ProductDetailData2:
+        if "h5" in dataFieldBlock.prettify():
+            BlockName = dataFieldBlock.find("h5").get_text().strip()
+            if "Category" in BlockName:
+                ProductDetail['Category'] = dataFieldBlock.get_text().strip().replace("Category","").strip()
+            elif "Material" in BlockName:
+                ProductDetail['Material'] = dataFieldBlock.get_text().strip().replace("Material", "").strip()
+            elif "Color" in BlockName:
+                ProductDetail['Color'] = dataFieldBlock.get_text().strip().replace("Color", "").replace(' ', '').strip().replace('"', '')
+            elif "Size" in BlockName:
+                Size_Group = ""
+                rawSize_Values = dataFieldBlock.get_text().strip().replace("Size", "").strip()
+                Size_Values = ""
+
+                if "Length" in rawSize_Values or "Width" in rawSize_Values or "Height" in rawSize_Values or '"' in rawSize_Values:
+                    Size_Group = "Dimension"
+                    splitSize_Values = rawSize_Values.split("x")
+                    if len(splitSize_Values) == 3:
+                        length = splitSize_Values[0].replace('"','').strip()
+                        width = splitSize_Values[1].replace('"','').strip()
+                        height = splitSize_Values[2].replace('"','').strip()
+                        Size_Values = "Length:" + length + "in;Width:" +width + "in;Height:" + height + ":in"
+                    elif len(splitSize_Values) == 2:
+                        length = splitSize_Values[0].replace('"', '').strip()
+                        width = splitSize_Values[1].replace('"', '').strip()
+                        Size_Values = "Length:" + length + "in;Width:" + width + ":in"
+                    elif len(splitSize_Values) == 1:
+                        length = splitSize_Values[0].replace('"', '').strip()
+                        Size_Values = "Length:" + length + ":in"
+                elif "M" in rawSize_Values or "L" in rawSize_Values or "S" in rawSize_Values:
+                    Size_Group = "Standard & Numbered"
+                    Size_Values = rawSize_Values.replace(" ","")
+                elif "oz" in rawSize_Values or "ml" in rawSize_Values or "kg" in rawSize_Values:
+                    Size_Group = "Volume/Weight"
+                    if "oz" in rawSize_Values:
+                        splitSize_Values = rawSize_Values.split("oz")
+                        if len(splitSize_Values) > 1:
+                            for i in range(len(splitSize_Values)):
+                                num = splitSize_Values[i].replace(",","").strip()
+                                if len(num) > 0:
+                                        Size_Values = Size_Values + num +":oz,"
+                            if len(Size_Values) > 0:
+                                Size_Values = Size_Values[0:len(Size_Values)-1]
+                        else:
+                            num = rawSize_Values.replace("oz","").strip()
+                            Size_Values = Size_Values + num + ":oz"
+                    elif "ml" in rawSize_Values:
+                        splitSize_Values = rawSize_Values.split("ml")
+                        if len(splitSize_Values) > 1:
+                            for i in range(len(splitSize_Values)):
+                                num = splitSize_Values[i].replace(",","").strip()
+                                if len(num) > 0:
+                                    Size_Values = Size_Values + num + ":ml,"
+                            if len(Size_Values) > 0:
+                                Size_Values = Size_Values[0:len(Size_Values) - 1]
+                        else:
+                            num = rawSize_Values.replace("ml","").strip()
+                            Size_Values = Size_Values + num + ":ml"
+                    elif "kg" in rawSize_Values:
+                        splitSize_Values = rawSize_Values.split("kg")
+                        if len(splitSize_Values) > 1:
+                            for i in range(len(splitSize_Values)):
+                                num = splitSize_Values[i].replace(",","").strip()
+                                if len(num) > 0:
+                                    Size_Values = Size_Values + num +":kg,"
+                            if len(Size_Values) > 0:
+                                Size_Values = Size_Values[0:len(Size_Values) - 1]
+                        else:
+                            num = rawSize_Values.replace("kg","").strip()
+                            Size_Values = Size_Values + num + ":kg"
+                ProductDetail['Size_Group'] = Size_Group
+                ProductDetail['Size_Values'] = Size_Values
+
+
+    return ProductDetail
 
 """这个函数是获取ProductDetail大块中的Samples板块（如果有），会生成csv中的sample charge"""
 def getSampleCharge(bsObj):
-    pass
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    ProductDetailDiv = allData[1]
+    ProductDetailData = ProductDetailDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
 
+    SampleCharge = {}
+
+    for dataFieldBlock in ProductDetailData:
+        if "h5" in dataFieldBlock.prettify():
+            BlockName = dataFieldBlock.find("h5").get_text().strip()
+            if "amples" in BlockName:
+                if "Charge Type" in dataFieldBlock.prettify():
+                    SampleCharge['Upcharge_Name'] = 'Product Sample'
+                    SampleCharge['Upcharge_Criteria_1'] = 'SMPL:Product Sample'
+                    SampleCharge['Upcharge_Type'] = 'Sample Charge'
+                    SampleCharge['Upcharge_Level'] = 'Other'
+                    SampleCharge['Service_Charge'] = 'Optional'
+
+                    SampleChargeTable = {}
+                    SampleQuantity = dataFieldBlock.findAll("tr")[0].findAll("th")[1].get_text().strip()
+                    SamplePrice = dataFieldBlock.find("td").get_text().strip()
+                    SampleChargeTable['UQ1'] = SampleQuantity
+                    SampleChargeTable['UP1'] = SamplePrice
+                    SampleChargeTable['UD1'] = "Z"
+                    SampleCharge['QuantityPirceTable'] = SampleChargeTable
+                    if "Price Includes:" in dataFieldBlock.get_text().strip():
+                        index = dataFieldBlock.get_text().strip().rfind("Price Includes:")
+                        ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].strip()
+                        # 如果Detail中有N/A,那么设为空
+                        if "N/A" in ArtworkChargeDetail:
+                            ArtworkChargeDetail = ""
+                        SampleCharge['Upcharge_Details'] = ArtworkChargeDetail
+
+
+    return SampleCharge
 
 """这个函数是获取Imprint大块中的Imprint Information板块（肯定有）, 同时获取可能存在的Imprint Location板块"""
 def getImprintInformation(bsObj):
@@ -275,7 +388,7 @@ def getImprintInformation(bsObj):
     return ImprintBasicInfo
 
 
-"""这个函数是获取Imprint大块中的Imprint Method板块（如果有，会产生ImprintCharge"""
+"""这个函数是获取Imprint大块中的Imprint Method板块（如果有，会产生ImprintCharge）"""
 def getImprintMethod(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
     ImprintDiv = allData[2]
@@ -475,7 +588,7 @@ def getProductionInformation(bsObj):
 
 
 """这个函数是获取Production and Shipping大块中Rush Time小版块的信息,如果有这个版块，那么产生一个Rush Service Charge的UPcharge
-获取Production Time，Rush Service，Rush Time，Shipping Weight，Shipping_Info等字段"""
+获取Upcharge_Name，Upcharge_Criteria_1，QuantityPirceTable等字段"""
 # 麻烦在于Rush Time小版块中可能会有两张表，记录不同的rush time服务时间，价格只能一个，表里面只能放一种价格
 # 经过观察，rushtime服务时间和之前获取的时间一样，只要获取价格
 def getRushServiceCharge(bsObj):
@@ -528,17 +641,9 @@ def getRushServiceCharge(bsObj):
                         # 如果Detail中有N/A,那么设为空
                         if "N/A" in ArtworkChargeDetail:
                             ArtworkChargeDetail = ""
-                            RushServiceCharge['Upcharge_Details'] = ArtworkChargeDetail
-
+                        RushServiceCharge['Upcharge_Details'] = ArtworkChargeDetail
 
     return RushServiceCharge
-
-
-"""这个函数是获取Production and Shipping大块除去上面两个版块中的信息，包括Origin，Shipping Weight，Shipping_Info，Ship_Plain_Box"""
-# 需要Origin，Shipping Weight（grams	。lbs）与后面是；隔开，Shipping_Info，Ship_Plain_Box（好像都是N）
-# Comp_Cert（这是Safety and Compliance大块中的）
-def getProduction_Shipping(bsObj):
-    pass
 
 
 """最终写入csv文件中的时候，每个字段都要加上两个双引号，来保证不被逗号分隔错"""
@@ -548,10 +653,10 @@ def addQuot(rawstr):
     return str2
 
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551128690"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551054975"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
 
-    print getRushServiceCharge(bsObj)
+    print getProductDetail(bsObj)
 
