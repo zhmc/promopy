@@ -201,13 +201,53 @@ def parser(productObject):
     return productObject
 
 """这个函数是获取商品的基本信息，包括字段Product_Name，Description，Prod_Image"""
-def getPricing(bsObj):
-    pass
+def getBasicInfomation(bsObj):
+    BasicInfomation ={}
+    BasicInfomation['Product_Name'] =""
+    BasicInfomation['Description'] =""
+    BasicInfomation['Prod_Image'] =""
+
+    Product_Name = bsObj.find("span", {"class": "prodName"}).get_text().strip()
+    BasicInfomation['Product_Name'] = Product_Name
+    Description = bsObj.find("div", {"class": "prodDescrFull prepend-top"}).get_text().strip()
+    BasicInfomation['Description'] = Description
+    picsrc = bsObj.find("input", {"type": "image"})['src']
+    BasicInfomation['Description'] = picsrc
+
 
 """这个函数是获取Pricing大块中的table和Price Includes信息"""
 def getPricing(bsObj):
-    pass
+    Pricing = {}
+    Pricing['PirceTable'] = {}
+    Pricing['Price Includes'] = ''
+    PirceTable = {}
+    PirceTable['Quantity'] = []
+    PirceTable['Price'] = []
 
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    PriceingDiv = allData[0]
+    # 这里只处理又有一个表格的简单情况
+    trs = PriceingDiv.findAll("tr")
+    # print "trs", len(trs)
+    row_Quantity = trs[0].findAll("th")
+    for th in row_Quantity:
+        PirceTable['Quantity'].append(th.get_text().strip())
+
+    row_Price = trs[1].findAll("td")
+    for td in row_Price:
+        PirceTable['Price'].append(td.get_text().strip())
+
+    Pricing['PirceTable'] = PirceTable
+
+    if "Price Includes:" in PriceingDiv.get_text().strip():
+        # 这个地方用rfind而不是index，是为了从后往前找，防止有两条Price Includes而出错
+        index = PriceingDiv.get_text().strip().rfind("Price Includes:")
+        Price_Includes = PriceingDiv.get_text().strip()[index + len("Price Includes:"):].strip()
+        # 这地方有一段隐藏文本Add to Shopping Cart
+        Price_Includes = Price_Includes.replace("Add to Shopping Cart","").strip()
+        Pricing['Price_Includes'] = Price_Includes
+
+    return Pricing
 
 """这个函数是获取ProductDetail大块中的除了Samples板块的基本信息
 字段包括Category，Material,Color,Size_Group, Size_Values, Shape,	Shipping Dimensions, Shipping Estimate
@@ -454,7 +494,7 @@ def getImprintInformation(bsObj):
 
 
 """这个函数是获取Imprint大块中的Imprint Method板块（如果有，会产生ImprintCharge）"""
-def getImprintMethod(bsObj):
+def getImprintMethodCharge(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
     ImprintDiv = allData[2]
     ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
@@ -724,4 +764,6 @@ if __name__ == "__main__":
     bsObj = BeautifulSoup(html, 'html.parser')
 
     print getProductDetail(bsObj)
+    print getPricing(bsObj)
+
 
