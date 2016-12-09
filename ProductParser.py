@@ -200,6 +200,9 @@ def parser(productObject):
 
     return productObject
 
+"""这个函数是获取商品的基本信息，包括字段Product_Name，Description，Prod_Image"""
+def getPricing(bsObj):
+    pass
 
 """这个函数是获取Pricing大块中的table和Price Includes信息"""
 def getPricing(bsObj):
@@ -207,7 +210,8 @@ def getPricing(bsObj):
 
 
 """这个函数是获取ProductDetail大块中的除了Samples板块的基本信息
-字段包括Category，Size_Group, Size_Values"""
+字段包括Category，Material,Color,Size_Group, Size_Values, Shape,	Shipping Dimensions, Shipping Estimate
+"""
 def getProductDetail(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
     ProductDetailDiv = allData[1]
@@ -215,16 +219,42 @@ def getProductDetail(bsObj):
     ProductDetailData2 = ProductDetailDiv.findAll("div", class_="dataFieldBlock")
 
     ProductDetail = {}
+    ProductDetail['Shape'] = ""
 
     for dataFieldBlock in ProductDetailData2:
         if "h5" in dataFieldBlock.prettify():
             BlockName = dataFieldBlock.find("h5").get_text().strip()
             if "Category" in BlockName:
-                ProductDetail['Category'] = dataFieldBlock.get_text().strip().replace("Category","").strip()
+                category = ""
+                CateList = dataFieldBlock.get_text().strip().replace("Category","").split(";")
+                for cate in CateList:
+                    cate_clean = cate.strip()
+                    if len(cate_clean) > 0:
+                        category += cate_clean +","
+                if len(category) > 0:
+                    category = category[0:len(category)-1]
+                ProductDetail['Category'] = category
             elif "Material" in BlockName:
-                ProductDetail['Material'] = dataFieldBlock.get_text().strip().replace("Material", "").strip()
+                category = ""
+                CateList = dataFieldBlock.get_text().strip().replace("Material", "").split(",")
+                for cate in CateList:
+                    cate_clean = cate.strip()
+                    if len(cate_clean) > 0:
+                        category += cate_clean + ","
+                if len(category) > 0:
+                    category = category[0:len(category) - 1]
+
+                ProductDetail['Material'] = category
             elif "Color" in BlockName:
-                ProductDetail['Color'] = dataFieldBlock.get_text().strip().replace("Color", "").replace(' ', '').strip().replace('"', '')
+                category = ""
+                CateList = dataFieldBlock.get_text().strip().replace("Color", "").split(",")
+                for cate in CateList:
+                    cate_clean = cate.strip()
+                    if len(cate_clean) > 0:
+                        category += cate_clean + ","
+                if len(category) > 0:
+                    category = category[0:len(category) - 1]
+                ProductDetail['Color'] = category
             elif "Size" in BlockName:
                 Size_Group = ""
                 rawSize_Values = dataFieldBlock.get_text().strip().replace("Size", "").strip()
@@ -237,11 +267,11 @@ def getProductDetail(bsObj):
                         length = splitSize_Values[0].replace('"','').strip()
                         width = splitSize_Values[1].replace('"','').strip()
                         height = splitSize_Values[2].replace('"','').strip()
-                        Size_Values = "Length:" + length + "in;Width:" +width + "in;Height:" + height + ":in"
+                        Size_Values = "Length:" + length + ":in;Width:" +width + ":in;Height:" + height + ":in"
                     elif len(splitSize_Values) == 2:
                         length = splitSize_Values[0].replace('"', '').strip()
                         width = splitSize_Values[1].replace('"', '').strip()
-                        Size_Values = "Length:" + length + "in;Width:" + width + ":in"
+                        Size_Values = "Length:" + length + ":in;Width:" + width + ":in"
                     elif len(splitSize_Values) == 1:
                         length = splitSize_Values[0].replace('"', '').strip()
                         Size_Values = "Length:" + length + ":in"
@@ -258,7 +288,7 @@ def getProductDetail(bsObj):
                                 if len(num) > 0:
                                         Size_Values = Size_Values + num +":oz,"
                             if len(Size_Values) > 0:
-                                Size_Values = Size_Values[0:len(Size_Values)-1]
+                                Size_Values = Size_Values[0:len(Size_Values) - 1]
                         else:
                             num = rawSize_Values.replace("oz","").strip()
                             Size_Values = Size_Values + num + ":oz"
@@ -268,7 +298,7 @@ def getProductDetail(bsObj):
                             for i in range(len(splitSize_Values)):
                                 num = splitSize_Values[i].replace(",","").strip()
                                 if len(num) > 0:
-                                    Size_Values = Size_Values + num + ":ml,"
+                                    Size_Values = Size_Values + num + ":ml;"
                             if len(Size_Values) > 0:
                                 Size_Values = Size_Values[0:len(Size_Values) - 1]
                         else:
@@ -288,7 +318,42 @@ def getProductDetail(bsObj):
                             Size_Values = Size_Values + num + ":kg"
                 ProductDetail['Size_Group'] = Size_Group
                 ProductDetail['Size_Values'] = Size_Values
-
+            elif "Shipping Dimensions" in BlockName:
+                Size_Values = ""
+                rawSize_Values = dataFieldBlock.get_text().strip().replace("Shipping Dimensions","").strip()
+                if "x" in rawSize_Values:
+                    splitSize_Values = rawSize_Values.split("x")
+                    if len(splitSize_Values) == 3:
+                        length = splitSize_Values[0].replace('"', '').strip()
+                        width = splitSize_Values[1].replace('"', '').strip()
+                        height = splitSize_Values[2].replace('"', '').strip()
+                        Size_Values = length + ":in;" + width + ":in;" + height + ":in"
+                    elif len(splitSize_Values) == 2:
+                        length = splitSize_Values[0].replace('"', '').strip()
+                        width = splitSize_Values[1].replace('"', '').strip()
+                        Size_Values = length + ":in;" + width + ":in"
+                    elif len(splitSize_Values) == 1:
+                        length = splitSize_Values[0].replace('"', '').strip()
+                        Size_Values = length + ":in"
+                ProductDetail['Shipping_Dimensions'] = Size_Values
+            elif "Shipping Estimate" in BlockName:
+                rawEstimate = dataFieldBlock.get_text().strip().replace("Shipping Estimate","").strip()
+                num = rawEstimate[0:rawEstimate.index("per")].strip()
+                other = rawEstimate.replace(num,"").strip()
+                Estimate = num +":"+other
+                ProductDetail['Shipping_Items'] = Estimate
+            elif "Shape" in BlockName:
+                shapeindex = dataFieldBlock.get_text().strip().index("Shape")
+                shape = ""
+                rawShape = dataFieldBlock.get_text().strip()[shapeindex+len("Shape"):].strip()
+                CateList = rawShape.split(",")
+                for cate in CateList:
+                    cate_clean = cate.strip()
+                    if len(cate_clean) > 0:
+                        shape += cate_clean + ","
+                if len(shape) > 0:
+                    shape = shape[0:len(shape) - 1]
+                ProductDetail['Shape'] = shape
 
     return ProductDetail
 
@@ -467,7 +532,7 @@ def getArtwork_Proofs(bsObj):
             ArtworkCharge['Upcharge_Name'] = ArtworkName
 
             # 如果有Artwork & Proofs板块但是内容很简单，没有charge type, 那么前面找ArtworkName会找不到
-            if len(ArtworkCharge['Upcharge_Name']) == 0:
+            if len(ArtworkCharge['Upcharge_Name']) == 0 and "Charge Type" not in block.get_text().strip():
                 ArtworkCharge['Upcharge_Name'] = block.get_text().strip().replace("Artwork & Proofs","").strip()
 
             # 如果文中出现charge type，就为ArtworkCharge填充数据，如果不出现，那么ArtworkCharge['Upcharge_Type'] = ""
@@ -646,14 +711,14 @@ def getRushServiceCharge(bsObj):
     return RushServiceCharge
 
 
-"""最终写入csv文件中的时候，每个字段都要加上两个双引号，来保证不被逗号分隔错"""
+"""最终写入csv文件中的时候，每个字段都要两边加上两个双引号，第二个双引号后面加上逗号，来保证不被逗号分隔错"""
 def addQuot(rawstr):
     str1 = str(rawstr)
-    str2 = '"'+str1+'"'
+    str2 = '"'+str1+'"'+','
     return str2
 
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551054975"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551052073"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
