@@ -212,21 +212,22 @@ def getBasicInfomation(bsObj):
     Description = bsObj.find("div", {"class": "prodDescrFull prepend-top"}).get_text().strip()
     BasicInfomation['Description'] = Description
     picsrc = bsObj.find("input", {"type": "image"})['src']
-    BasicInfomation['Description'] = picsrc
+    BasicInfomation['Prod_Image'] = picsrc
 
+    return BasicInfomation
 
 """这个函数是获取Pricing大块中的table和Price Includes信息"""
 def getPricing(bsObj):
     Pricing = {}
     Pricing['PirceTable'] = {}
-    Pricing['Price Includes'] = ''
+    Pricing['Price_Includes'] = ''
     PirceTable = {}
     PirceTable['Quantity'] = []
     PirceTable['Price'] = []
 
     allData = bsObj.findAll("div", class_="attributesContainer")
     PriceingDiv = allData[0]
-    # 这里只处理又有一个表格的简单情况
+    # 这里只处理了有一个表格的简单情况
     trs = PriceingDiv.findAll("tr")
     # print "trs", len(trs)
     row_Quantity = trs[0].findAll("th")
@@ -765,5 +766,6 @@ if __name__ == "__main__":
 
     print getProductDetail(bsObj)
     print getPricing(bsObj)
+    print getBasicInfomation(bsObj)
 
 
