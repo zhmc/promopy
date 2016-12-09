@@ -225,6 +225,13 @@ def getImprintInformation(bsObj):
     ImprintDic = {}
     ImprintMethodName = ""
     ImprintBasicInfo = {}
+    # 赋值 默认为空。返回的字段
+    ImprintBasicInfo["Sold_Unimprinted"] = ""
+    ImprintBasicInfo["Personalization"] = ""
+    ImprintBasicInfo["Imprint_Size"] = ""
+    ImprintBasicInfo["Imprint Method"] = ""
+    ImprintBasicInfo["Imprint Color"] = ""
+    ImprintBasicInfo["Imprint Location"] = ""
 
     for dataFieldBlock in ImprintData:
         BlockName = dataFieldBlock.find("h5").get_text().strip()
@@ -323,6 +330,16 @@ def getArtwork_Proofs(bsObj):
     ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
     BlockMap = {}
     ArtworkCharge = {}
+    # 初始化字典里面的变量
+    ArtworkCharge['Upcharge_Name'] = ""
+    ArtworkCharge['Upcharge_Criteria_1'] = ""
+    ArtworkCharge['Upcharge_Type'] = ""
+    ArtworkCharge['Upcharge_Level'] = ""
+    ArtworkCharge['Service_Charge'] = ""
+    ArtworkCharge['QuantityPirceTable'] = ""
+    ArtworkCharge['QuantityPirceTable'] = {}
+    ArtworkCharge['Upcharge_Details'] = ""
+
 
     for dataFieldBlock in ImprintData:
         BlockName = dataFieldBlock.find("h5").get_text().strip()
@@ -340,7 +357,7 @@ def getArtwork_Proofs(bsObj):
             if len(ArtworkCharge['Upcharge_Name']) == 0:
                 ArtworkCharge['Upcharge_Name'] = block.get_text().strip().replace("Artwork & Proofs","").strip()
 
-            # 如果文中出现charge type，就为ArtworkCharge填充数据，如果不出现，那么len(ArtworkCharge)=1
+            # 如果文中出现charge type，就为ArtworkCharge填充数据，如果不出现，那么ArtworkCharge['Upcharge_Type'] = ""
             if "Charge Type" in block.get_text().strip():
                 ArtworkCharge['Upcharge_Criteria_1'] = "ARTW:" + ArtworkName
                 ArtworkCharge['Upcharge_Type'] = "Artwork Charge"
@@ -355,7 +372,7 @@ def getArtwork_Proofs(bsObj):
                 ArtworkChargeTable['UD1'] = "Z"
                 ArtworkCharge['QuantityPirceTable'] = ArtworkChargeTable
                 if "Price Includes:" in block.get_text().strip():
-                    index = block.get_text().strip().index("Price Includes:")
+                    index = block.get_text().strip().rfind("Price Includes:")
                     ArtworkChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
                     # 如果Detail中有N/A,那么设为空
                     if "N/A" in ArtworkChargeDetail:
@@ -365,13 +382,24 @@ def getArtwork_Proofs(bsObj):
     return ArtworkCharge
 
 
-"""这个函数是获取Production and Shipping大块中Production Information小版块的信息
+"""这个函数是获取Production and Shipping大块中Production Information小版块的信息,再加上Packaging小版块
 获取Production Time，Rush Service，Rush Time，Shipping Weight，Shipping_Info等字段"""
 def getProductionInformation(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
     Production_ShippingDiv = allData[3]
     Production_ShippingData = Production_ShippingDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
     ProductionInformation = {}
+
+    # 产地全部统一为中国
+    ProductionInformation["Origin"] = "CHINA"
+    ProductionInformation["Shipper_Bills_By"] = ""
+    ProductionInformation["Ship_Plain_Box"] = "N"
+    ProductionInformation["Production_Time"] = ""
+    ProductionInformation["Rush_Service"] = ""
+    ProductionInformation["Rush_Time"] = ""
+    ProductionInformation["Shipping_Weight"] = ""
+    ProductionInformation["Shipping_Info"] = ""
+    ProductionInformation["Packaging"] = ""
 
     for dataFieldBlock in Production_ShippingData:
         # 这个地方有个坑，别的标题都是<h5>，这个Production Information的标题是<h6>
@@ -399,8 +427,10 @@ def getProductionInformation(bsObj):
                     elif "Rush Time" in ProdInfoClean:
                         rawtext = ProdInfoClean.replace("Rush Time", "").strip()
                         if "-" in rawtext:
-                            begin = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(1)
-                            end = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(2)
+                            match = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext)
+                            if match:
+                                begin = match.group(1)
+                                end = match.group(2)
                             # print begin,end
                             ProductionInformation["Rush_Time"] = str(begin)+":"+","+str(end)+":"
                         else:
@@ -408,25 +438,37 @@ def getProductionInformation(bsObj):
                             ProductionInformation["Rush_Time"] = str(begin)+":"
                     elif "Shipping Weight" in ProdInfoClean:
                         rawtext = ProdInfoClean.replace("Shipping Weight", "").strip()
+                        rawweight = ""
+                        weight = ""
+                        ShippingInfo = ""
                         if "kg" in rawtext :
-                            pass
+                            index = rawtext.index("kg")
+                            rawweight = rawtext[0:index + len("kg")].strip()
+                            weight = rawweight.replace("kg", "").strip() + ":" + "kg"
                         elif "oz" in rawtext:
-                            pass
+                            index = rawtext.index("oz")
+                            rawweight = rawtext[0:index + len("oz")].strip()
+                            weight = rawweight.replace("oz", "").strip() + ":" + "oz"
                         elif "lbs" in rawtext:
-                            pass
+                            index = rawtext.index("lbs")
+                            rawweight = rawtext[0:index+len("lbs")].strip()
+                            weight = rawweight.replace("lbs","").strip() + ":" + "lbs"
                         elif "grams" in rawtext:
-                            pass
+                            index = rawtext.index("grams")
+                            rawweight = rawtext[0:index + len("grams")].strip()
+                            weight = rawweight.replace("grams", "").strip() + ":" + "grams"
                         else:
                             pass
+                        ProductionInformation["Shipping_Weight"] = weight
+                        ShippingInfo = rawtext.replace(rawweight,"").strip()
+                        ProductionInformation["Shipping_Info"] = ShippingInfo
 
-
-
-
+        #  顺便把packaging字段获取
         elif "h5" in dataFieldBlock.prettify():
             BlockName = dataFieldBlock.find("h5").get_text().strip()
-            if BlockName == "Production Information":
-                pass
-
+            if "Packaging" in BlockName:
+                packagingInfo = dataFieldBlock.get_text().strip().replace("Packaging", "").strip()
+                ProductionInformation['Packaging'] = packagingInfo
 
     return ProductionInformation
 
@@ -434,8 +476,62 @@ def getProductionInformation(bsObj):
 
 """这个函数是获取Production and Shipping大块中Rush Time小版块的信息,如果有这个版块，那么产生一个Rush Service Charge的UPcharge
 获取Production Time，Rush Service，Rush Time，Shipping Weight，Shipping_Info等字段"""
+# 麻烦在于Rush Time小版块中可能会有两张表，记录不同的rush time服务时间，价格只能一个，表里面只能放一种价格
+# 经过观察，rushtime服务时间和之前获取的时间一样，只要获取价格
 def getRushServiceCharge(bsObj):
-    pass
+    RushServiceCharge = {}
+    RushServiceCharge['Upcharge_Name'] = ""
+    RushServiceCharge['Upcharge_Criteria_1'] = ""
+    basicInfo = getProductionInformation(bsObj)
+    # if len(basicInfo.get('Rush_Time')) > 0:
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    Production_ShippingDiv = allData[3]
+    Production_ShippingData = Production_ShippingDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
+    for dataFieldBlock in Production_ShippingData:
+        if "h5" in dataFieldBlock.prettify():
+            BlockName = dataFieldBlock.find("h5").get_text().strip()
+            if "Rush Time" in BlockName:
+                #判断是否存在Rush Service Charge
+                if "Charge Type" in dataFieldBlock.prettify():
+
+                    RushServiceCharge['Upcharge_Type'] = "Rush Service Charge"
+                    RushServiceCharge['Upcharge_Level'] = "Other"
+                    RushServiceCharge['Service_Charge'] = "Required"
+
+                    rushtimestr = basicInfo.get('Rush_Time')
+                    # print rushtimestr
+                    # 判读rushtime有几个值，1个还是2个
+                    if "," in rushtimestr:
+                        match1 = re.match(r'(\d*?):,(\d*?):', rushtimestr)
+                        if match1:
+                            begin = match1.group(1)
+                            end = match1.group(2)
+                            RushServiceCharge['Upcharge_Name'] = begin + " business days,"+end+" business days"
+                            RushServiceCharge['Upcharge_Criteria_1'] = "RUSH:" + begin +"," + end
+                    # 如果rushtime只有1个值
+                    elif len(rushtimestr) > 0:
+                        rushtime = rushtimestr.replace(":","").strip()
+                        RushServiceCharge['Upcharge_Name'] = rushtime + " business days"
+                        RushServiceCharge['Upcharge_Criteria_1'] = "RUSH:" + rushtime
+
+                    #获取Charge Price
+                    RushChargeTable = {}
+                    RushQuantity = dataFieldBlock.findAll("tr")[0].findAll("th")[1].get_text().strip()
+                    RushPrice = dataFieldBlock.find("td").get_text().strip()
+                    RushChargeTable['UQ1'] = RushQuantity
+                    RushChargeTable['UP1'] = RushPrice
+                    RushChargeTable['UD1'] = "Z"
+                    RushServiceCharge['QuantityPirceTable'] = RushChargeTable
+                    if "Price Includes:" in dataFieldBlock.get_text().strip():
+                        index = dataFieldBlock.get_text().strip().rfind("Price Includes:")
+                        ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].strip()
+                        # 如果Detail中有N/A,那么设为空
+                        if "N/A" in ArtworkChargeDetail:
+                            ArtworkChargeDetail = ""
+                            RushServiceCharge['Upcharge_Details'] = ArtworkChargeDetail
+
+
+    return RushServiceCharge
 
 
 """这个函数是获取Production and Shipping大块除去上面两个版块中的信息，包括Origin，Shipping Weight，Shipping_Info，Ship_Plain_Box"""
@@ -452,10 +548,10 @@ def addQuot(rawstr):
     return str2
 
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=550544575"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551128690"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
 
-    print getProductionInformation(bsObj)
+    print getRushServiceCharge(bsObj)
 

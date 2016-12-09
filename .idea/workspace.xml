@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7e73df6-a7ed-4621-96ef-de172dbca3aa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProductParser.py" afterPath="$PROJECT_DIR$/ProductParser.py" />
     </list>
     <ignored path="promopy.iws" />
@@ -31,12 +32,14 @@
       <file leaf-file-name="ProductParser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProductParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="419" column="32" lean-forward="false" selection-start-line="419" selection-start-column="32" selection-end-line="419" selection-end-column="32" />
+            <state relative-caret-position="1212">
+              <caret line="534" column="0" lean-forward="true" selection-start-line="534" selection-start-column="0" selection-end-line="534" selection-end-column="0" />
               <folding>
                 <element signature="e#22#51#0" expanded="true" />
                 <element signature="e#1644#6609#0" expanded="false" />
-                <element signature="e#7004#9153#0" expanded="false" />
+                <element signature="e#7004#9439#0" expanded="false" />
+                <element signature="e#9537#11710#0" expanded="false" />
+                <element signature="e#14715#19667#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -45,8 +48,8 @@
       <file leaf-file-name="一些备忘事项.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/一些备忘事项.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="34">
+              <caret line="2" column="80" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -78,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/reqpost.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -116,8 +119,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1370" />
+    <option name="width" value="1366" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -176,7 +178,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -414,16 +416,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="754" extended-state="0" />
+    <frame x="-8" y="0" width="1366" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1996997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2003012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3137584" sideWeight="0.503003" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28956228" sideWeight="0.496997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28956228" sideWeight="0.496997" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63131315" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -450,7 +452,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -462,7 +464,9 @@
           <folding>
             <element signature="e#22#51#0" expanded="true" />
             <element signature="e#1644#6609#0" expanded="false" />
-            <element signature="e#7004#9153#0" expanded="false" />
+            <element signature="e#7004#9439#0" expanded="false" />
+            <element signature="e#9537#11710#0" expanded="false" />
+            <element signature="e#14715#19667#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -512,7 +516,9 @@
           <folding>
             <element signature="e#22#51#0" expanded="true" />
             <element signature="e#1644#6609#0" expanded="false" />
-            <element signature="e#7004#9153#0" expanded="false" />
+            <element signature="e#7004#9439#0" expanded="false" />
+            <element signature="e#9537#11710#0" expanded="false" />
+            <element signature="e#14715#19667#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -554,7 +560,9 @@
           <folding>
             <element signature="e#22#51#0" expanded="true" />
             <element signature="e#1644#6609#0" expanded="false" />
-            <element signature="e#7004#9153#0" expanded="false" />
+            <element signature="e#7004#9439#0" expanded="false" />
+            <element signature="e#9537#11710#0" expanded="false" />
+            <element signature="e#14715#19667#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -617,7 +625,7 @@
     <entry file="file://$PROJECT_DIR$/reqpost.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -632,22 +640,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="56" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/一些备忘事项.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="34">
+          <caret line="2" column="80" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProductParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="419" column="32" lean-forward="false" selection-start-line="419" selection-start-column="32" selection-end-line="419" selection-end-column="32" />
+        <state relative-caret-position="1212">
+          <caret line="534" column="0" lean-forward="true" selection-start-line="534" selection-start-column="0" selection-end-line="534" selection-end-column="0" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
             <element signature="e#1644#6609#0" expanded="false" />
-            <element signature="e#7004#9153#0" expanded="false" />
+            <element signature="e#7004#9439#0" expanded="false" />
+            <element signature="e#9537#11710#0" expanded="false" />
+            <element signature="e#14715#19667#0" expanded="false" />
           </folding>
         </state>
       </provider>
