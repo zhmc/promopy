@@ -9,12 +9,12 @@ class Prodouct(object):
 
     # 第A列XID全空（不预先填值）
     Product_Name = ""   #   第B列
-    Product_Number = ""   #   第C列
+    Product_Number = ""   #   第C列无法得到
     # D, E, F, G列全空
     Description = ""    #   第H列
     # 第I列summary无法得到
     Prod_Image = ""      #   第J列
-    # K列全空# K列全空
+    # K列全空
     Category = ""     #   第L列
     # 第M列Keywords无法得到
     Product_Color = ""     #   第N列
@@ -36,9 +36,9 @@ class Prodouct(object):
     # 第AJ列, AK列无法得到
     Product_Sample = "Y"       # 第AL列
     # AM列全空
-    Production_Time = ""       # 第AN列
+    Production_Time = ""      # 第AN列
     Rush_Service = ""       # 第AO列
-    Rush_Time = ""       # 第AP列
+    Rush_Time = ""         # 第AP列
     # AQ列全空
     Packaging= ""       # 第AR列
     Shipping_Items= ""       # 第AS列
@@ -63,7 +63,7 @@ class Prodouct(object):
     # 第CN列QUR_Flag 无法得到
     Currency= "USD"       # 第CO列
     # 第CP列Less_Than_Min 无法得到
-    Price_Type = "List	"  # 第CQ列
+    Price_Type = "List"  # 第CQ列
 
     #从CR到EC都是upcharge内容。在写入csv时要分行写。新的一行只填写XID和upcharge内容，其余为空
     ImprintMethodCharge_exist = 0 # 是否存在ImprintMethodCharge
@@ -97,174 +97,220 @@ class Prodouct(object):
 
     @property
     def to_csv_row(self):
+        csvRowList = []
         csv_row = ""
+        csvRowList.append(csv_row)
+        # 写入csv文件时，只有那些quantity字段不用加上双引号
 
-        # xid
-        csv_row += ","
-        # Product_Name
-        csv_row += '"' + self.Product_Name + '"' + ","
-        # Product_Number
-        csv_row += '"' + self.Product_Number + '"' + ","
-        # Product_SKU, Product_Inventory_Link, Product_Inventory_Status, Product_Inventory_Quantity
-        csv_row += ",,,,"
-        # Description
-        csv_row += '"' + self.Description + '"' + ","
-        # Summary
-        csv_row += ","
-        # Prod_Image
-        csv_row += self.Prod_Image + ","
-        # Catalog_Information
-        csv_row += '"' + self.Category + '"' + ","
-        # Keywords
-        csv_row += ","
-        # Product_Color
-        csv_row += ","
-        # Silicone=Silicone
-        csv_row += self.Material + "=" + self.Material + ","
-        # Size_Group
-        csv_row += self.Size_Group + ","
-        # Size_Values
-        csv_row += self.Size_Values + ","
+        csv_row += ","          # 第A列XID全空（不预先填值）
+        csv_row += addQuot(self.Product_Name)     #  第B列
+        csv_row += addQuot(self.Product_Number)   #   第C列
+        csv_row += ","*4          # D, E, F, G列全空
+        csv_row += addQuot(self.Description)     #   第H列
+        csv_row += ","              # 第I列summary无法得到
+        csv_row += ","               #   第J列Prod_Image要手动填入
+        csv_row += ","               # K列全空
+        csv_row += addQuot(self.Category)       #   第L列
+        csv_row += ","              # 第M列Keywords无法得到
+        csv_row +=  addQuot(self.Product_Color)     #   第N列
+        csv_row +=  addQuot(self.Material)        #   第O列
+        csv_row +=  addQuot(self.Size_Group)        #   第P列
+        csv_row +=  addQuot(self.Size_Values)        #   第Q列
+        csv_row +=  addQuot(self.Shape)        #   第Q列
+        csv_row += ","*2               # 第S列, T列无法得到
+        csv_row +=  addQuot(self.Origin)        #   第U列
+        csv_row += ","*6             # V, W, X, Y, Z, AA列全空
+        csv_row +=  addQuot(self.Imprint_Method)        # 第AB列
+        csv_row += ","         # 第AC列Linename (EXPORT ONLY)
+        csv_row +=  addQuot(self.Artwork)        #   第AD列
+        csv_row +=  addQuot(self.Imprint_Color)        #   第AE列
+        csv_row +=  addQuot(self.Sold_Unimprinted)        #   第AF列
+        csv_row +=  addQuot(self.Personalization)        #   第AG列
+        csv_row +=  addQuot(self.Imprint_Size)        #   第AH列
+        csv_row +=  addQuot(self.Imprint_Location)        #   第AI列
+        csv_row += "," * 2                # 第AJ列, AK列无法得到
+        csv_row +=  addQuot(self.Product_Sample)        #   第AL列
+        csv_row += ","                         # AM列全空
+        csv_row += addQuot(self.Production_Time)      # 第AN列
+        csv_row += addQuot(self.Rush_Service)       # 第AO列
+        csv_row += addQuot(self.Rush_Time)         # 第AP列
+        csv_row += ","                       # AQ列全空
+        csv_row += addQuot(self.Packaging)         # 第AR列
+        csv_row += addQuot(self.Shipping_Items)         # 第AS列
+        csv_row += addQuot(self.Shipping_Dimensions)         # 第AT列
+        csv_row += addQuot(self.Shipping_Weight)         # 第AU列
+        csv_row += ","                         # 第AV列Shipper_Bills_By 无法得到
+        csv_row += addQuot(self.Shipping_Info)         # 第AW列
+        csv_row += addQuot(self.Ship_Plain_Box)         # 第AX列
+        csv_row += addQuot(self.Comp_Cert)         # 第AY列
+        csv_row += "," * 5                         # AZ, BA, BC, BB, BD列全空
+        csv_row += addQuot(self.Product_Name)         # 第BE列Base_Price_Name= ""，可以直接用Product_Name
+        csv_row += "," * 2                   # 第BF列, BG列无法得到
+        csv_row += addQuot(self.Product_Name)         # 第BE列Base_Price_Name= ""，可以直接用Product_Name
 
-        # print csv_row
-        return csv_row
+        # 从第BH列到BQ列是商品的Quantity
+        # 从第BR列到CA列是商品的Pricing
+        # 从第CB列到CK列，之前的Quantity有几项有值，这里就有几项全是R，后面的为空
+
+        quantityList = [","] * 10
+        priceList = [","] * 10
+        whatDList = [","] * 10
+
+        # 这一段已经给price和什么D字段加上了双引号
+        if 'PirceTable' in self.Pricing.keys():
+            if 'Quantity' in self.Pricing['PirceTable'].keys():
+                if len(self.Pricing['PirceTable']['Quantity']) > 1:
+                    cutHeadList = self.Pricing['PirceTable']['Quantity'][1:]
+                    for i in range(len(cutHeadList)):
+                        quantityList[i] = cutHeadList[i] + ","
+                        whatDList[i] = addQuot("R")
+            if 'Price' in self.Pricing['PirceTable'].keys():
+                if len(self.Pricing['PirceTable']['Price']) > 1:
+                    cutHeadList = self.Pricing['PirceTable']['Price'][1:]
+                    for i in range(len(cutHeadList)):
+                        priceList[i] = addQuot(cutHeadList[i])
+
+        for item in quantityList:
+            csv_row += item
+        for item in priceList:
+            csv_row += item
+        for item in whatDList:
+            csv_row += item
+
+        csv_row += ","                             # CL列Product_Number_Price全空
+        csv_row += addQuot(self.Price_Includes)          # 第CM列
+        csv_row += ","                             # 第CN列QUR_Flag 无法得到
+        csv_row += addQuot(self.Currency)          # 第CO列
+        csv_row += ","                             # 第CP列Less_Than_Min 无法得到
+        csv_row += addQuot(self.Price_Type)          # 第CQ列
+
+        # 从CR到EC都是upcharge内容。在写入csv时要分行写。新的一行只填写XID和upcharge内容，其余为空
+        # 此处要判断该商品有几个upcharge。
+        upchargeList = []
+        upchargeRowList = []
+
+
+        if self.ImprintMethodCharge_exist:
+            upchargeList.append(self.ImprintMethodCharge)
+        if self.SampleCharge_exist:
+            upchargeList.append(self.SampleCharge)
+        if self.ArtworkCharge_exist:
+            upchargeList.append(self.ArtworkCharge)
+        if self.RushServiceCharge_exist:
+            upchargeList.append(self.RushServiceCharge)
+
+        for upcharge in upchargeList:
+            upcharge_row = ""
+            upcharge_row += addQuot(upcharge['Upcharge_Name'])         # 第CR列
+            upcharge_row += addQuot(upcharge['Upcharge_Criteria_1'])   # 第CS列
+            upcharge_row += ","                                       # 第CT列Upcharge_Criteria_2全空
+            upcharge_row += addQuot(upcharge['Upcharge_Type'])         # 第CU列
+            upcharge_row += addQuot(upcharge['Upcharge_Level'])         # 第CV列
+            upcharge_row += addQuot(upcharge['Service_Charge'])         # 第CW列
+            upcharge_row += addQuot(upcharge['UQ1'])                  # 第CX列
+            upcharge_row += ","*9           #从CY到DG是空行
+            upcharge_row += addQuot(upcharge['UP1'])  # 第DH列
+            upcharge_row += "," * 9          # 从DI到DQ是空行
+            upcharge_row += addQuot("Z")             # 第DR列全是Z
+            upcharge_row += "," * 9                # 从DS到EA是空行
+            upcharge_row += addQuot(upcharge['Upcharge_Details'])  # 第EB列
+            upcharge_row += ","               # 第EC列U_QUR_Flag全空
+
+            upchargeRowList.append(upcharge_row)
+
+        if len(upchargeRowList) > 0:
+            csv_row += upchargeRowList[0]
+            if len(upchargeRowList) > 1:
+                csv_row2 = ","*95 + upchargeRowList[1] + ","*27
+                csvRowList.append(csv_row2)
+                if len(upchargeRowList) > 2:
+                    csv_row3 = ","*95 + upchargeRowList[2] + ","*27
+                    csvRowList.append(csv_row3)
+                    if len(upchargeRowList) > 3:
+                        csv_row4 = "," * 95 + upchargeRowList[3] + "," * 27
+                        csvRowList.append(csv_row4)
+        else:
+            csv_row += "," *38  # 一个upcharge都没有的话，填充空列，从CR到EC
+
+        csv_row += ","           # ED列的Confirmed_Thru_Date项确定不了
+        csv_row += "," * 11      # 从EE到EO全空
+        csv_row += addQuot(self.Distributor_View_Only)   # 第EP列
+        # EQ, ER全为空
+        # ES列Item_Weight无法获取
+        # ET, EU全为空
+        csv_row += "," * 5
+        csv_row += addQuot(self.Industry_Segment)            # 第EV列
+        csv_row += addQuot(self.SEO_FLG)                    # 第EW列
+        csv_row += "," * 2      # EX, EY全为空
+        csv_row += addQuot(self.Item_Assembled)                    # 第EZ列
+        csv_row += addQuot(self.Delivery_Option)                    # 第FA列
+        csv_row += "," * 3                                # FB, FC, FD, FE都是EXPORT ONLY！
+
+        csvRowList[0] = csv_row
+
+        return csvRowList
 
 
 def parser(productObject):
     html = requests.get(productObject.url, headers=productObject.headers).content
-
     bsObj = BeautifulSoup(html, 'html.parser')
-
-    # all attributes here
-    Product_Name = ""
-    Product_Number = ""
-    Description = ""
-    Prod_Image = ""
-    Category = ""
-    sample_charge = {}
-    Size_Group = ""
-    Size_Values = ""
-    Price_table = [[], []]
-    Price_Includes = ""
-
-    Product_Name = bsObj.find("span", {"class": "prodName"}).get_text().strip()
-    print Product_Name
-    productObject.Product_Name = Product_Name
-
-    Product_Number = bsObj.find("div", {"class": "prodNum"}).get_text().strip()
-    print Product_Number
-    productObject.Product_Number = Product_Number
-
-    Description = bsObj.find("div", {"class": "prodDescrFull prepend-top"}).get_text().strip()
-    # print Description
-    productObject.Description = Description
-
-    picsrcs = bsObj.findAll("input", {"type": "image"})
-    for i in range(len(picsrcs)):
-        if i == 0:
-            Prod_Image += picsrcs[i]['src']
-        else:
-            Prod_Image += "," + picsrcs[i]['src']
-
-    # print Prod_Image
-    productObject.Prod_Image = Prod_Image
-
     allData = bsObj.findAll("div", class_="attributesContainer")
-    # print len(allData)
+    # 判断能不能获取信息
+    if len(allData) > 0:
 
-    PriceingDiv = allData[0]
-    trs = PriceingDiv.findAll("tr")
-    # print "trs", len(trs)
-    row_Quantity = trs[0].findAll("th")
-    for th in row_Quantity:
-        Price_table[0].append(th.get_text().strip())
-    row_Price = trs[1].findAll("td")
-    for td in row_Price:
-        Price_table[1].append(td.get_text().strip())
+        BasicInfomation = getBasicInfomation(bsObj)
+        productObject.Product_Name = BasicInfomation['Product_Name']
+        productObject.Description = BasicInfomation['Description']
+        productObject.Prod_Image = BasicInfomation['Prod_Image']
 
-    print Price_table
-    productObject.Price_table = Price_table
+        Pricing = getPricing(bsObj)
+        productObject.Pircing = Pricing
+        productObject.Price_Includes = Pricing['Price_Includes']
 
-    Product_Detail = allData[1]
-    Product_Detail_Data = Product_Detail.findAll("div", class_="dataFieldBlock")
-    # print len(Product_Detail_Data) 这个地方发现长度有点不太对，不能依次按顺序取数据，必须得按照键值对取数据
-    ProductDetailDic = {}
-    for k in range(len(Product_Detail_Data)):
-        try:
-            raw_attr = Product_Detail_Data[k].find("h5").get_text()
-            attr = raw_attr.strip()
-            raw_value = Product_Detail_Data[k].get_text().strip()
-            value = raw_value.replace(attr, "").strip()
-            ProductDetailDic[attr] = value
-            if attr == "Samples":
-                sample_list = value.split("\n")
-                sample_list_clean = []
-                for si in range(len(sample_list)):
-                    if len(sample_list[si].strip()) > 0:
-                        sample_list_clean.append(sample_list[si].strip())
-                ProductDetailDic[attr] = sample_list_clean
-                # 如果存在sample这一项，那么给sample_charge填充数据
-                sample_charge['Upcharge_Type'] = "Sample Charge"
-                sample_charge['Upcharge_Level'] = "Other"
-                sample_charge['Service_Charge'] = "Optional"
-                sample_charge['UQ1'] = "1"
-                for key in range(len(sample_list_clean)):
-                    if sample_list_clean[key] == "Price":
-                        sample_charge['UP1'] = sample_list_clean[key + 1]
-                sample_charge['Upcharge_Details'] = sample_list_clean[-1].replace("Price Includes:", "").strip()
+        ProductDetail = getProductDetail(bsObj)
+        productObject.Category = ProductDetail['Category']
+        productObject.Material = ProductDetail['Material']
+        productObject.Color = ProductDetail['Color']
+        productObject.Color = ProductDetail['Color']
+        productObject.Size_Group = ProductDetail['Size_Group']
+        productObject.Size_Values = ProductDetail['Size_Values']
+        productObject.Shape = ProductDetail['Shape']
+        productObject.Shipping_Dimensions = ProductDetail['Shipping_Dimensions']
+        productObject.Shipping_Items = ProductDetail['Shipping_Items']
 
-        except Exception,e:
-            print e
+        SampleCharge = getSampleCharge(bsObj)
+        if len(SampleCharge) > 0:
+            productObject.SampleCharge_exist = 1;
+            productObject.SampleCharge = SampleCharge
 
-    # print ProductDetailDic
-    # print ProductDetailDic.get("Samples")
-    print "sample_charge"
-    print sample_charge
+        ImprintBasicInfo = getImprintInformation(bsObj)
+        productObject.Sold_Unimprinted = ImprintBasicInfo['Sold_Unimprinted']
+        productObject.Personalization = ImprintBasicInfo['Personalization']
+        productObject.Imprint_Size = ImprintBasicInfo['Imprint_Size']
+        productObject.Imprint_Method = ImprintBasicInfo['Imprint_Method']
+        productObject.Imprint_Color = ImprintBasicInfo['Imprint_Color']
+        productObject.Imprint_Location = ImprintBasicInfo['Imprint_Location']
 
-    try:
-        Size_Values = ProductDetailDic.get("Size")
-        if "Length" in Size_Values or "Width" in Size_Values or "Height" in Size_Values or '"' in Size_Values:
-            Size_Group = "Dimension"
-        elif "M" in Size_Values or "L" in Size_Values or "S" in Size_Values:
-            Size_Group = "Standard & Numbered"
-        elif "oz" in Size_Values or "ml" in Size_Values:
-            Size_Group = "Volume/Weight"
-        print "Size_group,Size_values"
-        print Size_Group, Size_Values
-    except Exception,e:
-            print e
+        ImprintCharge = getImprintMethodCharge(bsObj)
+        if 'Upcharge_Type' in ImprintCharge.keys():
+            productObject.ImprintMethodCharge_exist = 1;
+            productObject.ImprintMethodCharge = ImprintCharge
+
+        ArtworkCharge = getArtwork_Proofs(bsObj)
+        productObject.Artwork = ArtworkCharge['Upcharge_Name']
+        if len(ArtworkCharge['Upcharge_Type']) > 0:
+            productObject.ArtworkCharge_exist = 1;
+            productObject.ArtworkCharge = ArtworkCharge
+
+        ProductionInformation = getProductionInformation(bsObj)
+        productObject.Production_Time = ProductionInformation['Production_Time']
+        productObject.Rush_Service = ProductionInformation['Rush_Service']
+        productObject.Rush_Time = ProductionInformation['Rush_Time']
+        productObject.Shipping_Weight = ProductionInformation['Shipping_Weight']
+        productObject.Shipping_Info = ProductionInformation['Shipping_Info']
+        productObject.Packaging = ProductionInformation['Packaging']
 
 
-    """
-    这个地方ImpritDiv里面分为几个板块（如果有），其中Imprint Information板块是始终出现的，
-    当Imprint Method板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
-    当Artwork & Proofs板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
-
-    当一个商品有几个upcharge（包括Sample Charge，Imprint Method Charge，Artwork Charge，Rush Service Charge）
-    出现时，在csv中第一条记录中的upcharge type项暂时定为记录Imprint Method Charge（如果有），别的就接着主记录行，用一行填上upcharge相关信息
-    """
-    ImprintDiv = allData[2]
-    ImprintData = ImprintDiv.findAll("div", class_="criteriaSetBox dataFieldBlock")
-    BlockMap = {}
-    ImprintDic = {}
-
-    # 获取到ImprintDiv里面的各个板块
-    for dataFieldBlock in ImprintData:
-        BlockName = dataFieldBlock.find("h5").get_text().strip()
-        BlockValue = dataFieldBlock
-        BlockMap[BlockName] = BlockValue
-
-    # 遍历这几个板块
-    #for k in d.keys()
-
-    for k in range(len(ImprintData)):
-        try:
-            ImprintKey = ImprintData[k].find("label").get_text().strip()
-            ImprintValue = ImprintData[k].get_text().replace(ImprintKey, "").strip()
-            ImprintDic[ImprintKey] = ImprintValue
-
-        except Exception, e:
-            print e
 
 
     return productObject
@@ -284,6 +330,7 @@ def getBasicInfomation(bsObj):
     BasicInfomation['Prod_Image'] = picsrc
 
     return BasicInfomation
+
 
 """这个函数是获取Pricing大块中的table和Price Includes信息"""
 def getPricing(bsObj):
@@ -319,6 +366,7 @@ def getPricing(bsObj):
 
     return Pricing
 
+
 """这个函数是获取ProductDetail大块中的除了Samples板块的基本信息
 字段包括Category，Material,Color,Size_Group, Size_Values, Shape,	Shipping Dimensions, Shipping Estimate
 """
@@ -329,7 +377,14 @@ def getProductDetail(bsObj):
     ProductDetailData2 = ProductDetailDiv.findAll("div", class_="dataFieldBlock")
 
     ProductDetail = {}
+    ProductDetail['Category'] = ""
+    ProductDetail['Material'] = ""
+    ProductDetail['Color'] = ""
+    ProductDetail['Size_Group'] = ""
+    ProductDetail['Size_Values'] = ""
     ProductDetail['Shape'] = ""
+    ProductDetail['Shipping_Dimensions'] = ""
+    ProductDetail['Shipping_Items'] = ""
 
     for dataFieldBlock in ProductDetailData2:
         if "h5" in dataFieldBlock.prettify():
@@ -491,6 +546,7 @@ def getProductDetail(bsObj):
 
     return ProductDetail
 
+
 """这个函数是获取ProductDetail大块中的Samples板块（如果有），会生成csv中的sample charge"""
 def getSampleCharge(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
@@ -517,6 +573,8 @@ def getSampleCharge(bsObj):
                     SampleChargeTable['UP1'] = SamplePrice
                     SampleChargeTable['UD1'] = "Z"
                     SampleCharge['QuantityPirceTable'] = SampleChargeTable
+                    SampleCharge['UQ1'] = SampleQuantity
+                    SampleCharge['UP1'] = SamplePrice
                     if "Price Includes:" in dataFieldBlock.get_text().strip():
                         index = dataFieldBlock.get_text().strip().rfind("Price Includes:")
                         ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].strip()
@@ -552,9 +610,9 @@ def getImprintInformation(bsObj):
     ImprintBasicInfo["Sold_Unimprinted"] = ""
     ImprintBasicInfo["Personalization"] = ""
     ImprintBasicInfo["Imprint_Size"] = ""
-    ImprintBasicInfo["Imprint Method"] = ""
-    ImprintBasicInfo["Imprint Color"] = ""
-    ImprintBasicInfo["Imprint Location"] = ""
+    ImprintBasicInfo["Imprint_Method"] = ""
+    ImprintBasicInfo["Imprint_Color"] = ""
+    ImprintBasicInfo["Imprint_Location"] = ""
 
     for dataFieldBlock in ImprintData:
         BlockName = dataFieldBlock.find("h5").get_text().strip()
@@ -578,9 +636,9 @@ def getImprintInformation(bsObj):
                 text = InfoList[i].get_text().strip()
                 # print text
                 if "Imprint Method" in text:
-                    ImprintBasicInfo["Imprint Method"] = text.replace("Imprint Method","").strip()
+                    ImprintBasicInfo["Imprint_Method"] = text.replace("Imprint Method","").strip()
                 elif "Imprint Color" in text:
-                    ImprintBasicInfo["Imprint Color"] = text.replace("Imprint Color","").strip()
+                    ImprintBasicInfo["Imprint_Color"] = text.replace("Imprint Color","").strip()
                 elif "Sold Unimprinted" in text:
                     if "Yes" in text.replace("Sold_Unimprinted","").strip():
                         ImprintBasicInfo["Sold_Unimprinted"] = "Y"
@@ -593,7 +651,7 @@ def getImprintInformation(bsObj):
         # 提取Imprint Location板块的信息（如果有）  这里之考虑了简单的情况（只有一行）
         if key == "Imprint Location":
             text = BlockMap[key].get_text().strip()
-            ImprintBasicInfo["Imprint Location"] = text.replace("Imprint Location","").strip()
+            ImprintBasicInfo["Imprint_Location"] = text.replace("Imprint Location","").strip()
 
     return ImprintBasicInfo
 
@@ -637,6 +695,8 @@ def getImprintMethodCharge(bsObj):
                 ImprintChargeTable['UP1'] = ImprintPrice
                 ImprintChargeTable['UD1'] = "Z"
                 ImprintCharge['QuantityPirceTable'] = ImprintChargeTable
+                ImprintCharge['UQ1'] = ImprintQuantity
+                ImprintCharge['UP1'] = ImprintPrice
                 if "Price Includes:" in block.get_text().strip():
                     index = block.get_text().strip().index("Price Includes:")
                     ImprintChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
@@ -694,6 +754,8 @@ def getArtwork_Proofs(bsObj):
                 ArtworkChargeTable['UP1'] = ArtworkPrice
                 ArtworkChargeTable['UD1'] = "Z"
                 ArtworkCharge['QuantityPirceTable'] = ArtworkChargeTable
+                ArtworkCharge['UQ1'] = ArtworkQuantity
+                ArtworkCharge['UP1'] = ArtworkPrice
                 if "Price Includes:" in block.get_text().strip():
                     index = block.get_text().strip().rfind("Price Includes:")
                     ArtworkChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
@@ -845,6 +907,8 @@ def getRushServiceCharge(bsObj):
                     RushChargeTable['UP1'] = RushPrice
                     RushChargeTable['UD1'] = "Z"
                     RushServiceCharge['QuantityPirceTable'] = RushChargeTable
+                    RushServiceCharge['UQ1'] = RushQuantity
+                    RushServiceCharge['UP1'] = RushPrice
                     if "Price Includes:" in dataFieldBlock.get_text().strip():
                         index = dataFieldBlock.get_text().strip().rfind("Price Includes:")
                         ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].strip()
@@ -893,3 +957,4 @@ if __name__ == "__main__":
     print "ProductionInformation", getProductionInformation(bsObj)
     print "RushServiceCharge", getRushServiceCharge(bsObj)
 
+    print addQuot("有没有引号和逗号")

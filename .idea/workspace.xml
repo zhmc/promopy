@@ -32,12 +32,18 @@
       <file leaf-file-name="ProductParser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProductParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="42">
+              <caret line="910" column="56" lean-forward="false" selection-start-line="910" selection-start-column="56" selection-end-line="910" selection-end-column="56" />
               <folding>
                 <element signature="e#22#51#0" expanded="true" />
-                <element signature="e#23089#25524#0" expanded="false" />
-                <element signature="e#30857#35809#0" expanded="false" />
+                <element signature="e#13359#13901#0" expanded="false" />
+                <element signature="e#13978#15095#0" expanded="false" />
+                <element signature="e#15278#25464#0" expanded="false" />
+                <element signature="e#25566#27521#0" expanded="false" />
+                <element signature="e#28019#30454#0" expanded="false" />
+                <element signature="e#30559#32839#0" expanded="false" />
+                <element signature="e#32942#35799#0" expanded="false" />
+                <element signature="e#36001#40953#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -46,8 +52,8 @@
       <file leaf-file-name="一些备忘事项.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/一些备忘事项.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-349">
-              <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="12" />
+            <state relative-caret-position="34">
+              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -430,11 +436,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3137584" sideWeight="0.503003" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35986158" sideWeight="0.496997" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24924698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63131315" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62975776" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64646465" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -479,7 +485,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -490,8 +496,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
-            <element signature="e#23089#25524#0" expanded="false" />
-            <element signature="e#30857#35809#0" expanded="false" />
+            <element signature="e#13359#13901#0" expanded="false" />
+            <element signature="e#13978#15095#0" expanded="false" />
+            <element signature="e#15278#25464#0" expanded="false" />
+            <element signature="e#25566#27521#0" expanded="false" />
+            <element signature="e#28019#30454#0" expanded="false" />
+            <element signature="e#30559#32839#0" expanded="false" />
+            <element signature="e#32942#35799#0" expanded="false" />
+            <element signature="e#36001#40953#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,8 +552,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
-            <element signature="e#23089#25524#0" expanded="false" />
-            <element signature="e#30857#35809#0" expanded="false" />
+            <element signature="e#13359#13901#0" expanded="false" />
+            <element signature="e#13978#15095#0" expanded="false" />
+            <element signature="e#15278#25464#0" expanded="false" />
+            <element signature="e#25566#27521#0" expanded="false" />
+            <element signature="e#28019#30454#0" expanded="false" />
+            <element signature="e#30559#32839#0" expanded="false" />
+            <element signature="e#32942#35799#0" expanded="false" />
+            <element signature="e#36001#40953#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -582,8 +600,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
-            <element signature="e#23089#25524#0" expanded="false" />
-            <element signature="e#30857#35809#0" expanded="false" />
+            <element signature="e#13359#13901#0" expanded="false" />
+            <element signature="e#13978#15095#0" expanded="false" />
+            <element signature="e#15278#25464#0" expanded="false" />
+            <element signature="e#25566#27521#0" expanded="false" />
+            <element signature="e#28019#30454#0" expanded="false" />
+            <element signature="e#30559#32839#0" expanded="false" />
+            <element signature="e#32942#35799#0" expanded="false" />
+            <element signature="e#36001#40953#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -679,20 +703,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/一些备忘事项.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-349">
-          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="12" />
+        <state relative-caret-position="34">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProductParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="42">
+          <caret line="910" column="56" lean-forward="false" selection-start-line="910" selection-start-column="56" selection-end-line="910" selection-end-column="56" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
-            <element signature="e#23089#25524#0" expanded="false" />
-            <element signature="e#30857#35809#0" expanded="false" />
+            <element signature="e#13359#13901#0" expanded="false" />
+            <element signature="e#13978#15095#0" expanded="false" />
+            <element signature="e#15278#25464#0" expanded="false" />
+            <element signature="e#25566#27521#0" expanded="false" />
+            <element signature="e#28019#30454#0" expanded="false" />
+            <element signature="e#30559#32839#0" expanded="false" />
+            <element signature="e#32942#35799#0" expanded="false" />
+            <element signature="e#36001#40953#0" expanded="false" />
           </folding>
         </state>
       </provider>
