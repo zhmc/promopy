@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7e73df6-a7ed-4621-96ef-de172dbca3aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProductParser.py" afterPath="$PROJECT_DIR$/ProductParser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/涓�浜涘蹇樹簨椤�.txt" afterPath="$PROJECT_DIR$/涓�浜涘蹇樹簨椤�.txt" />
     </list>
     <ignored path="promopy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="ProductParser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProductParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="910" column="56" lean-forward="false" selection-start-line="910" selection-start-column="56" selection-end-line="910" selection-end-column="56" />
+            <state relative-caret-position="-281">
+              <caret line="918" column="0" lean-forward="true" selection-start-line="918" selection-start-column="0" selection-end-line="918" selection-end-column="0" />
               <folding>
                 <element signature="e#22#51#0" expanded="true" />
                 <element signature="e#13359#13901#0" expanded="false" />
@@ -711,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProductParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="910" column="56" lean-forward="false" selection-start-line="910" selection-start-column="56" selection-end-line="910" selection-end-column="56" />
+        <state relative-caret-position="-281">
+          <caret line="918" column="0" lean-forward="true" selection-start-line="918" selection-start-column="0" selection-end-line="918" selection-end-column="0" />
           <folding>
             <element signature="e#22#51#0" expanded="true" />
             <element signature="e#13359#13901#0" expanded="false" />
