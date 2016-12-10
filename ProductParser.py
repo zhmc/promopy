@@ -5,23 +5,92 @@ import re
 
 class Prodouct(object):
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    url = ""       #  商品页地址
 
-    Product_Name = ""
-    Product_Number = ""
-    Description = ""
-    Prod_Image = ""
-    Category = ""
-    Product_Color = ""
-    Material = ""
+    # 第A列XID全空（不预先填值）
+    Product_Name = ""   #   第B列
+    Product_Number = ""   #   第C列
+    # D, E, F, G列全空
+    Description = ""    #   第H列
+    # 第I列summary无法得到
+    Prod_Image = ""      #   第J列
+    # K列全空# K列全空
+    Category = ""     #   第L列
+    # 第M列Keywords无法得到
+    Product_Color = ""     #   第N列
+    Material = ""     #   第O列
+    Size_Group = ""   #   第P列
+    Size_Values = ""   #   第Q列
+    Shape = ""        #   第R列
+    # 第S列, T列无法得到
+    Origin = "CHINA"   #   第U列
+    # V, W, X, Y, Z, AA列全空
+    Imprint_Method = ""  # 第AB列
+    # 第AC列Linename (EXPORT ONLY)
+    Artwork = ""       # 第AD列
+    Imprint_Color = ""       # 第AE列
+    Sold_Unimprinted = ""       # 第AF列
+    Personalization = ""       # 第AG列
+    Imprint_Size = ""       # 第AH列
+    Imprint_Location = ""       # 第AI列
+    # 第AJ列, AK列无法得到
+    Product_Sample = "Y"       # 第AL列
+    # AM列全空
+    Production_Time = ""       # 第AN列
+    Rush_Service = ""       # 第AO列
+    Rush_Time = ""       # 第AP列
+    # AQ列全空
+    Packaging= ""       # 第AR列
+    Shipping_Items= ""       # 第AS列
+    Shipping_Dimensions= ""       # 第AT列
+    Shipping_Weight= ""       # 第AU列
+    # 第AV列Shipper_Bills_By 无法得到
+    Shipping_Info= ""       # 第AW列
+    Ship_Plain_Box= "N"       # 第AX列
+    Comp_Cert= ""       # 第AY列
+    # AZ, BA, BC, BB, BD列全空
+    Base_Price_Name= ""      # 第BE列，可以直接用Product_Name
+    # 第BF列, BG列无法得到
 
-    sample_charge = {}
-    Size_Group = ""
-    Size_Values = ""
-    Price_table = [[], []]
-    Price_Includes = ""
+    Pricing = {}
+    # 从第BH列到BQ列是商品的Quantity
+    # 从第BR列到CA列是商品的Pricing
+    # 从第CB列到CK列，之前的Quantity有几项有值，这里就有几项全是R，后面的为空
 
-    Imprint_Method = ""
-    Sold_Unimprinted = ""
+    # CL列Product_Number_Price全空
+
+    Price_Includes= ""       # 第CM列
+    # 第CN列QUR_Flag 无法得到
+    Currency= "USD"       # 第CO列
+    # 第CP列Less_Than_Min 无法得到
+    Price_Type = "List	"  # 第CQ列
+
+    #从CR到EC都是upcharge内容。在写入csv时要分行写。新的一行只填写XID和upcharge内容，其余为空
+    ImprintMethodCharge_exist = 0 # 是否存在ImprintMethodCharge
+    ImprintMethodCharge = {}
+
+    SampleCharge_exist = 0  # 是否存在SampleCharge
+    SampleCharge = {}
+
+    ArtworkCharge_exist = 0  # 是否存在ArtworkCharge
+    ArtworkCharge = {}
+
+    RushServiceCharge_exist = 0  # 是否存在RushServiceCharge
+    RushServiceCharge = {}
+
+    Confirmed_Thru_Date= ""       # 第ED列
+    # 从EE到EO全空
+    Distributor_View_Only = "N"  # 第EP列
+    # EQ, ER全为空
+    # ES列Item_Weight无法获取
+    # ET, EU全为空
+    Industry_Segment = "Promotional"  # 第EV列
+    SEO_FLG = "N"  # 第EW列
+    # EX, EY全为空
+    Item_Assembled = "Y"  # 第EZ列
+    Delivery_Option = "None"  # 第FA列
+    # FB, FC, FD, FE都是EXPORT ONLY！
+
 
     def __init__(self, url):
         self.url = url
@@ -303,19 +372,43 @@ def getProductDetail(bsObj):
 
                 if "Length" in rawSize_Values or "Width" in rawSize_Values or "Height" in rawSize_Values or '"' in rawSize_Values:
                     Size_Group = "Dimension"
-                    splitSize_Values = rawSize_Values.split("x")
-                    if len(splitSize_Values) == 3:
-                        length = splitSize_Values[0].replace('"','').strip()
-                        width = splitSize_Values[1].replace('"','').strip()
-                        height = splitSize_Values[2].replace('"','').strip()
-                        Size_Values = "Length:" + length + ":in;Width:" +width + ":in;Height:" + height + ":in"
-                    elif len(splitSize_Values) == 2:
-                        length = splitSize_Values[0].replace('"', '').strip()
-                        width = splitSize_Values[1].replace('"', '').strip()
-                        Size_Values = "Length:" + length + ":in;Width:" + width + ":in"
-                    elif len(splitSize_Values) == 1:
-                        length = splitSize_Values[0].replace('"', '').strip()
-                        Size_Values = "Length:" + length + ":in"
+                    # 这个地方可能存在多组长宽高
+                    if "," in rawSize_Values:
+                        #print "存在多组长宽高"
+                        firstSplitSize_Values = rawSize_Values.split(",")
+                        for item in firstSplitSize_Values:
+                            sigleSize_Value = ""
+                            splitSize_Values = item.split("x")
+                            if len(splitSize_Values) == 3:
+                                length = splitSize_Values[0].replace('"', '').strip()
+                                width = splitSize_Values[1].replace('"', '').strip()
+                                height = splitSize_Values[2].replace('"', '').strip()
+                                sigleSize_Value = "Length:" + length + ":in;Width:" + width + ":in;Height:" + height + ":in"
+                            elif len(splitSize_Values) == 2:
+                                length = splitSize_Values[0].replace('"', '').strip()
+                                width = splitSize_Values[1].replace('"', '').strip()
+                                sigleSize_Value = "Length:" + length + ":in;Width:" + width + ":in"
+                            elif len(splitSize_Values) == 1:
+                                length = splitSize_Values[0].replace('"', '').strip()
+                                sigleSize_Value = "Length:" + length + ":in"
+                            Size_Values += sigleSize_Value + ","
+                        if len(Size_Values) > 0:
+                            Size_Values = Size_Values[0:len(Size_Values)-1]
+                    # 只存在一组长宽高
+                    else:
+                        splitSize_Values = rawSize_Values.split("x")
+                        if len(splitSize_Values) == 3:
+                            length = splitSize_Values[0].replace('"','').strip()
+                            width = splitSize_Values[1].replace('"','').strip()
+                            height = splitSize_Values[2].replace('"','').strip()
+                            Size_Values = "Length:" + length + ":in;Width:" +width + ":in;Height:" + height + ":in"
+                        elif len(splitSize_Values) == 2:
+                            length = splitSize_Values[0].replace('"', '').strip()
+                            width = splitSize_Values[1].replace('"', '').strip()
+                            Size_Values = "Length:" + length + ":in;Width:" + width + ":in"
+                        elif len(splitSize_Values) == 1:
+                            length = splitSize_Values[0].replace('"', '').strip()
+                            Size_Values = "Length:" + length + ":in"
                 elif "M" in rawSize_Values or "L" in rawSize_Values or "S" in rawSize_Values:
                     Size_Group = "Standard & Numbered"
                     Size_Values = rawSize_Values.replace(" ","")
@@ -434,6 +527,17 @@ def getSampleCharge(bsObj):
 
 
     return SampleCharge
+
+
+"""
+这个地方ImpritDiv里面分为几个板块（如果有），其中Imprint Information板块是始终出现的，
+当Imprint Method板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
+当Artwork & Proofs板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
+
+当一个商品有几个upcharge（包括Sample Charge，Imprint Method Charge，Artwork Charge，Rush Service Charge）
+出现时，在csv中第一条记录中的upcharge type项暂时定为记录Imprint Method Charge（如果有），别的就接着主记录行，用一行填上upcharge相关信息
+"""
+
 
 """这个函数是获取Imprint大块中的Imprint Information板块（肯定有）, 同时获取可能存在的Imprint Location板块"""
 def getImprintInformation(bsObj):
@@ -700,7 +804,6 @@ def getProductionInformation(bsObj):
 def getRushServiceCharge(bsObj):
     RushServiceCharge = {}
     RushServiceCharge['Upcharge_Name'] = ""
-    RushServiceCharge['Upcharge_Criteria_1'] = ""
     basicInfo = getProductionInformation(bsObj)
     # if len(basicInfo.get('Rush_Time')) > 0:
     allData = bsObj.findAll("div", class_="attributesContainer")
@@ -712,6 +815,7 @@ def getRushServiceCharge(bsObj):
             if "Rush Time" in BlockName:
                 #判断是否存在Rush Service Charge
                 if "Charge Type" in dataFieldBlock.prettify():
+                    RushServiceCharge['Upcharge_Criteria_1'] = ""
 
                     RushServiceCharge['Upcharge_Type'] = "Rush Service Charge"
                     RushServiceCharge['Upcharge_Level'] = "Other"
@@ -752,6 +856,21 @@ def getRushServiceCharge(bsObj):
     return RushServiceCharge
 
 
+"""这个函数是获取Safety and Compliance大块中的Comp_Cert字段"""
+def getComp_Cert(bsObj):
+    allData = bsObj.findAll("div", class_="attributesContainer")
+    SafetyComplianceDiv = allData[4]
+    Comp_Cert = ""
+    if "FDA" in SafetyComplianceDiv.prettify():
+        Comp_Cert += "FDA,"
+    if "Food Grade"  in SafetyComplianceDiv.prettify():
+        Comp_Cert += "Food Grade,"
+    if len(Comp_Cert) > 0:
+        Comp_Cert = Comp_Cert[0:len(Comp_Cert)]
+
+    return Comp_Cert
+
+
 """最终写入csv文件中的时候，每个字段都要两边加上两个双引号，第二个双引号后面加上逗号，来保证不被逗号分隔错"""
 def addQuot(rawstr):
     str1 = str(rawstr)
@@ -759,13 +878,18 @@ def addQuot(rawstr):
     return str2
 
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551052073"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551122828"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
 
-    print getProductDetail(bsObj)
-    print getPricing(bsObj)
-    print getBasicInfomation(bsObj)
-
+    print "BasicInfomation",getBasicInfomation(bsObj)
+    print "Pricing",getPricing(bsObj)
+    print "ProductDetail", getProductDetail(bsObj)
+    print "SampleCharge", getSampleCharge(bsObj)
+    print "ImprintInformation", getImprintInformation(bsObj)
+    print "ImprintMethodCharge", getImprintMethodCharge(bsObj)
+    print "Artwork_Proofs", getArtwork_Proofs(bsObj)
+    print "ProductionInformation", getProductionInformation(bsObj)
+    print "RushServiceCharge", getRushServiceCharge(bsObj)
 

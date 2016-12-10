@@ -1,3 +1,7 @@
+在csv文件中一定要手动填入的值包括：
+1.第A列XID ，例如"7990166-550919663"
+2.第J列Prod_Image，例如"http://commonmedia.asicentral.com/velocity/7990166/product_images/23685812.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685813.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685814.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685815.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685816.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685817.jpg	"
+
 
 一些典型商品页
 RushServiceCharge:     http://promomart.espwebsite.com/ProductDetails/?productId=551120432
