@@ -104,16 +104,19 @@ if __name__ == "__main__":
     content = getFirstPageContent(url)
     print "page: 1"
     print getProdIDList(content)
+    print time.strftime('%Y-%m-%d %H:%M:%S')
 
-    content80 = get80PerPage(url,content)
-    print "page:1  80perpage  "
-    print getProdIDList(content80)
+    # content80 = get80PerPage(url,content)
+    # print "page:1  80perpage  "
+    # print getProdIDList(content80)
+    # print time.strftime('%Y-%m-%d %H:%M:%S')
 
     for i in range(20):
 
         print "page: "+str(i+2)
-        print time.strftime('%Y-%m-%d %H:%M:%S')
-        content = getNextPageContent(url, content80)
+
+        content = getNextPageContent(url, content)
         print getProdIDList(content)
+        print time.strftime('%Y-%m-%d %H:%M:%S')
 
     print "done" + time.strftime('%Y-%m-%d %H:%M:%S')
