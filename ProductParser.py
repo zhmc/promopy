@@ -6,7 +6,7 @@ import re
 class Prodouct(object):
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     url = ""       #  商品页地址
-
+    # bsObj = BeautifulSoup("","html.parser")
     # 第A列XID全空（不预先填值）
     Product_Name = ""   #   第B列
     Product_Number = ""   #   第C列无法得到
@@ -49,10 +49,10 @@ class Prodouct(object):
     Ship_Plain_Box= "N"       # 第AX列
     Comp_Cert= ""       # 第AY列
     # AZ, BA, BC, BB, BD列全空
-    Base_Price_Name= ""      # 第BE列，可以直接用Product_Name
+    Base_Price_Name= ""      # 第BE列，能够从页面获取
     # 第BF列, BG列无法得到
-
     Pricing = {}
+
     # 从第BH列到BQ列是商品的Quantity
     # 从第BR列到CA列是商品的Pricing
     # 从第CB列到CK列，之前的Quantity有几项有值，这里就有几项全是R，后面的为空
@@ -144,9 +144,8 @@ class Prodouct(object):
         csv_row += addQuot(self.Ship_Plain_Box)         # 第AX列
         csv_row += addQuot(self.Comp_Cert)         # 第AY列
         csv_row += "," * 5                         # AZ, BA, BC, BB, BD列全空
-        csv_row += addQuot(self.Product_Name)         # 第BE列Base_Price_Name= ""，可以直接用Product_Name
+        csv_row += addQuot(self.Base_Price_Name)         # 第BE列Base_Price_Name
         csv_row += "," * 2                   # 第BF列, BG列无法得到
-        csv_row += addQuot(self.Product_Name)         # 第BE列Base_Price_Name= ""，可以直接用Product_Name
 
         # 从第BH列到BQ列是商品的Quantity
         # 从第BR列到CA列是商品的Pricing
@@ -156,19 +155,20 @@ class Prodouct(object):
         priceList = [","] * 10
         whatDList = [","] * 10
 
+        pp = self.Pricing
         # 这一段已经给price和什么D字段加上了双引号
-        if 'PirceTable' in self.Pricing.keys():
-            if 'Quantity' in self.Pricing['PirceTable'].keys():
-                if len(self.Pricing['PirceTable']['Quantity']) > 1:
-                    cutHeadList = self.Pricing['PirceTable']['Quantity'][1:]
+        if 'PirceTable' in pp:
+            if 'Quantity' in pp['PirceTable'].keys():
+                if len(pp['PirceTable']['Quantity']) > 1:
+                    cutHeadList = pp['PirceTable']['Quantity'][1:]
                     for i in range(len(cutHeadList)):
-                        quantityList[i] = cutHeadList[i] + ","
+                        quantityList[i] = addQuot(deleteDollar(cutHeadList[i]).replace(",","").strip())
                         whatDList[i] = addQuot("R")
-            if 'Price' in self.Pricing['PirceTable'].keys():
-                if len(self.Pricing['PirceTable']['Price']) > 1:
-                    cutHeadList = self.Pricing['PirceTable']['Price'][1:]
+            if 'Price' in pp['PirceTable'].keys():
+                if len(pp['PirceTable']['Price']) > 1:
+                    cutHeadList = pp['PirceTable']['Price'][1:]
                     for i in range(len(cutHeadList)):
-                        priceList[i] = addQuot(cutHeadList[i])
+                        priceList[i] = addQuot(deleteDollar(cutHeadList[i]))
 
         for item in quantityList:
             csv_row += item
@@ -209,7 +209,7 @@ class Prodouct(object):
             upcharge_row += addQuot(upcharge['Service_Charge'])         # 第CW列
             upcharge_row += addQuot(upcharge['UQ1'])                  # 第CX列
             upcharge_row += ","*9           #从CY到DG是空行
-            upcharge_row += addQuot(upcharge['UP1'])  # 第DH列
+            upcharge_row += addQuot(deleteDollar(upcharge['UP1']))  # 第DH列
             upcharge_row += "," * 9          # 从DI到DQ是空行
             upcharge_row += addQuot("Z")             # 第DR列全是Z
             upcharge_row += "," * 9                # 从DS到EA是空行
@@ -252,6 +252,7 @@ class Prodouct(object):
 
 
 def parser(productObject):
+    # productObject = Prodouct(productObject.url)
     html = requests.get(productObject.url, headers=productObject.headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
     allData = bsObj.findAll("div", class_="attributesContainer")
@@ -264,14 +265,14 @@ def parser(productObject):
         productObject.Prod_Image = BasicInfomation['Prod_Image']
 
         Pricing = getPricing(bsObj)
-        productObject.Pircing = Pricing
+        productObject.Pricing = Pricing
         productObject.Price_Includes = Pricing['Price_Includes']
+        productObject.Base_Price_Name = Pricing['Base_Price_Name']
 
         ProductDetail = getProductDetail(bsObj)
         productObject.Category = ProductDetail['Category']
         productObject.Material = ProductDetail['Material']
-        productObject.Color = ProductDetail['Color']
-        productObject.Color = ProductDetail['Color']
+        productObject.Product_Color = ProductDetail['Color']
         productObject.Size_Group = ProductDetail['Size_Group']
         productObject.Size_Values = ProductDetail['Size_Values']
         productObject.Shape = ProductDetail['Shape']
@@ -279,9 +280,10 @@ def parser(productObject):
         productObject.Shipping_Items = ProductDetail['Shipping_Items']
 
         SampleCharge = getSampleCharge(bsObj)
-        if len(SampleCharge) > 0:
-            productObject.SampleCharge_exist = 1;
-            productObject.SampleCharge = SampleCharge
+        if 'Upcharge_Type' in SampleCharge.keys():
+            if len(SampleCharge['Upcharge_Type']) > 0:
+                productObject.SampleCharge_exist = 1
+                productObject.SampleCharge = SampleCharge
 
         ImprintBasicInfo = getImprintInformation(bsObj)
         productObject.Sold_Unimprinted = ImprintBasicInfo['Sold_Unimprinted']
@@ -293,13 +295,13 @@ def parser(productObject):
 
         ImprintCharge = getImprintMethodCharge(bsObj)
         if 'Upcharge_Type' in ImprintCharge.keys():
-            productObject.ImprintMethodCharge_exist = 1;
+            productObject.ImprintMethodCharge_exist = 1
             productObject.ImprintMethodCharge = ImprintCharge
 
         ArtworkCharge = getArtwork_Proofs(bsObj)
         productObject.Artwork = ArtworkCharge['Upcharge_Name']
         if len(ArtworkCharge['Upcharge_Type']) > 0:
-            productObject.ArtworkCharge_exist = 1;
+            productObject.ArtworkCharge_exist = 1
             productObject.ArtworkCharge = ArtworkCharge
 
         ProductionInformation = getProductionInformation(bsObj)
@@ -310,7 +312,14 @@ def parser(productObject):
         productObject.Shipping_Info = ProductionInformation['Shipping_Info']
         productObject.Packaging = ProductionInformation['Packaging']
 
+        RushServiceCharge = getRushServiceCharge(bsObj)
+        if 'Upcharge_Type' in RushServiceCharge.keys():
+            if len(RushServiceCharge['Upcharge_Type']) > 0:
+                productObject.RushServiceCharge_exist = 1
+                productObject.RushServiceCharge = RushServiceCharge
 
+        Comp_Cert = getComp_Cert(bsObj)
+        productObject.Comp_Cert = Comp_Cert
 
 
     return productObject
@@ -332,11 +341,12 @@ def getBasicInfomation(bsObj):
     return BasicInfomation
 
 
-"""这个函数是获取Pricing大块中的table和Price Includes信息"""
+"""这个函数是获取Pricing大块中的table和Price Includes， Base_Price_Name信息"""
 def getPricing(bsObj):
     Pricing = {}
     Pricing['PirceTable'] = {}
     Pricing['Price_Includes'] = ''
+    Pricing['Base_Price_Name'] = ''
     PirceTable = {}
     PirceTable['Quantity'] = []
     PirceTable['Price'] = []
@@ -363,6 +373,9 @@ def getPricing(bsObj):
         # 这地方有一段隐藏文本Add to Shopping Cart
         Price_Includes = Price_Includes.replace("Add to Shopping Cart","").strip()
         Pricing['Price_Includes'] = Price_Includes
+
+    Base_Price_Name = PriceingDiv.find("span",class_="strong").get_text().strip()
+    Pricing['Base_Price_Name'] = Base_Price_Name
 
     return Pricing
 
@@ -410,7 +423,7 @@ def getProductDetail(bsObj):
                     category = category[0:len(category) - 1]
 
                 ProductDetail['Material'] = category
-            elif "Color" in BlockName:
+            elif "Color" == BlockName:
                 category = ""
                 CateList = dataFieldBlock.get_text().strip().replace("Color", "").split(",")
                 for cate in CateList:
@@ -565,10 +578,17 @@ def getSampleCharge(bsObj):
                     SampleCharge['Upcharge_Type'] = 'Sample Charge'
                     SampleCharge['Upcharge_Level'] = 'Other'
                     SampleCharge['Service_Charge'] = 'Optional'
+                    SampleCharge['Upcharge_Details'] = ""
+                    SampleCharge['UQ1'] = ""
+                    SampleCharge['UP1'] = ""
 
                     SampleChargeTable = {}
                     SampleQuantity = dataFieldBlock.findAll("tr")[0].findAll("th")[1].get_text().strip()
                     SamplePrice = dataFieldBlock.find("td").get_text().strip()
+                    # 有些表格不写价格，写上QUR
+                    if SamplePrice == "QUR":
+                        SampleCharge['Upcharge_Type'] = ""
+                        continue
                     SampleChargeTable['UQ1'] = SampleQuantity
                     SampleChargeTable['UP1'] = SamplePrice
                     SampleChargeTable['UD1'] = "Z"
@@ -697,10 +717,12 @@ def getImprintMethodCharge(bsObj):
                 ImprintCharge['QuantityPirceTable'] = ImprintChargeTable
                 ImprintCharge['UQ1'] = ImprintQuantity
                 ImprintCharge['UP1'] = ImprintPrice
+                ImprintCharge['Upcharge_Details'] = ""
                 if "Price Includes:" in block.get_text().strip():
-                    index = block.get_text().strip().index("Price Includes:")
+                    index = block.get_text().strip().rfind("Price Includes:")
                     ImprintChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
-                    ImprintCharge['Upcharge_Details'] = ImprintChargeDetail
+                    if "N/A" not in ImprintChargeDetail:
+                        ImprintCharge['Upcharge_Details'] = ImprintChargeDetail
 
     return ImprintCharge
 
@@ -796,14 +818,17 @@ def getProductionInformation(bsObj):
                     ProdInfoClean = ProdInfo.get_text().strip()
                     if "Production Time" in ProdInfoClean:
                         rawtext = ProdInfoClean.replace("Production Time","").strip()
-                        if "-" in rawtext:
-                            begin = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(1)
-                            end = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(2)
-                            # print begin,end
-                            ProductionInformation["Production_Time"] = str(begin)+","+str(end)
+                        if "N/A" in rawtext:
+                            pass
                         else:
-                            begin = re.match(r'(\d+?) business days',rawtext).group(1)
-                            ProductionInformation["Production_Time"] = str(begin)
+                            if "-" in rawtext:
+                                begin = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(1)
+                                end = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(2)
+                                # print begin,end
+                                ProductionInformation["Production_Time"] = str(begin)+","+str(end)
+                            else:
+                                begin = re.match(r'(\d+?) business days',rawtext).group(1)
+                                ProductionInformation["Production_Time"] = str(begin)
                     elif "Rush Service" in ProdInfoClean:
                         if "Yes" in ProdInfoClean:
                             ProductionInformation["Rush_Service"] = "Y"
@@ -817,10 +842,17 @@ def getProductionInformation(bsObj):
                                 begin = match.group(1)
                                 end = match.group(2)
                             # print begin,end
-                            ProductionInformation["Rush_Time"] = str(begin)+":"+","+str(end)+":"
+                            # 此处在字符串尾部加上"\t"是为了防止excel把"5:"当成时间格式，而字典转化了
+                            ProductionInformation["Rush_Time"] = str(begin)+":"+","+str(end)+":"+"\t"
                         else:
-                            begin = re.match(r'(\d+?) business days',rawtext).group(1)
-                            ProductionInformation["Rush_Time"] = str(begin)+":"
+                            match1 = re.match(r'(\d+?) business days',rawtext)
+                            if match1:
+                                begin = match1.group(1)
+                            else:
+                                match2 = re.match(r'(\d+?) business day',rawtext)
+                                if match2:
+                                    begin = match2.group(1)
+                            ProductionInformation["Rush_Time"] = str(begin)+":"+"\t"
                     elif "Shipping Weight" in ProdInfoClean:
                         rawtext = ProdInfoClean.replace("Shipping Weight", "").strip()
                         rawweight = ""
@@ -846,6 +878,9 @@ def getProductionInformation(bsObj):
                             pass
                         ProductionInformation["Shipping_Weight"] = weight
                         ShippingInfo = rawtext.replace(rawweight,"").strip()
+                        if len(ShippingInfo) > 0:
+                            if ShippingInfo[0] == ";":
+                                ShippingInfo = ShippingInfo[1:].strip()
                         ProductionInformation["Shipping_Info"] = ShippingInfo
 
         #  顺便把packaging字段获取
@@ -925,36 +960,56 @@ def getComp_Cert(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
     SafetyComplianceDiv = allData[4]
     Comp_Cert = ""
-    if "FDA" in SafetyComplianceDiv.prettify():
-        Comp_Cert += "FDA,"
-    if "Food Grade"  in SafetyComplianceDiv.prettify():
-        Comp_Cert += "Food Grade,"
-    if len(Comp_Cert) > 0:
-        Comp_Cert = Comp_Cert[0:len(Comp_Cert)]
+
+    # if "FDA" in SafetyComplianceDiv.prettify():
+    #     Comp_Cert += "FDA,"
+    # if "Food Grade"  in SafetyComplianceDiv.prettify():
+    #     Comp_Cert += "Food Grade,"
+    # if len(Comp_Cert) > 0:
+    #     Comp_Cert = Comp_Cert[0:len(Comp_Cert)]
+    if "Certifications and Compliance" in SafetyComplianceDiv.prettify():
+        rawtexts = SafetyComplianceDiv.findAll("span",class_="strong addColon TxtLabel")
+        for item in rawtexts:
+            rawtext = item.get_text().strip()
+            if "Certifications and Compliance" in rawtext:
+                Comp_Cert = rawtext.replace("Certifications and Compliance","").strip()
 
     return Comp_Cert
 
 
-"""最终写入csv文件中的时候，每个字段都要两边加上两个双引号，第二个双引号后面加上逗号，来保证不被逗号分隔错"""
+'''最终写入csv文件中的时候，每个字段都要两边加上两个双引号，第二个双引号后面加上逗号，来保证不被逗号分隔错
+如果列内容本身含有"，则用""表示 如某一列内容为c,"d",则csv格式为： a,b,"c,""d""",e
+要将字段值中的双引号换成4引号
+'''
 def addQuot(rawstr):
     str1 = str(rawstr)
+    str1 = str1.replace('"','""')
     str2 = '"'+str1+'"'+','
     return str2
 
+def deleteDollar(str):
+    str1 = str.replace("$","").strip()
+    return str1
+
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=551122828"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=4783582"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
 
-    print "BasicInfomation",getBasicInfomation(bsObj)
-    print "Pricing",getPricing(bsObj)
-    print "ProductDetail", getProductDetail(bsObj)
-    print "SampleCharge", getSampleCharge(bsObj)
-    print "ImprintInformation", getImprintInformation(bsObj)
-    print "ImprintMethodCharge", getImprintMethodCharge(bsObj)
-    print "Artwork_Proofs", getArtwork_Proofs(bsObj)
-    print "ProductionInformation", getProductionInformation(bsObj)
-    print "RushServiceCharge", getRushServiceCharge(bsObj)
+    # rows = parser(Prodouct(url)).to_csv_row
+    # for row in rows:
+    #     print row
 
-    print addQuot("有没有引号和逗号")
+    # print "BasicInfomation",getBasicInfomation(bsObj)
+    # print "Pricing",getPricing(bsObj)
+    print "ProductDetail", getProductDetail(bsObj)
+    # print "SampleCharge", getSampleCharge(bsObj)
+    # print "ImprintInformation", getImprintInformation(bsObj)
+    # print "ImprintMethodCharge", getImprintMethodCharge(bsObj)
+    # print "Artwork_Proofs", getArtwork_Proofs(bsObj)
+    # print "ProductionInformation", getProductionInformation(bsObj)
+    # print "RushServiceCharge", getRushServiceCharge(bsObj)
+    #
+    # print addQuot("有没有引号和逗号")
+
