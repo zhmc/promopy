@@ -253,7 +253,10 @@ class Prodouct(object):
 
 def parser(productObject):
     # productObject = Prodouct(productObject.url)
-    html = requests.get(productObject.url, headers=productObject.headers).content
+    requests.adapters.DEFAULT_RETRIES = 10
+    session1 = requests.session()
+    session1.keep_alive = False
+    html = session1.get(productObject.url, headers=productObject.headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
     allData = bsObj.findAll("div", class_="attributesContainer")
     # 判断能不能获取信息
@@ -607,16 +610,6 @@ def getSampleCharge(bsObj):
     return SampleCharge
 
 
-"""
-这个地方ImpritDiv里面分为几个板块（如果有），其中Imprint Information板块是始终出现的，
-当Imprint Method板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
-当Artwork & Proofs板块出现时，有时候里面会有charge type，这时会有一个table记录upcharge
-
-当一个商品有几个upcharge（包括Sample Charge，Imprint Method Charge，Artwork Charge，Rush Service Charge）
-出现时，在csv中第一条记录中的upcharge type项暂时定为记录Imprint Method Charge（如果有），别的就接着主记录行，用一行填上upcharge相关信息
-"""
-
-
 """这个函数是获取Imprint大块中的Imprint Information板块（肯定有）, 同时获取可能存在的Imprint Location板块"""
 def getImprintInformation(bsObj):
     allData = bsObj.findAll("div", class_="attributesContainer")
@@ -702,6 +695,8 @@ def getImprintMethodCharge(bsObj):
                 
                 ImprintCharge['Upcharge_Criteria_1'] = "IMMD:" + ImprintMethodName
                 ImprintCharge['Upcharge_Type'] = "Imprint Method Charge"
+                if "Set-up Charge" in block.get_text().strip():
+                    ImprintCharge['Upcharge_Type'] = "Set-up Charge"
                 if "Per Order" in block.get_text().strip():
                     ImprintCharge['Upcharge_Level'] = "Per Order"
                 else:
@@ -843,7 +838,7 @@ def getProductionInformation(bsObj):
                                 end = match.group(2)
                             # print begin,end
                             # 此处在字符串尾部加上"\t"是为了防止excel把"5:"当成时间格式，而字典转化了
-                            ProductionInformation["Rush_Time"] = str(begin)+":"+","+str(end)+":"+"\t"
+                                ProductionInformation["Rush_Time"] = str(begin)+":"+","+str(end)+":"+"\t"
                         else:
                             match1 = re.match(r'(\d+?) business days',rawtext)
                             if match1:
