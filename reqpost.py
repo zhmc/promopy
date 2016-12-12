@@ -71,17 +71,14 @@ def get80PerPage(url, startContent):
 
     selectOnchange = bsObj.find("select").attrs['onchange']
     # print selectOnchange
+    # select元素是这样：<select name="ctl01$ctl00$records$CmbNumberPerPage" onchange="javascript:setTimeout('__doPostBack(\'ctl01$ctl00$records$CmbNumberPerPage\',\'\')', 0)" id="ctl01_ctl00_records_CmbNumberPerPage" style="width:60px;">
     __EVENTTARGET_value = re.findall(r"doPostBack\(\\'(.*?)\\'", selectOnchange)
     # print __EVENTTARGET_value[0]
     # print __EVENTTARGET
     postData["__EVENTTARGET"] = __EVENTTARGET_value[0]
-
-    postData[__EVENTTARGET_value[0]] = "80"
+    # 表单中是这样：   ctl01$ctl00$records$CmbNumberPerPage:"80"
     # 这个POST字段是不存在于源代码之中，需要临时添加
-    # print postData
-    # for key in postData.keys():
-    #     if "PerPage" in key:
-    #         postData[key] = "80"
+    postData[__EVENTTARGET_value[0]] = "80"
 
     response = requests.post(url, data=postData, headers=headers)
 
@@ -106,13 +103,17 @@ if __name__ == "__main__":
     url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=HAT"
     content = getFirstPageContent(url)
     print "page: 1"
-    printProdID(content)
+    print getProdIDList(content)
 
     content80 = get80PerPage(url,content)
     print "page:1  80perpage  "
-    printProdID(content80)
+    print getProdIDList(content80)
 
     for i in range(20):
-        content = getNextPageContent(url, content80)
+
         print "page: "+str(i+2)
-        printProdID(content)
+        print time.strftime('%Y-%m-%d %H:%M:%S')
+        content = getNextPageContent(url, content80)
+        print getProdIDList(content)
+
+    print "done" + time.strftime('%Y-%m-%d %H:%M:%S')
