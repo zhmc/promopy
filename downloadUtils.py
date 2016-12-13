@@ -6,8 +6,7 @@ from requests import ConnectionError
 from threading import Thread
 from random import choice
 from ProductParser import Prodouct,parser
-from reqpost import get80PerPage, getNextPageContent, getProdIDList
-
+from nextPage import get80PerPage, getNextPageContent, getProdIDList, getFirstPageContent, get80NextPageContent
 
 headers_list = [{'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'},
                 {'user-agent': "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0"}
@@ -36,7 +35,7 @@ class MyThread(Thread):
 
 # threadPool = []
 
-def getPagesFromProdIDList(ProdIDList):
+def getThreadPoolFromProdIDList(ProdIDList):
     threadPool = []
     productList = []
     for ProdID in ProdIDList:
@@ -51,6 +50,29 @@ def getPagesFromProdIDList(ProdIDList):
         productList.append(singlethread.productInfo)
 
     return threadPool
+
+def getThreadPoolAndStartContentByKeyword80(keyword):
+    url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=" + keyword
+    content = getFirstPageContent(url)
+    content80 = get80PerPage(url, content)
+    idList = getProdIDList(content80)
+    threadPool = getThreadPoolFromProdIDList(idList)
+    package = {}
+    package['threadPool'] = threadPool
+    package['startContent'] = content80
+    return threadPool
+
+def getThreadPoolAndEndContentByStartContent(keyword, startContent):
+    url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=" + keyword
+    endContent = get80NextPageContent(url, startContent)
+    idList = getProdIDList(endContent)
+    threadPool = getThreadPoolFromProdIDList(idList)
+
+    package = {}
+    package['threadPool'] = threadPool
+    package['endContent'] = endContent
+
+    return package
 
 def getCsvRowsFromThreadPool(threadPool):
     rows4write = []
@@ -88,7 +110,7 @@ if __name__ == "__main__":
     #     idList.append(str(ProdID))
 
 
-    threadPool = getPagesFromProdIDList(idList)
+    threadPool = getThreadPoolFromProdIDList(idList)
     print "写文件花多少时间 " + time.strftime('%Y-%m-%d %H:%M:%S')
     rows4write = getCsvRowsFromThreadPool(threadPool)
     write2Csv('results.csv',rows4write)
