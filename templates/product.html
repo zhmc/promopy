@@ -7,5 +7,45 @@
 <body>
 <p>这是商品--{{ prod }}  的表格界面</p>
 <p>这是第{{ page }}页</p>
+<a href={{"/"+prod+"/"+ (page|int+1)|string }}>下一页</a>
+<a href={{"/"+prod+"/"+ (page|int-1)|string }}>上一页</a>
+<!--<p>这是测试内存数据库 {{ test }}</p>-->
+<table>
+    <tr>
+        <td>序号</td>
+        <td>名字</td>
+        <td>图片</td>
+        <td>数量-价格</td>
+        <td width="500">描述</td>
+        <!--<td>价格</td>-->
+        <!--<td>类别</td>-->
+        <!--<td>颜色</td>-->
+        <!--<td>材料</td>-->
+    </tr>
+    {% for i in range(pagebean['threadPool']|length) %}
+        <tr height="100px">
+            <td width="50"><a href={{"http://promomart.espwebsite.com/ProductDetails/?productId="+pagebean['threadPool'][i].prodID }}> {{ i+1 }} </a></td>
+            <!--<td height="100px">{{ "http://promomart.espwebsite.com/ProductDetails/?productId="+pagebean['threadPool'][i].prodID }}</td>-->
+            <td height="100px">{{ pagebean['threadPool'][i].productInfo.Product_Name }}</td>
+            <td height="100px"><img  style="width:100px;height:100px;" src={{pagebean['threadPool'][i].productInfo.Prod_Image}}></td>
+            <td height="100px">
+                <table>
+                    <tr>
+                    {% for quantity in pagebean['threadPool'][i].productInfo.Pricing['PirceTable']['Quantity'] %}
+                        <td  width="40">{{　quantity }}</td>
+                    {% endfor %}
+                    </tr>
+                    <tr>
+                    {% for price in pagebean['threadPool'][i].productInfo.Pricing['PirceTable']['Price'] %}
+                        <td  width="40">{{　price }}</td>
+                    {% endfor %}
+                    </tr>
+                </table>
+            </td>
+            <td  width="500">{{ pagebean['threadPool'][i].productInfo.Description }}</td>
+
+        </tr>
+    {% endfor %}
+</table>
 </body>
 </html>

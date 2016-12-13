@@ -98,7 +98,7 @@ class Prodouct(object):
     @property
     def to_csv_row(self):
         csvRowList = []
-        csv_row = ""
+        csv_row = unicode("")
         csvRowList.append(csv_row)
         # 写入csv文件时，只有那些quantity字段不用加上双引号
 
@@ -338,8 +338,10 @@ def getBasicInfomation(bsObj):
     BasicInfomation['Product_Name'] = Product_Name
     Description = bsObj.find("div", {"class": "prodDescrFull prepend-top"}).get_text().strip()
     BasicInfomation['Description'] = Description
-    picsrc = bsObj.find("input", {"type": "image"})['src']
-    BasicInfomation['Prod_Image'] = picsrc
+    pic = bsObj.find("input", {"type": "image"})
+    if pic:
+        picsrc = bsObj.find("input", {"type": "image"})['src']
+        BasicInfomation['Prod_Image'] = picsrc
 
     return BasicInfomation
 
@@ -355,30 +357,32 @@ def getPricing(bsObj):
     PirceTable['Price'] = []
 
     allData = bsObj.findAll("div", class_="attributesContainer")
+
     PriceingDiv = allData[0]
     # 这里只处理了有一个表格的简单情况
     trs = PriceingDiv.findAll("tr")
     # print "trs", len(trs)
-    row_Quantity = trs[0].findAll("th")
-    for th in row_Quantity:
-        PirceTable['Quantity'].append(th.get_text().strip())
+    if trs:
+        row_Quantity = trs[0].findAll("th")
+        for th in row_Quantity:
+            PirceTable['Quantity'].append(th.get_text().strip())
 
-    row_Price = trs[1].findAll("td")
-    for td in row_Price:
-        PirceTable['Price'].append(td.get_text().strip())
+        row_Price = trs[1].findAll("td")
+        for td in row_Price:
+            PirceTable['Price'].append(td.get_text().strip())
 
-    Pricing['PirceTable'] = PirceTable
+        Pricing['PirceTable'] = PirceTable
 
-    if "Price Includes:" in PriceingDiv.get_text().strip():
-        # 这个地方用rfind而不是index，是为了从后往前找，防止有两条Price Includes而出错
-        index = PriceingDiv.get_text().strip().rfind("Price Includes:")
-        Price_Includes = PriceingDiv.get_text().strip()[index + len("Price Includes:"):].strip()
-        # 这地方有一段隐藏文本Add to Shopping Cart
-        Price_Includes = Price_Includes.replace("Add to Shopping Cart","").strip()
-        Pricing['Price_Includes'] = Price_Includes
+        if "Price Includes:" in PriceingDiv.get_text().strip():
+            # 这个地方用rfind而不是index，是为了从后往前找，防止有两条Price Includes而出错
+            index = PriceingDiv.get_text().strip().rfind("Price Includes:")
+            Price_Includes = PriceingDiv.get_text().strip()[index + len("Price Includes:"):].strip()
+            # 这地方有一段隐藏文本Add to Shopping Cart
+            Price_Includes = Price_Includes.replace("Add to Shopping Cart","").strip()
+            Pricing['Price_Includes'] = Price_Includes
 
-    Base_Price_Name = PriceingDiv.find("span",class_="strong").get_text().strip()
-    Pricing['Base_Price_Name'] = Base_Price_Name
+        Base_Price_Name = PriceingDiv.find("span",class_="strong").get_text().strip()
+        Pricing['Base_Price_Name'] = Base_Price_Name
 
     return Pricing
 
@@ -816,13 +820,21 @@ def getProductionInformation(bsObj):
                         if "N/A" in rawtext:
                             pass
                         else:
+                            # if ""
                             if "-" in rawtext:
                                 begin = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(1)
                                 end = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(2)
                                 # print begin,end
                                 ProductionInformation["Production_Time"] = str(begin)+","+str(end)
                             else:
-                                begin = re.match(r'(\d+?) business days',rawtext).group(1)
+                                begin = ""
+                                match1 = re.match(r'(\d+?) business days', rawtext)
+                                if match1:
+                                    begin = match1.group(1)
+                                else:
+                                    match2 = re.match(r'(\d+?) business day', rawtext)
+                                    if match2:
+                                        begin = match2.group(1)
                                 ProductionInformation["Production_Time"] = str(begin)
                     elif "Rush Service" in ProdInfoClean:
                         if "Yes" in ProdInfoClean:
@@ -840,6 +852,7 @@ def getProductionInformation(bsObj):
                             # 此处在字符串尾部加上"\t"是为了防止excel把"5:"当成时间格式，而字典转化了
                                 ProductionInformation["Rush_Time"] = str(begin)+":"+","+str(end)+":"+"\t"
                         else:
+                            begin = ""
                             match1 = re.match(r'(\d+?) business days',rawtext)
                             if match1:
                                 begin = match1.group(1)
@@ -977,7 +990,7 @@ def getComp_Cert(bsObj):
 要将字段值中的双引号换成4引号
 '''
 def addQuot(rawstr):
-    str1 = str(rawstr)
+    str1 = unicode(rawstr)
     str1 = str1.replace('"','""')
     str2 = '"'+str1+'"'+','
     return str2

@@ -5,6 +5,7 @@
 
 
 一些典型商品页
+这个商品页面竟然没有基本价格 http://promomart.espwebsite.com/ProductDetails/?productId=550757386
 RushServiceCharge:     http://promomart.espwebsite.com/ProductDetails/?productId=551120432
 ImprintMethodCharge:   http://promomart.espwebsite.com/ProductDetails/?productId=551051126
 Artwork Charge:        http://promomart.espwebsite.com/ProductDetails/?productId=551115615

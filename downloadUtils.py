@@ -1,5 +1,6 @@
 # -*- coding:utf-8-*-
 from bs4 import BeautifulSoup
+import traceback
 import time
 import requests
 from requests import ConnectionError
@@ -29,6 +30,13 @@ class MyThread(Thread):
             self.rowList = self.productInfo.to_csv_row
         except ConnectionError, e:
             print self.prodID + "连接错误"
+        # except IndexError:
+        # #     print self.prodID + "数组越界"
+        # except TypeError,e:
+        #     print self.prodID + "类型错误"
+        except:
+            print self.prodID
+            traceback.print_exc()
 
     def getRowList(self):
         return self.rowList
@@ -37,7 +45,7 @@ class MyThread(Thread):
 
 def getThreadPoolFromProdIDList(ProdIDList):
     threadPool = []
-    productList = []
+    # productList = []
     for ProdID in ProdIDList:
         mythread = MyThread(ProdID)
         threadPool.append(mythread)
@@ -46,8 +54,8 @@ def getThreadPoolFromProdIDList(ProdIDList):
     for singlethread in threadPool:
         singlethread.join()
 
-    for singlethread in threadPool:
-        productList.append(singlethread.productInfo)
+    # for singlethread in threadPool:
+    #     productList.append(singlethread.productInfo)
 
     return threadPool
 
@@ -61,6 +69,18 @@ def getThreadPoolAndStartContentByKeyword80(keyword):
     package['threadPool'] = threadPool
     package['startContent'] = content80
     return threadPool
+
+def getFirstThreadPoolAndEndContentByKeyword(keyword):
+    url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=" + keyword
+    content = getFirstPageContent(url)
+    content80 = get80PerPage(url, content)
+    idList = getProdIDList(content80)
+    threadPool = getThreadPoolFromProdIDList(idList)
+    package = {}
+    package['threadPool'] = threadPool
+    package['endContent'] = content80
+
+    return package
 
 def getThreadPoolAndEndContentByStartContent(keyword, startContent):
     url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=" + keyword
@@ -97,7 +117,7 @@ def write2Csv(filepath, rows4write):
 if __name__ == "__main__":
     print "start now " + time.strftime('%Y-%m-%d %H:%M:%S')
     headers = choice(headers_list)
-    url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=HAT"
+    url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=tshirt"
     html = requests.get(url, headers=headers).content
     first80content = get80PerPage(url,html)
 
