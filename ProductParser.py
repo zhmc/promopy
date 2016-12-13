@@ -352,6 +352,7 @@ def getPricing(bsObj):
     Pricing['PirceTable'] = {}
     Pricing['Price_Includes'] = ''
     Pricing['Base_Price_Name'] = ''
+    Pricing['PirceTable'] = {}
     PirceTable = {}
     PirceTable['Quantity'] = []
     PirceTable['Price'] = []

@@ -16,7 +16,7 @@
         <td>名字</td>
         <td>图片</td>
         <td>数量-价格</td>
-        <td width="500">描述</td>
+        <td width="600">描述</td>
         <!--<td>价格</td>-->
         <!--<td>类别</td>-->
         <!--<td>颜色</td>-->
@@ -29,6 +29,7 @@
             <td height="100px">{{ pagebean['threadPool'][i].productInfo.Product_Name }}</td>
             <td height="100px"><img  style="width:100px;height:100px;" src={{pagebean['threadPool'][i].productInfo.Prod_Image}}></td>
             <td height="100px">
+                {% if pagebean['threadPool'][i].productInfo.Pricing|length > 0 %}
                 <table>
                     <tr>
                     {% for quantity in pagebean['threadPool'][i].productInfo.Pricing['PirceTable']['Quantity'] %}
@@ -41,8 +42,9 @@
                     {% endfor %}
                     </tr>
                 </table>
+                {% endif %}
             </td>
-            <td  width="500">{{ pagebean['threadPool'][i].productInfo.Description }}</td>
+            <td  width="600">{{ pagebean['threadPool'][i].productInfo.Description }}</td>
 
         </tr>
     {% endfor %}
