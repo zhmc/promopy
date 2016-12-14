@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 class Prodouct(object):
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     url = ""       #  商品页地址

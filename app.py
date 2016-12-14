@@ -7,6 +7,13 @@ from flask import send_from_directory
 from downloadUtils import getThreadPoolAndStartContentByKeyword80, getFirstThreadPoolAndEndContentByKeyword, \
     getThreadPoolFromProdIDList, writeCsvByThreadPool
 from nextPage import get80PerPage, getProdIDList, get80NextPageContent
+import sys,os
+
+'''
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+'''
 
 app = Flask(__name__)
 
@@ -29,7 +36,7 @@ def getTable(prod, page):
     if request.method == 'POST':
         threadPool4WriteCsv = []
         newPackage = memorydb[(keyword, num)]
-        print len(newPackage['threadPool'])
+        # print len(newPackage['threadPool'])
 
         form = request.form
         # if newPackage:
@@ -44,9 +51,12 @@ def getTable(prod, page):
             # 这个地方i是从1到80的，然而在列表里面取值要从0到79
             threadPool4WriteCsv.append(newPackage['threadPool'][int(key[0])-1])
 
-        writeCsvByThreadPool(threadPool4WriteCsv,'static/temp.csv')
+        path = sys.path[0]
+        filename = str(path) + '/static/temp.csv'
+        writeCsvByThreadPool(threadPool4WriteCsv, filename)
 
         return send_from_directory('static', 'temp.csv', as_attachment=True)
+        #return "hello kitty"
 
     pagebean = None
     test = None
