@@ -114,6 +114,10 @@ def write2Csv(filepath, rows4write):
 
     csvfile.close()
 
+def writeCsvByThreadPool(threadPool,filepath):
+    rows4write = getCsvRowsFromThreadPool(threadPool)
+    write2Csv(filepath, rows4write)
+
 if __name__ == "__main__":
     print "start now " + time.strftime('%Y-%m-%d %H:%M:%S')
     headers = choice(headers_list)

@@ -1,3 +1,10 @@
+还需要fix的：{
+packaging获取有问题，有的网页如http://promomart.espwebsite.com/ProductDetails/?productId=4973690
+里面还有packaging charge的内容
+
+下载速度慢的问题
+}
+
 在csv文件中一定要手动填入的值包括：
 1.第A列XID，例如"7990166-550919663"
 2.第C列Product_Number，例如"HJO004"

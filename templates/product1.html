@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">首页</a>
+<form method="POST">
+    <input type="submit" value="提交">
+<table>
+    <tr>
+        <td>序号</td>
+        <td>单选框</td>
+        <!--<td>价格</td>-->
+        <!--<td>类别</td>-->
+        <!--<td>颜色</td>-->
+        <!--<td>材料</td>-->
+    </tr>
+    {% for i in range(80) %}
+        <tr >
+            <td width="50"> {{ i+1 }} </td>
+            <td width="100"><input name={{((i|int+1)|string)}} type="checkbox" value="1" checked="checked" ></td>
+
+
+        </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>

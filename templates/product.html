@@ -5,14 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-<p>这是商品--{{ prod }}  的表格界面</p>
-<p>这是第{{ page }}页</p>
-<a href={{"/"+prod+"/"+ (page|int+1)|string }}>下一页</a>
-<a href={{"/"+prod+"/"+ (page|int-1)|string }}>上一页</a>
+<a href="/">首页</a>
+<p>这是关键词--{{ prod }}  的表格界面。    这是第{{ page }}页<a href={{"/"+prod+"/"+ (page|int+1)|string }}> 下一页</a><a href={{"/"+prod+"/"+ (page|int-1)|string }}>上一页</a></p>
+<!--<a href={{"/"+prod+"/"+ (page|int+1)|string }}>下一页</a>-->
+<!--<a href={{"/"+prod+"/"+ (page|int-1)|string }}>上一页</a>-->
 <!--<p>这是测试内存数据库 {{ test }}</p>-->
+<form method="POST">
+    <input type="submit" value="下载csv文件">
 <table>
     <tr>
         <td>序号</td>
+        <td>选中</td>
         <td>名字</td>
         <td>图片</td>
         <td>数量-价格</td>
@@ -25,7 +28,7 @@
     {% for i in range(pagebean['threadPool']|length) %}
         <tr height="100px">
             <td width="50"><a href={{"http://promomart.espwebsite.com/ProductDetails/?productId="+pagebean['threadPool'][i].prodID }}> {{ i+1 }} </a></td>
-            <!--<td height="100px">{{ "http://promomart.espwebsite.com/ProductDetails/?productId="+pagebean['threadPool'][i].prodID }}</td>-->
+            <td><input name={{((i|int+1)|string)}} type="checkbox" value="1" checked="checked" ></td>
             <td height="100px">{{ pagebean['threadPool'][i].productInfo.Product_Name }}</td>
             <td height="100px"><img  style="width:100px;height:100px;" src={{pagebean['threadPool'][i].productInfo.Prod_Image}}></td>
             <td height="100px">
@@ -49,5 +52,6 @@
         </tr>
     {% endfor %}
 </table>
+</form>
 </body>
 </html>
