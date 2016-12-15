@@ -341,7 +341,7 @@ def getBasicInfomation(bsObj):
     Product_Name = bsObj.find("span", {"class": "prodName"}).get_text().strip()
     BasicInfomation['Product_Name'] = Product_Name
     Description = bsObj.find("div", {"class": "prodDescrFull prepend-top"}).get_text().strip()
-    BasicInfomation['Description'] = Description
+    BasicInfomation['Description'] = Description.replace("\n","")
     pic = bsObj.find("input", {"type": "image"})
     if pic:
         picsrc = bsObj.find("input", {"type": "image"})['src']
@@ -425,26 +425,36 @@ def getProductDetail(bsObj):
                     category = category[0:len(category)-1]
                 ProductDetail['Category'] = category
             elif "Material" in BlockName:
-                category = ""
-                CateList = dataFieldBlock.get_text().strip().replace("Material", "").split(",")
-                for cate in CateList:
-                    cate_clean = cate.strip()
-                    if len(cate_clean) > 0:
-                        category += cate_clean + ","
-                if len(category) > 0:
-                    category = category[0:len(category) - 1]
 
-                ProductDetail['Material'] = category
+                # 这个Material版块可能比较复杂，不止一行，但是我这里只取一行
+                NotSimple = dataFieldBlock.find("div", class_="setDetail dataFieldBlock")
+                if NotSimple:
+                    ProductDetail['Material'] = NotSimple.get_text().strip()
+                else:
+                    category = ""
+                    CateList = dataFieldBlock.get_text().strip().replace("Material", "").split(",")
+                    for cate in CateList:
+                        cate_clean = cate.strip()
+                        if len(cate_clean) > 0:
+                            category += cate_clean + ","
+                    if len(category) > 0:
+                        category = category[0:len(category) - 1]
+
+                    ProductDetail['Material'] = category
             elif "Color" == BlockName:
-                category = ""
-                CateList = dataFieldBlock.get_text().strip().replace("Color", "").split(",")
-                for cate in CateList:
-                    cate_clean = cate.strip()
-                    if len(cate_clean) > 0:
-                        category += cate_clean + ","
-                if len(category) > 0:
-                    category = category[0:len(category) - 1]
-                ProductDetail['Color'] = category
+                NotSimple = dataFieldBlock.find("div", class_="setDetail dataFieldBlock")
+                if NotSimple:
+                    ProductDetail['Color'] = NotSimple.get_text().strip()
+                else:
+                    category = ""
+                    CateList = dataFieldBlock.get_text().strip().replace("Color", "").split(",")
+                    for cate in CateList:
+                        cate_clean = cate.strip()
+                        if len(cate_clean) > 0:
+                            category += cate_clean + ","
+                    if len(category) > 0:
+                        category = category[0:len(category) - 1]
+                    ProductDetail['Color'] = category
             elif "Size" in BlockName:
                 Size_Group = ""
                 rawSize_Values = dataFieldBlock.get_text().strip().replace("Size", "").strip()
@@ -609,7 +619,7 @@ def getSampleCharge(bsObj):
                     SampleCharge['UP1'] = SamplePrice
                     if "Price Includes:" in dataFieldBlock.get_text().strip():
                         index = dataFieldBlock.get_text().strip().rfind("Price Includes:")
-                        ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].strip()
+                        ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].replace("\n","").strip()
                         # 如果Detail中有N/A,那么设为空
                         if "N/A" in ArtworkChargeDetail:
                             ArtworkChargeDetail = ""
@@ -670,10 +680,14 @@ def getImprintInformation(bsObj):
                 elif "Imprint Size" in text:
                     ImprintBasicInfo["Imprint_Size"] = text.replace("Imprint Size","").strip()
 
-        # 提取Imprint Location板块的信息（如果有）  这里之考虑了简单的情况（只有一行）
+        # 提取Imprint Location板块的信息（如果有）  这里只考虑了简单的情况（只有一行）
         if key == "Imprint Location":
-            text = BlockMap[key].get_text().strip()
-            ImprintBasicInfo["Imprint_Location"] = text.replace("Imprint Location","").strip()
+            NotSimple = dataFieldBlock.find("div", class_="setDetail dataFieldBlock")
+            if NotSimple:
+                ImprintBasicInfo['Imprint_Location'] = NotSimple.get_text().strip()
+            else:
+                text = BlockMap[key].get_text().strip()
+                ImprintBasicInfo["Imprint_Location"] = text.replace("Imprint Location","").strip()
 
     return ImprintBasicInfo
 
@@ -704,7 +718,7 @@ def getImprintMethodCharge(bsObj):
                 
                 ImprintCharge['Upcharge_Criteria_1'] = "IMMD:" + ImprintMethodName
                 ImprintCharge['Upcharge_Type'] = "Imprint Method Charge"
-                if "Set-up Charge" in block.get_text().strip():
+                if "Set-up Charge" in block.get_text().strip() and " Imprint Method Charge" not in block.get_text().strip():
                     ImprintCharge['Upcharge_Type'] = "Set-up Charge"
                 if "Per Order" in block.get_text().strip():
                     ImprintCharge['Upcharge_Level'] = "Per Order"
@@ -724,7 +738,7 @@ def getImprintMethodCharge(bsObj):
                 ImprintCharge['Upcharge_Details'] = ""
                 if "Price Includes:" in block.get_text().strip():
                     index = block.get_text().strip().rfind("Price Includes:")
-                    ImprintChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
+                    ImprintChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip().replace("\n","")
                     if "N/A" not in ImprintChargeDetail:
                         ImprintCharge['Upcharge_Details'] = ImprintChargeDetail
 
@@ -784,7 +798,7 @@ def getArtwork_Proofs(bsObj):
                 ArtworkCharge['UP1'] = ArtworkPrice
                 if "Price Includes:" in block.get_text().strip():
                     index = block.get_text().strip().rfind("Price Includes:")
-                    ArtworkChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip()
+                    ArtworkChargeDetail = block.get_text().strip()[index+len("Price Includes:"):].strip().replace("\n","")
                     # 如果Detail中有N/A,那么设为空
                     if "N/A" in ArtworkChargeDetail:
                         ArtworkChargeDetail = ""
@@ -891,6 +905,7 @@ def getProductionInformation(bsObj):
                             pass
                         ProductionInformation["Shipping_Weight"] = weight
                         ShippingInfo = rawtext.replace(rawweight,"").strip()
+                        ShippingInfo = rawtext[rawtext.index(rawweight)+len(rawweight):].strip()
                         if len(ShippingInfo) > 0:
                             if ShippingInfo[0] == ";":
                                 ShippingInfo = ShippingInfo[1:].strip()
@@ -900,8 +915,15 @@ def getProductionInformation(bsObj):
         elif "h5" in dataFieldBlock.prettify():
             BlockName = dataFieldBlock.find("h5").get_text().strip()
             if "Packaging" in BlockName:
-                packagingInfo = dataFieldBlock.get_text().strip().replace("Packaging", "").strip()
-                ProductionInformation['Packaging'] = packagingInfo
+                # 这个有个麻烦，packaging里面可能会有upcharge，这里就简单处理了
+                if 'Charge Type' not in dataFieldBlock.prettify():
+                    packagingInfo = dataFieldBlock.get_text().strip().replace("Packaging", "").strip()
+                    ProductionInformation['Packaging'] = packagingInfo
+                else:
+                    row1 = dataFieldBlock.find('div',class_="criteriaSetBox dataFieldBlock")
+                    if row1:
+                        packagingInfo = row1.get_text().strip()
+                        ProductionInformation['Packaging'] = packagingInfo
 
     return ProductionInformation
 
@@ -959,7 +981,7 @@ def getRushServiceCharge(bsObj):
                     RushServiceCharge['UP1'] = RushPrice
                     if "Price Includes:" in dataFieldBlock.get_text().strip():
                         index = dataFieldBlock.get_text().strip().rfind("Price Includes:")
-                        ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].strip()
+                        ArtworkChargeDetail = dataFieldBlock.get_text().strip()[index + len("Price Includes:"):].replace("\n","").strip()
                         # 如果Detail中有N/A,那么设为空
                         if "N/A" in ArtworkChargeDetail:
                             ArtworkChargeDetail = ""
@@ -1005,7 +1027,7 @@ def deleteDollar(str):
     return str1
 
 if __name__ == "__main__":
-    url = "http://promomart.espwebsite.com/ProductDetails/?productId=4783582"
+    url = "http://promomart.espwebsite.com/ProductDetails/?productId=7382449"
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     html = requests.get(url, headers=headers).content
     bsObj = BeautifulSoup(html, 'html.parser')
@@ -1018,7 +1040,7 @@ if __name__ == "__main__":
     # print "Pricing",getPricing(bsObj)
     print "ProductDetail", getProductDetail(bsObj)
     # print "SampleCharge", getSampleCharge(bsObj)
-    # print "ImprintInformation", getImprintInformation(bsObj)
+    print "ImprintInformation", getImprintInformation(bsObj)
     # print "ImprintMethodCharge", getImprintMethodCharge(bsObj)
     # print "Artwork_Proofs", getArtwork_Proofs(bsObj)
     # print "ProductionInformation", getProductionInformation(bsObj)

@@ -19,6 +19,7 @@ app = Flask(__name__)
 
 memorydb = {}
 
+
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
@@ -32,6 +33,12 @@ def index():
 def getTable(prod, page):
     keyword = unicode(prod)
     num = int(page)
+
+    # 当内存数据库存了超过10个页面时，就删除之前的页面（非此keyword的页面）
+    if len(memorydb) > 10:
+        for key in memorydb.keys():
+            if key[0] != keyword:
+                memorydb.pop(key)
 
     if request.method == 'POST':
         threadPool4WriteCsv = []
@@ -71,21 +78,26 @@ def getTable(prod, page):
             memorydb[(keyword, 1)] = singleBean
         else:
             if num > 1:
-                loopstartnum = num
-                while (keyword, loopstartnum) not in memorydb.keys():
-                    loopstartnum -= 1
-                startContent = memorydb[(keyword, loopstartnum)]['endContent']
-                url =  "http://promomart.espwebsite.com/ProductResults/?SearchTerms=" + keyword
-                for i in range(num-loopstartnum):
-                    startContent = get80NextPageContent(url, startContent)
+                if (keyword, 1) in memorydb.keys():
+                    loopstartnum = num
+                    while (keyword, loopstartnum) not in memorydb.keys():
+                        loopstartnum -= 1
+                    startContent = memorydb[(keyword, loopstartnum)]['endContent']
+                    url =  "http://promomart.espwebsite.com/ProductResults/?SearchTerms=" + keyword
+                    for i in range(num-loopstartnum):
+                        startContent = get80NextPageContent(url, startContent)
 
-                idList = getProdIDList(startContent)
-                threadPool = getThreadPoolFromProdIDList(idList)
+                    idList = getProdIDList(startContent)
+                    threadPool = getThreadPoolFromProdIDList(idList)
 
-                package = {}
-                package['threadPool'] = threadPool
-                package['endContent'] = startContent
-                memorydb[(keyword, num)] = package
+                    package = {}
+                    package['threadPool'] = threadPool
+                    package['endContent'] = startContent
+                    memorydb[(keyword, num)] = package
+                # 在memorydb被清空后，防止从第5页点击上一页到第四页
+                else:
+                    new_url = '/' + unicode(keyword) + "/1"
+                    return redirect(new_url)
 
     pagebean = memorydb[(keyword, num)]
     return render_template('product.html', prod=prod, page=page,pagebean=pagebean)
@@ -103,7 +115,6 @@ def test():
         return render_template('test1.html',str=str1)
 
     return render_template('product1.html')
-
 
 
 if __name__ == '__main__':

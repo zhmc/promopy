@@ -1,14 +1,16 @@
+
+在csv文件中一定要手动填入的值包括：
+1.第A列XID，例如"7990166-550919663"
+2.第J列Prod_Image，例如"http://commonmedia.asicentral.com/velocity/7990166/product_images/23685812.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685813.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685814.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685815.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685816.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685817.jpg	"
+3.第BH列Q1, BR列P1，CB列 可能为空（qur)，要手动填至少一列
+
+
 还需要fix的：{
 packaging获取有问题，有的网页如http://promomart.espwebsite.com/ProductDetails/?productId=4973690
 里面还有packaging charge的内容
 
 下载速度慢的问题
 }
-
-在csv文件中一定要手动填入的值包括：
-1.第A列XID，例如"7990166-550919663"
-2.第C列Product_Number，例如"HJO004"
-3.第J列Prod_Image，例如"http://commonmedia.asicentral.com/velocity/7990166/product_images/23685812.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685813.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685814.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685815.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685816.jpg,http://commonmedia.asicentral.com/velocity/7990166/product_images/23685817.jpg	"
 
 
 一些典型商品页
