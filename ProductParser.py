@@ -259,8 +259,10 @@ def parser(productObject):
     # productObject = Prodouct(productObject.url)
     requests.adapters.DEFAULT_RETRIES = 10
     session1 = requests.session()
-    session1.keep_alive = False
-    html = session1.get(productObject.url, headers=productObject.headers).content
+    # session1.keep_alive = False
+    get = session1.get(productObject.url, headers=productObject.headers)
+    html = get.content
+    get.close()
     bsObj = BeautifulSoup(html, 'html.parser')
     allData = bsObj.findAll("div", class_="attributesContainer")
     # 判断能不能获取信息

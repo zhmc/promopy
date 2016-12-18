@@ -1,5 +1,5 @@
  # -*- coding:utf-8-*-
-import time
+import browser
 from selenium import webdriver
 import selenium.webdriver.support.ui as ui
 from selenium.webdriver.support.wait import WebDriverWait
@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import sys,os
 type=sys.getfilesystemencoding()
 
-print "程序开始 ".decode('utf-8').encode(type) + time.strftime('%Y-%m-%d %H:%M:%S') 
+print "程序开始 ".decode('utf-8').encode(type) + browser.strftime('%Y-%m-%d %H:%M:%S')
 driver = webdriver.PhantomJS(service_args=['--load-images=no'])
 
 #firefoxBin = os.path.abspath("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe")
@@ -17,7 +17,7 @@ driver = webdriver.PhantomJS(service_args=['--load-images=no'])
 
 #driver2 = webdriver.Firefox(executable_path="C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe")
 
-print "加载浏览器完成 ".decode('utf-8').encode(type) + time.strftime('%Y-%m-%d %H:%M:%S') 
+print "加载浏览器完成 ".decode('utf-8').encode(type) + browser.strftime('%Y-%m-%d %H:%M:%S')
 url="http://promomart.espwebsite.com/ProductResults/?SearchTerms=HAT"
 
 #wait = ui.WebDriverWait(driver,15)
@@ -25,7 +25,7 @@ url="http://promomart.espwebsite.com/ProductResults/?SearchTerms=HAT"
 
 driver.get(url)
 
-print "加载页面1完成 ".decode('utf-8').encode(type) + time.strftime('%Y-%m-%d %H:%M:%S') 
+print "加载页面1完成 ".decode('utf-8').encode(type) + browser.strftime('%Y-%m-%d %H:%M:%S')
 
 """
 locator = (By.XPATH, '//input[@class="ProdID"]')
@@ -41,7 +41,7 @@ for i in range(20):
 	WebDriverWait(driver, 20, 0.5).until(EC.presence_of_element_located(locator2))
 	link = driver.find_element_by_xpath('//a[@class="edcPageNext"]')
 	link.click()
-	print "加载页面".decode('utf-8').encode(type)+str(i+2)+"完成: ".decode('utf-8').encode(type) + time.strftime('%Y-%m-%d %H:%M:%S') 
+	print "加载页面".decode('utf-8').encode(type)+str(i+2)+"完成: ".decode('utf-8').encode(type) + browser.strftime('%Y-%m-%d %H:%M:%S')
 
 
 
@@ -53,5 +53,5 @@ for item in ProdIDs:
 	one = item.get_attribute('value')
 	print "id " ,one
 
-print "程序结束 ".decode('utf-8').encode(type) + time.strftime('%Y-%m-%d %H:%M:%S') 
+print "程序结束 ".decode('utf-8').encode(type) + browser.strftime('%Y-%m-%d %H:%M:%S')
 driver.close()

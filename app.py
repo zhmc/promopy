@@ -3,17 +3,17 @@
 from flask import Flask, render_template
 from flask import request, redirect, url_for
 from flask import send_from_directory
-
+import sys,os
 from downloadUtils import getThreadPoolAndStartContentByKeyword80, getFirstThreadPoolAndEndContentByKeyword, \
     getThreadPoolFromProdIDList, writeCsvByThreadPool
 from nextPage import get80PerPage, getProdIDList, get80NextPageContent
-import sys,os
+from browser import get_webservertime, openBrowser
 
-'''
+
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-'''
+
 
 app = Flask(__name__)
 
@@ -59,10 +59,12 @@ def getTable(prod, page):
             threadPool4WriteCsv.append(newPackage['threadPool'][int(key[0])-1])
 
         path = sys.path[0]
-        filename = str(path) + '/static/temp.csv'
+        filename_withoudir = keyword +'_'+str(num) +'.csv'
+        filename_withoudir_str = filename_withoudir.encode('utf-8')
+        filename = str(path) + '/static/' + filename_withoudir_str
         writeCsvByThreadPool(threadPool4WriteCsv, filename)
 
-        return send_from_directory('static', 'temp.csv', as_attachment=True)
+        return send_from_directory('static', filename_withoudir_str, as_attachment=True)
         #return "hello kitty"
 
     pagebean = None
@@ -117,5 +119,11 @@ def test():
     return render_template('product1.html')
 
 
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+
+    timeflag = get_webservertime()
+    if timeflag:
+        openBrowser()
+        app.run(debug=True)

@@ -153,7 +153,7 @@ def getProdIDList(content):
 
 
 if __name__ == "__main__":
-    print "start"+time.strftime('%Y-%m-%d %H:%M:%S')
+    print "start" + time.strftime('%Y-%m-%d %H:%M:%S')
     url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=HAT"
     content = getFirstPageContent(url)
     print "page: 1"
