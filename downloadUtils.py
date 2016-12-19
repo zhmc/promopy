@@ -1,7 +1,7 @@
 # -*- coding:utf-8-*-
 from bs4 import BeautifulSoup
 import traceback
-import browser
+import time
 import requests
 from requests import ConnectionError
 from threading import Thread
@@ -34,6 +34,7 @@ class MyThread(Thread):
             self.rowList = self.productInfo.to_csv_row
         except ConnectionError, e:
             print self.prodID + "连接错误"
+            traceback.print_exc()
         # except IndexError:
         # #     print self.prodID + "数组越界"
         # except TypeError,e:
@@ -123,13 +124,13 @@ def writeCsvByThreadPool(threadPool,filepath):
     write2Csv(filepath, rows4write)
 
 if __name__ == "__main__":
-    print "start now " + browser.strftime('%Y-%m-%d %H:%M:%S')
+    print "start now " + time.strftime('%Y-%m-%d %H:%M:%S')
     headers = choice(headers_list)
-    url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=tshirt"
+    url = "http://promomart.espwebsite.com/ProductResults/?SearchTerms=sex"
     html = requests.get(url, headers=headers).content
     first80content = get80PerPage(url,html)
 
-    print "80第一页加载完成 " + browser.strftime('%Y-%m-%d %H:%M:%S')
+    print "80第一页加载完成 " + time.strftime('%Y-%m-%d %H:%M:%S')
     # bsObj = BeautifulSoup(first80content, 'html.parser')
     # ids = bsObj.findAll('div', class_="col4 prodPannel")
     idList = getProdIDList(first80content)
@@ -139,7 +140,7 @@ if __name__ == "__main__":
 
 
     threadPool = getThreadPoolFromProdIDList(idList)
-    print "写文件花多少时间 " + browser.strftime('%Y-%m-%d %H:%M:%S')
+    print "写文件花多少时间 " + time.strftime('%Y-%m-%d %H:%M:%S')
     rows4write = getCsvRowsFromThreadPool(threadPool)
     write2Csv('results.csv',rows4write)
-    print "done" + browser.strftime('%Y-%m-%d %H:%M:%S')
+    print "done" + time.strftime('%Y-%m-%d %H:%M:%S')

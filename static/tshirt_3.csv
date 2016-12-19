@@ -1,0 +1,717 @@
+XID,Product_Name,Product_Number,Product_SKU,Product_Inventory_Link,Product_Inventory_Status,Product_Inventory_Quantity,Description,Summary,Prod_Image,Catalog_Information,Category,Keywords,Product_Color,Material,Size_Group,Size_Values,Shape,Theme,Tradename,Origin,Option_Type,Option_Name,Option_Values,Can_order_only_one,Req_for_order,Option_Additional_Info,Imprint_Method,Linename,Artwork,Imprint_Color,Sold_Unimprinted,Personalization,Imprint_Size,Imprint_Location,Additional_Color,Additional_Location,Product_Sample,Spec_Sample,Production_Time,Rush_Service,Rush_Time,Same_Day_Service,Packaging,Shipping_Items,Shipping_Dimensions,Shipping_Weight,Shipper_Bills_By,Shipping_Info,Ship_Plain_Box,Comp_Cert,Product_Data_Sheet,Safety_Warnings,Additional_Info,Distibutor_Only,Disclaimer,Base_Price_Name,Base_Price_Criteria_1,Base_Price_Criteria_2,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,Product_Number_Price,Price_Includes,QUR_Flag,Currency,Less_Than_Min,Price_Type,Upcharge_Name,Upcharge_Criteria_1,Upcharge_Criteria_2,Upcharge_Type,Upcharge_Level,Service_Charge,UQ1,UQ2,UQ3,UQ4,UQ5,UQ6,UQ7,UQ8,UQ9,UQ10,UP1,UP2,UP3,UP4,UP5,UP6,UP7,UP8,UP9,UP10,UD1,UD2,UD3,UD4,UD5,UD6,UD7,UD8,UD9,UD10,Upcharge_Details,U_QUR_Flag,Confirmed_Thru_Date,Product_Number_Criteria_1,Product_Number_Criteria_2,Product_Number_Other,SKU_Criteria_1,SKU_Criteria_2,SKU_Criteria_3,SKU_Criteria_4,SKU,Inventory_Link,Inventory_Status,Inventory_Quantity,Distributor_View_Only,Operation,Carrier_Information,Item_Weight,Warranty,Battery,Industry_Segment,SEO_FLG,UPC_Code,Additional_Imprint_Information,Item_Assembled,Delivery_Option,Do_Not_Use,Product_Status,Workflow_Status,Last_Updated_Date
+6168595,"Unisex Tri-Blend Long Sleeve T-Shirt","",,,,,"Unisex Tri-Blend Long Sleeve T-Shirt. Constructed using 50% polyester, 25% ring-spun combed cotton, and 25% rayon. 3.7 oz / yd squared (125 g/m squared). 30-Singles. Our signature blend boasts the fit and feel of your favorite vintage t-shirt.",,,,"T-Shirts-Unisex",,"Athletic Gray","Blend: Polyester/Cotton/Rayon (50/25/25)","Standard & Numbered","XS,S,2XL","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"XS, S, M, L, XL",,,"1","12","72",,,,,,,,"20.00","16.20","15.50",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551041561,"Next Level Ladies' The Deep V Jersey T-Shirt","",,,,,"Next Level Ladies' The Deep V Jersey T-Shirt. 3.7 oz. 100% combed cotton jersey. 36 singles for extreme softness. Set in collar 1x1 baby rib. Pre-shrunk. Satin label. Free shipping and lowest price guaranteed.",,,,"T-Shirts-Womens",,"Dark Gray,Kelly Green,White,Black,Midnight Navy,Hot Pink,Red,Royal,Banana Cream,Heather Gray,Turquoise,Purple Rush,Warm Gray,Dark Chocolate,Oatmeal","Cotton","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","","","","4"" Diameter or Less","",,,"Y",,"10","Y","2:,3:	",,"","72:per Box","","31.68:lbs",,"","N","",,,,,,"Next Level Ladies' The Deep V Jersey T-Shirt",,,"12","36","72","144","288","576","1008","2016",,,"12.26","11.30","10.53","9.57","8.62","7.66","7.58","7.39",,,"R","R","R","R","R","R","R","R",,,,"one color/location Screen Print or one location Embroidery, up to 7000 stitches & 8 thread colors.",,"USD",,"List","Screen Print","IMMD:Screen Print",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"49.00",,,,,,,,,,"Z",,,,,,,,,,"Per color for approximate match.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551041561,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","ARTW:Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"First color.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+551041561,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"2 business days,3 business days","RUSH:2,3",,"Rush Service Charge","Other","Required","",,,,,,,,,,"QUR",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550205465,"Unisex Poly Mesh Athletic T-Shirt","",,,,,"Unisex Poly Mesh Athletic T-Shirt. 100% Polyester, 3.3 oz / yd squared (112 g/m squared).",,,,"T-Shirts-Unisex",,"Black,White-White,Black-Silver,White-Red,Regatta-White","Polyester Mesh","Standard & Numbered","S,M,L,XL","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"",,,"1","12","96",,,,,,,,"15.40","11.60","10.90",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551180966,"Fine Jersey Classic Women's Long Sleeve T-Shirt","",,,,,"Fine Jersey Classic Women's Long Sleeve T-Shirt. Designed, cut, and sewn for a woman's body for a figure-flattering fit.",,,,"T-Shirts-Womens",,"Black,White,Heather Gray,Asphalt,Red,Pink,Royal Blue,Navy Blue","Cotton Jersey","Standard & Numbered","S,M,L,XL,2XL
+
+
+
+
+
+:S
+
+
+
+
+Color:Black,HeatherGray,Asphalt,Red,Pink,RoyalBlue,NavyBlue
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:Black,HeatherGray,Asphalt,Red,Pink,RoyalBlue,NavyBlue
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:Black,HeatherGray,Asphalt,Red,Pink,RoyalBlue,NavyBlue
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:Black,HeatherGray,Asphalt,Red,Pink,RoyalBlue,NavyBlue
+
+
+
+
+
+
+
+:S
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:2XL
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:2XL
+
+
+
+
+Color:Black,HeatherGray,Asphalt,Red,Pink,RoyalBlue,NavyBlue","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Black, Heather Gray, Asphalt, Red, Pink, Royal Blue, Navy Blue, S, M, L, XL",,,"1","12","96",,,,,,,,"15.50","11.70","11.00",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551053338,"Gildan(R) Heavy Cotton(TM) Ladies T-Shirt - 5.3 oz. - White","",,,,,"Classic t-shirt with a contoured silhouette for Ladies..Made of 100% cotton* 5.3 oz. Preshrunk Jersey knit fabric. (*Safety Green & Dark Heather shirts are 50% Cotton / 50% Polyester Jersey)..Features seamless double needle 1/2"" collar..Tearaway label..Taped neck and shoulders..Double-needle sleeve and bottom hems..Washing Instructions: Machine wash warm, inside out, with like colors, remove immediately. Use non-chlorine bleach only when needed. Tumble dry medium, cool iron if needed (do not iron if decorated). Do not dry clean. Recommended hand washing all imprinted products...NOTE: Pricing is for sizes S-XL, add'l fee applies for size 2XL (per piece).",,,,"T-Shirts-Womens",,"White","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Embroidered, Screen Print",,"","Athletic Gold, Baby Pink, Bark Brown, Black, Bronze, Brown, Bubble Gum Pink, Burgundy, Burgundy Wine, Burly Wood Beige, Butterscotch Gold, Candy Apple Red, Carmine Red, Carolina Blue, Celadon Green, Christmas Green, Chrome, Clover Green, Coffee with Cream Brown, Cool Gray, Country Kitchen Blue, Cranberry Red/Purple, Dark Chocolate Brown, Dark Mauve Brown, Dark Sage Green, Dark Taupe Brown, Dark Teal, Deep Lilac Purple, Dill Pickle Green, Dusty Blue/Gray, Emerald Green, Emerald Ink Green, Granny Smith Apple Green, Hanukkah BLue, Hunter Green, Ivory Beige, Lemon Drop Yellow, Lime Green, Magenta, Margarita Lime, Metallic Gold, Metallic Silver, Navy blue, Orchid Purple/Pink, Peacoat Blue, Pearl Purple, Plum Purple, Process Blue, Pumkpin Orange, Purple, Pussy Willow Brown/Gray, Reflex Blue, Rose Gold Brown, Rough Caribbean Sea Blue, Royal Blue, Saffron Yellow, Shark Gray, Sky Blue, Standard Orange, Standard Red, Standard Yellow, Storm Sky Blue, Sunflower Yellow, Teal, Tusk Beige, Twister Gray, Vegas Gold, Velvet Violet Purple, Wheat Gold, White","","","3""w x 3""h, 9""W x 9""H","",,,"Y",,"","","",,"Bulk","","","",,"Carriers that service factory daily are UPS and FEDEX Factory does not ship via DHL or TNT. USPS services are available for standard production orders. Factory is unable to ship on USPS third party account #'s. Customers will be billed the USPS rate plus applicable handling charges per box. Factory is unable to ship rush orders via USPS.","N","",,,,,,"Small through X-Large",,,"12","48","144","288","576",,,,,,"5.93","4.45","4.26","4.09","4.04",,,,,,"R","R","R","R","R",,,,,,,"N/A",,"USD",,"List","Screen Print, Embroidered","IMMD:Screen Print, Embroidered",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"30.00",,,,,,,,,,"Z",,,,,,,,,,"Per piece, per location, per 1000 stitches                                                                            Imprint Color : Burly Wood Beige, Ivory Beige, Tusk Beige, Country Kitchen Blue, Hanukkah BLue, Peacoat Blue, Rough Caribbean Sea Blue, Royal Blue, Sky Blue, Storm Sky Blue, Dusty Blue/Gray, Bark Brown, Bronze, Coffee with Cream Brown, Dark Chocolate Brown, Dark Mauve Brown, Dark Taupe Brown, Rose Gold Brown, Pussy Willow Brown/Gray, Burgundy Wine, Butterscotch Gold, Vegas Gold, Wheat Gold, Chrome, Shark Gray, Twister Gray, Emerald Ink Green, Celadon Green, Christmas Green, Clover Green, Dark Sage Green, Dill Pickle Green, Granny Smith Apple Green, Margarita Lime, Pumkpin Orange, Baby Pink, Deep Lilac Purple, Pearl Purple, Plum Purple, Velvet Violet Purple, Orchid Purple/Pink, Candy Apple Red, Carmine Red, Cranberry Red/Purple, Dark Teal, Lemon Drop Yellow, Saffron Yellow, Sunflower Yellow",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551039606,"Gildan SoftStyle Adult T-Shirt","",,,,,"Gildan SoftStyle Adult T-Shirt. 4.5 oz. 100% preshrunk cotton. Deluxe 30 singles softstyle yarns. Seamless double-needle 7/8"" rib knit collar. Taped neck and shoulders. Double-needle sleeves and hem. Slim euro-style collar, shoulders ans sleeves.",,,,"T-Shirts-Unisex",,"Honey,Antique Sapphire,Black,Cardinal Red,Charcoal,Dark Chocolate,Indigo Blue,Kiwi,Light Blue,Military Green,Navy,Orange,Cherry Red,Sand,Sport Gray,White","Cotton","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","","","","4"" Diameter or Less","",,,"Y",,"10","Y","2:,3:	",,"","50:per Case","","22:lbs",,"","N","",,,,,,"White",,,"12","36","72","144","288","576","1008","2016",,,"5.97","5.46","4.96","4.55","4.05","3.54","3.50","3.40",,,"R","R","R","R","R","R","R","R",,,,"one color/location Screen Print or one location Embroidery, up to 7000 stitches & 8 thread colors.",,"USD",,"List","Screen Print","IMMD:Screen Print",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per color/location.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551039606,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","ARTW:Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"For each additional color.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+551039606,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"2 business days,3 business days","RUSH:2,3",,"Rush Service Charge","Other","Required","",,,,,,,,,,"QUR",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5074824,"Kids Baby Rib Cap Sleeve T-Shirt","",,,,,"Kids Baby Rib Cap Sleeve T-Shirt. Colorful basics for newborns to tweens. 100% Cotton.",,,,"T-Shirts-Children",,"Black,Light Pink,Pink,Lavender","Cotton","","","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"",,,"1","12","144",,,,,,,,"12.40","8.60","7.90",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550566478,"Ultra Wash Women's T-Shirt","",,,,,"Ultra Wash Women's T-Shirt. 100% Ring-Spun Combed Cotton. 3.8 oz / square yard (129 g/m squared). 40-Singles. Our sheer jersey is soft washed for a relaxed fit. Blank.",,,,"T-Shirts-Womens",,"Black,White,Ink,Heather Gray,Coal","Cotton Jersey","Standard & Numbered","XS,S,M,L,XL
+
+
+
+
+
+:XS
+
+
+
+
+Color:Black,Ink,HeatherGray,Coal
+
+
+
+
+
+
+
+:S
+
+
+
+
+Color:Black,Ink,HeatherGray,Coal
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:Black,Ink,HeatherGray,Coal
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:Black,Ink,HeatherGray,Coal
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:Black,Ink,HeatherGray,Coal
+
+
+
+
+
+
+
+:XS
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:S
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:White","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Grenada, Morocco, Positano, Riviera, Black, Ink, Heather Gray, Coal, XS, S, M, L, XL",,,"1","12","72",,,,,,,,"16.90","13.10","12.40",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550989753,"Gildan (R) SoftStyle (TM) 4.5 oz. Adult Long Sleeve T-Shirt","",,,,,"2 or 3 Day Rush Gildan (R) SoftStyle (TM) 4.5 oz. Adult Long Sleeve T-Shirt. Made of 100% Cotton pre-shrunk jersey knit. Features deluxe 30's SoftStyle yarns, 7/8"" seamless double-needle collar, broader satin label, taped neck and shoulders, euro style fit in neck/shoulders/sleeves, hemmed sleeve cuffs, double-needle sleeves and bottom hem, and is quarter-turned to eliminate center crease. Please note: Sport Gray ringspun is 90% Cotton/10% Polyester.",,,,"T-Shirts-Unisex",,"Azalea,Black,Cherry Red,Ciel Blue,Dark Chocolate,Kiwi,Navy,Scrub Green,Sport Gray,White","Cotton","Standard & Numbered","S,M,L,XL","",,,"CHINA",,,,,,,"Screen Print",,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","","","","12"" W x 12"" H, 4"" W x 4"" H","",,,"Y",,"10","Y","2:,3:	",,"","72:per Box","","",,"","N","",,,,,,"2 business days",,,"12","36","72","144","288","576","1008","2016",,,"18.14","17.23","16.58","14.89","14.24","12.94","12.73","12.60",,,"R","R","R","R","R","R","R","R",,,,"one color imprint only.",,"USD",,"List","Screen Print","IMMD:Screen Print",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per color/location.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550989753,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","ARTW:Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"First color.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550989753,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"2 business days,3 business days","RUSH:2,3",,"Rush Service Charge","Other","Required","",,,,,,,,,,"QUR",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6430099,"Kids Tri-Blend V-Neck T-Shirt","",,,,,"Kids Tri-Blend V-Neck T-Shirt. 50% Polyester / 25% cotton / 25% rayon",,,,"T-Shirts-Children",,"Tri-Black,Athletic Blue,Tri-Coffee,Athletic Gray","Blend: Polyester/Cotton/Rayon (50/25/25)","","","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"",,,"1","12","144",,,,,,,,"14.00","10.20","9.50",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551039843,"Hanes (R) Heavyweight Cotton Blend T-Shirt","",,,,,"Hanes (R) Heavyweight cotton blend preshrunk t-shirt. 5.5 oz. 50/50 cotton/polyester. Taped neck and shoulders. Double-needle coverseamed crewneck. Double-needle sleeves and hem. Ash is 99/1 cotton/polyester. Light steel is 90/10 cotton/polyester. Free Shipping and lowest prices guaranteed.",,,,"T-Shirts-Unisex",,"Ash,Teal,Maroon,Kelly Green,Gold,Denim Blue,Deep Royal,Deep Forest,Purple,Yellow,Carolina Blue,Black,Deep Red,Dark Chocolate,Lime,Light Blue,Navy,Orange,Light Steel,White","Blend: Cotton/Polyester (50/50)","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","","","","4"" Diameter or Less","",,,"Y",,"10","Y","2:,3:	",,"","36:per Box","","15.84:lbs",,"","N","",,,,,,"White",,,"12","36","72","144","288","576","1008","2016",,,"6.26","5.73","5.20","4.77","4.24","3.71","3.67","3.56",,,"R","R","R","R","R","R","R","R",,,,"one color/location Screen Print or one location Embroidery, up to 7000 stitches & 8 thread colors.",,"USD",,"List","Screen Print","IMMD:Screen Print",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per color/location.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551039843,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","ARTW:Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"For each additional color.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+551039843,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"2 business days,3 business days","RUSH:2,3",,"Rush Service Charge","Other","Required","",,,,,,,,,,"QUR",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5074909,"Kids Poly-Cotton Short Sleeve T-Shirt","",,,,,"Kids Poly-Cotton Short Sleeve T-Shirt. 50% Polyester / 50% Cotton.",,,,"T-Shirts-Children",,"Black,White,Neon Yellow,Neon Heather Orange,Neon Heather Pink,Neon Heather Blue,Neon Green,Red,Pink,Lapis,Navy,Brown","Blend: Polyester/Cotton (50/50)","","","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Colors",,,"1","12","144",,,,,,,,"12.30","8.50","7.80",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551039686,"Hanes (R) Tagless (R) T-Shirt","",,,,,"Hanes (R) Tagless (R) t-shirt for ultimate neck comfort. 6.1 oz. 100% open end cotton. ComfortSoft (R) fabric for added comfort. Double-needle cover seamed neck. Shoulder-to-shoulder tape. Preshrunk to minimize shrinkage.",,,,"PERFORMANCE APPAREL,T-Shirts-Unisex",,"Yellow,Wow Pink,Texas Orange,Teal,Stonewashed Green,Stonewashed Blue,Smoke Gray,Shamrock Green,Sand,Purple,Pink,Pale Pink,Oxford Gray,Orange,Navy,Natural,Maroon,Lime,Light Steel,Light Blue,Lavender,Kelly Green,Gold Nugget,Gold,Fatigue Green,Denim Blue,Deep Royal,Deep Red,Deep Navy,Deep Forest,Dark Chocolate,Daffodil Yellow,Charcoal Heather,Carolina Blue,Cardinal,Black,Athletic Orange,Ash,Pebble,White","Cotton","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","","","","4"" Diameter or Less","",,,"Y",,"10","Y","2:,3:	",,"","36:per Box","","15.84:lbs",,"","N","",,,,,,"White",,,"12","36","72","144","288","576","1008","2016",,,"6.59","6.03","5.47","5.02","4.46","3.90","3.86","3.75",,,"R","R","R","R","R","R","R","R",,,,"one color/location Screen Print or one location Embroidery, up to 7000 stitches & 8 thread colors.",,"USD",,"List","Screen Print","IMMD:Screen Print",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per color/location.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551039686,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","ARTW:Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"First color.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+551039686,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"2 business days,3 business days","RUSH:2,3",,"Rush Service Charge","Other","Required","",,,,,,,,,,"QUR",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550046291,"Fine Jersey Contrast Inset Unisex Short Sleeve T-Shirt","",,,,,"Fine Jersey Contrast Inset Unisex Short Sleeve T-Shirt. 100% Ring-Spun Combed Cotton. 4.3 oz / yd squared (146 g/m squared). 30-Singles. Tight-knit, opaque and exceptionally smooth for endless decorating possibilities. Blank.",,,,"T-Shirts-Unisex",,"White-Black,White-Red,White-Navy","Cotton Jersey","Standard & Numbered","S,M,L,XL","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Fine Jersey Contrast Inset Unisex Short Sleeve T-Shirt",,,"1","12","96",,,,,,,,"16.40","12.60","11.90",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+5334933,"Kids Fine Jersey Long Sleeve T-Shirt","",,,,,"Kids Fine Jersey Long Sleeve T-Shirt. Colorful basics for newborns to tweens. Made with 100% cotton jersey.",,,,"T-Shirts-Children",,"Black,White,Heather Gray","Cotton Jersey","","","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Colors",,,"1","12","192",,,,,,,,"15.10","11.30","10.60",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+5074671,"Youth Baby Thermal Long Sleeve T-Shirt","",,,,,"Youth Baby Thermal Long Sleeve T-Shirt. Perfect for layering. Colorful basics for newborns to tweens.",,,,"T-Shirts-Children",,"Black,White,Light Pink,Light Blue,Heather Gray","","Standard & Numbered","8,10,12
+
+
+
+
+
+:8
+
+
+
+
+Color:Black,LightPink,LightBlue,HeatherGray
+
+
+
+
+
+
+
+:8
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:10
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:12
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:10
+
+
+
+
+Color:Black,LightPink,LightBlue,HeatherGray
+
+
+
+
+
+
+
+:12
+
+
+
+
+Color:Black,LightPink,LightBlue,HeatherGray","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Colors, 8",,,"1","12","144",,,,,,,,"17.70","13.90","13.20",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+5074721,"Unisex Tri-Blend Short Sleeve Track T-Shirt","",,,,,"Unisex Tri-Blend Short Sleeve Track T-Shirt. Constructed using 50% polyester, 25% ring-spun combed cotton, and 25% rayon. 3.7 oz / yd squared (125 g/m squared). 30-Singles. Our signature blend boasts the fit and feel of your favorite vintage t-shirt.",,,,"T-Shirts-Unisex",,"Tri-Black,Tri-Oatmeal,Tri-Cranberry,Tri-Orchid,Athletic Blue,Tri-Indigo,Tri-Evergreen,Tri-Coffee,Athletic Gray","Blend: Polyester/Cotton/Rayon (50/25/25)","Standard & Numbered","XS,S,M,L,XL,2XL","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"XS, S, M, L",,,"1","12","96",,,,,,,,"16.40","12.60","11.90",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+5074803,"Organic Youth Fine Jersey Short Sleeve T-Shirt","",,,,,"Organic Youth Fine Jersey Short Sleeve T-Shirt. Made with 100% USDA certified organic cotton. Colorful basics for newborns to tweens.",,,,"ENVIRONMENTALLY FRIENDLY PRODUCTS,T-Shirts-Children",,"Black,White,Natural,Ultraviolet,Galaxy,Cinder","Organic Cotton","","","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Colors",,,"1","12","144",,,,,,,,"15.80","12.00","11.30",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+6624975,"Short Sleeve Hammer T-Shirt","",,,,,"Short Sleeve Hammer T-Shirt. 100% Ring-Spun Cotton. 5.8 oz/yd squared (197 g/m squared). 18-Singles. Our 5.8 oz heavyweight t-shirts are made from 18 singles with a classic fit.",,,,"T-Shirts-Unisex",,"White, Black, Navy, Heather Gray","Cotton","Standard & Numbered","XS,S,M,L,XL,2XL","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Colors, XS, S, M, L, XL",,,"1","12","72",,,,,,,,"13.80","10.00","9.30",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551098738,"Design Dri-Power (R) Custom Printed Poly Pocket T-Shirt","",,,,,"Design Dri-Power (R) Custom Printed Poly Pocket T-Shirt.  5.6-ounce, 50/50 cotton/poly. Advanced moisture management performance. Absolute minimum: 12 pieces.",,,,"PERFORMANCE APPAREL,T-Shirts-Unisex",,"Athletic Heather,Oxford,Safety Green,Black,True Red,Ash,Burnt Orange,Light Blue,Maroon,Safety Orange,White","Blend: Cotton/Polyester (50/50)","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First paper proof in black and white are available free of charge.), Any changes made after the first paper proof will be upcharged","","","","4"" Diameter or Less","",,,"Y",,"10","","",,"","","","",,"","N","",,,,,,"White",,,"12","36","72","144","288","576","1008","2016",,,"14.15","12.95","11.75","10.79","9.59","8.39","8.29","8.05",,,"R","R","R","R","R","R","R","R",,,,"1 Color, 1 Location Screen Print or 1 Location Embroidery, Up to 7,000 Stitches and 8 Thread Colors",,"USD",,"List","Screen Print, Embroidery","IMMD:Screen Print, Embroidery",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"20.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551098738,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First paper proof in black and white are available free of charge.), Any changes made after the first paper proof will be upcharged","ARTW:Paper Proof (First paper proof in black and white are available free of charge.), Any changes made after the first paper proof will be upcharged",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"per proof",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5074762,"Youth Fine Jersey Short Sleeve T-Shirt","",,,,,"Youth Fine Jersey Short Sleeve T-Shirt. Colorful basics for newborns to tweens. Made with 100% cotton jersey.",,,,"T-Shirts-Children",,"Black,White,Lemon,Sunshine,Orange,Red,Cranberry,Light Pink,Pink,Fuchsia,Purple,Light Blue,Baby Blue,Lapis,Navy,Grass,Kelly Green,Olive,ASH WHITE STRIPE,Heather Gray,Slate","Cotton Jersey","","","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Colors",,,"1","12","144",,,,,,,,"12.80","9.00","8.30",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551098797,"Sport Tek (R) PosiCharge (R) Long Sleeve T-Shirt","",,,,,"Sport Tek (R) Competitor (TM) Imprinted Long Sleeve T-Shirt. 3.8-ounce, 100% polyester with PosiCharge technology.Removable tag for comfort and relabeling. Set-in sleeves. Absolute minimum: 12 pieces.",,,,"PERFORMANCE APPAREL,T-Shirts-Unisex",,"Iron Gray,White,Black,Carolina Blue,Deep Orange,FOREST GREEN,Gold,Lime Shock,Maroon,Neon Orange,Neon Pink,Purple,Silver,True Navy,True Red,True Royal,Atomic Blue","Polyester","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First paper proof in black and white are available free of charge.), Any changes made after the first paper proof will be upcharged","","","","4"" Diameter or Less","",,,"Y",,"10","","",,"","","","",,"","N","",,,,,,"",,,"12","36","72","144","288","576","1008","2016",,,"19.93","18.37","17.12","15.56","14.00","12.44","12.32","12.01",,,"R","R","R","R","R","R","R","R",,,,"1 Color, 1 Location Screen Print or 1 Location Embroidery, Up to 7,000 Stitches and 8 Thread Colors",,"USD",,"List","Screen Print, Embroidery","IMMD:Screen Print, Embroidery",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"49.00",,,,,,,,,,"Z",,,,,,,,,,"Per location.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551098797,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First paper proof in black and white are available free of charge.), Any changes made after the first paper proof will be upcharged","ARTW:Paper Proof (First paper proof in black and white are available free of charge.), Any changes made after the first paper proof will be upcharged",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"per proof",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550047596,"Tri-Blend Women's Scrimmage T-Shirt","",,,,,"Tri-Blend Women's Scrimmage T-Shirt. Constructed using 50% polyester, 25% ring-spun combed cotton, and 25% rayon. 3.7 oz / yd squared (125 g/m squared). 30-Singles. Our signature blend boasts the fit and feel of your favorite vintage t-shirt. A loose-fitting crop top with an open neckline.",,,,"T-Shirts-Womens",,"Tri-Black,Athletic Blue,Athletic Gray","Blend: Polyester/Cotton/Rayon (50/25/25)","","","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Tri-Blend Women's Scrimmage T-Shirt",,,"1","12","168",,,,,,,,"14.70","10.90","10.20",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551041539,"Next Level Ladies' Scoop Neck T-Shirt","",,,,,"Next Level Ladies' Scoop Neck T-Shirt. 3.7 oz. 100% combed cotton jersey. 36 singles for extreme softness. Set in collar with front cover stitch 1x1 baby rib. Pre-shrunk. Satin label. Free shipping and lowest price guaranteed.",,,,"T-Shirts-Womens",,"Dark Gray,Kelly Green,White,Tahiti Blue,Black,Midnight Navy,Hot Pink,Red,Royal,Banana Cream,Heather Gray,Turquoise,Peaches N Cream,Purple Rush","Cotton","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","","","","4"" Diameter or Less","",,,"Y",,"10","Y","2:,3:	",,"","72:per Box","","31.68:lbs",,"","N","",,,,,,"Next Level Ladies' Scoop Neck T-Shirt",,,"12","36","72","144","288","576","1008","2016",,,"12.26","11.30","10.53","9.57","8.62","7.66","7.58","7.39",,,"R","R","R","R","R","R","R","R",,,,"one color/location Screen Print or one location Embroidery, up to 7000 stitches & 8 thread colors.",,"USD",,"List","Screen Print","IMMD:Screen Print",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"20.00",,,,,,,,,,"Z",,,,,,,,,,"Per color for approximate match.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551041539,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","ARTW:Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"For each additional color.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+551041539,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"2 business days,3 business days","RUSH:2,3",,"Rush Service Charge","Other","Required","",,,,,,,,,,"QUR",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+551040322,"Gildan Ultra Cotton Adult Pocket T-Shirt","",,,,,"Gildan Ultra Cotton Adult Pocket T-Shirt. 6.1 oz. 100% preshrunk cotton. Double-needle neck, sleeves and hem. Taped neck and shoulders. Double-needle, left chest 5-point pocket. Ash is 99/1 cotton/polyester. Sport Gray is 90/10 cotton/polyester. Safety Green & Safety Orange are 50/50 cotton/polyester. Free Shipping and Lowest Price Guaranteed.",,,,"T-Shirts-Unisex",,"Sport Gray,Sand,Safety Orange,Safety Green,Safari Green,Royal Blue,Red,Orange,Navy Blue,Maroon,Light Blue,Forest Green,Black,Ash,White","Cotton","","","",,,"CHINA",,,,,,,"Embroidery, Screen Print",,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","","","","4"" Diameter or Less","",,,"Y",,"10","Y","2:,3:	",,"","50:per Case","","22:lbs",,"","N","",,,,,,"White",,,"12","36","72","144","288","576","1008","2016",,,"10.59","9.69","8.80","8.08","7.18","6.28","6.21","6.03",,,"R","R","R","R","R","R","R","R",,,,"one color/location Screen Print or one location Embroidery, up to 7000 stitches & 8 thread colors.",,"USD",,"List","Screen Print","IMMD:Screen Print",,"Imprint Method Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per color/location.",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551040322,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof","ARTW:Paper Proof (First proof, free of charge. Please allow several days to production timeline.), Typesetting service available., Pre-production Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"10.00",,,,,,,,,,"Z",,,,,,,,,,"First color.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+551040322,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"2 business days,3 business days","RUSH:2,3",,"Rush Service Charge","Other","Required","",,,,,,,,,,"QUR",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+5074783,"Unisex Baby Rib Fitted Short Sleeve T-Shirt","",,,,,"Unisex Baby Rib Fitted Short Sleeve T-Shirt. 100% Ring-spun combed cotton. 5.8 oz / yd squared (197 g/m squared). 30-Singles. A fine 1x1 rib knit with excellent recovery and durability.",,,,"T-Shirts-Unisex",,"Black, Heather Gray, Asphalt","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"",,"","","","","","",,,"Y",,"","","",,"","","","",,"","N","",,,,,,"Colors, S, M, L, XL",,,"1","12","72",,,,,,,,"14.70","10.90","10.20",,,,,,,,"R","R","R",,,,,,,,,"N/A",,"USD",,"List",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673166,"Delta Delta-Dri 30/1's Performance Adult Short Sleeve Tee","",,,,,"Your brand can promote an active lifestyle by putting its logo on this Delta (R) Delta-Dri (TM) 30/1's Performance Adult Short Sleeve Tee. Made from a 65% polyester/35% combed and ring-spun cotton blend, this 4.3 oz./146 GSM shirt features moisture-wicking technology and is anti-microbial treated for odor control. It has a 3/4"" seamed rib knit, taped neck and shoulder seams, two-needle sleeve bottom hem, short set-in sleeves and a tagless private label option. It is available in several colors and in sizes from S to 3XL, and it can be customized with an imprint of your liking.",,,,"ANTIMICROBIAL ENHANCED PRODUCTS,PERFORMANCE APPAREL,T-Shirts-Unisex",,"","Blend: Polyester/Cotton (65/35)","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550751056,"Delta (R) Ringspun Junior 30/1's Junior V-Neck Tee","",,,,,"Create the right look for kids with the Delta (R) Ringspun Junior 30/1's V-Nect Tee. It's made using 4.3 oz. / 146 GSM of 100% pre-shrunk ringspun cotton. It features short set-in sleeves, a fitted design for a curved silhouette look, seamed 5/8"" rib knit collar for shape retention, two-needle hemmed sleeves, a tagless private label option and a bottom that won't unravel. Create a custom look with a silkscreened imprint and put this wearable to work for you today!",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","11 1/2"" W x 11 1/2"" H, 3"" W x 3"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673170,"Delta Deltra-Dri 30/1's Performance Adult Long Sleeve Tee","",,,,,"The Delta (R) Delta-Dri (TM) 30/1's Performance Adult Long Sleeve Tee will help your brand promote an active lifestyle. Made from a 65% polyester/35% combed and ring-spun cotton blend, this 4.3 oz./146 GSM shirt features moisture-wicking technology and is anti-microbial treated for odor control. It has a 3/4"" seamed rib knit, taped neck and shoulder seams, two-needle sleeve bottom hem, long set-in sleeves and a tagless private label option. It is available in several colors and in sizes from S to 3XL, and it can be customized with an imprint of your choosing.",,,,"ANTIMICROBIAL ENHANCED PRODUCTS,PERFORMANCE APPAREL,T-Shirts-Unisex",,"","Blend: Polyester/Cotton (65/35)","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","44:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667667,"Bella + Canvas Unisex Jersey Short-Sleeve Tee","",,,,,"Available in sizes XS-4XL, this Bella + Canvas Unisex Jersey Short-Sleeve Tee features shoulder taping and a side-seamed retail fit. Solid colors are made from 30-single 100% combed and ring-spun cotton (4.2 oz.).  Athletic heather shirts are made from a blend of 30-single 90% combed and ring-spun cotton/10% polyester (4.2 oz.). All other heather and blend colors are made from 30-single 52% combed and ring-spun cotton/48% polyester (4.2 oz.). Separate by color and wash in cold water. Tumble dry. Iron if necessary. Please note, apparel cost changes weekly. Please check before ordering. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 3 1/2"" W x 3 1/2"" H - Optional, 4"" W x 4"" H - Standard","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","25:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667676,"Bella + Canvas Ladies' The Favorite Tee","",,,,,"Featuring a slim fit with a longer length, the Bella + Canvas Ladies' The Favorite Tee is available in sizes S-2XL. It is side-seamed with shoulder taping. Solid colors are made from 30-single 100% combed and ring-spun cotton (4.2 oz.). Athletic heather colors are made from 30-single 90% combed and ring-spun cotton/10% polyester (4.2 oz.). All other heather and blend colors are made from 30-single 5Machine wash cold, inside out, with like colors. Only non-chlorine bleach when needed. Tumble dry low. Medium/hot iron. Do not iron decoration. PLEASE NOTE: Apparel pricing changes weekly. Please check for current pricing before submitting your order.  There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 3 1/2"" W x 3 1/2"" H - Optional, 4"" W x 4"" H - Standard","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"0.20",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673163,"Delta (R) 30/1's Soft Spun Ladies Tee 4.3 Oz.","",,,,,"Offering a flattering fit, this Delta (R) 30/1's Soft Spun Ladies Tee is made from 4.3 oz. / 146 GSM 100% pre-shrunk soft spun cotton. Featuring short set-in sleeves and a 1/2"" rib knit seamed collar for feminine appeal, this shirt has taped neck and shoulder seams for durability. Its coverseamed full neck creates durability as well. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"C.O.D. SHIPMENT: Not Available","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"0.25",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550314877,"M-Bodie Short Sleeve Tee","",,,,,"Ultra soft and comfortable, the Bodie is an essential tee for any corporate, food services, team and school. The Bodie Short Sleeve Tee features a rib crew neck collar with chain stitch detail. Available in 8 trendy colors, this tee will enhance your brand. Decorate with the new inFusion decoration for maximum brand exposure from seam to seam.",,,,"T-Shirts-Mens",,"White (125),Team Red Heather (358),Sky Heather (422),New Royal Heather (561),Purple Heather (590),Kelly Heather (638),Medium Heather Grey (939),Heather Dark Charcoal (988)","Blend: Polyester/Cotton Jersey (65/35)","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL,5XL","",,,"CHINA",,,,,,,"Apparel Embroidery, Apparel HXD Metallic, Apparel Transfer, inFusion, Unimprinted",,"Paper Proof (First paper proof is free. Additional paper proofs are available upon request for a fee.), Virtual Proof (Request a sample from representative or create your own free sample on our website.)","","Y","Y","10""H x 10""L, 16""H x 13""L, 2""H x 4""L, 3.46""H x 3.46""L, 4""H x 4""L, 5""H x 5""L, 6""H x 6""L, 8""H x 10""L","",,,"Y",,"5","Y","",,"Poly Bag","","","",,"","N","",,,,,,"IMPRINTED",,,"24","72","144","288","486",,,,,,"19.34","18.56","16.15","14.13","13.08",,,,,,"R","R","R","R","R",,,,,,,"Blank Product Only",,"USD",,"List","Apparel Transfer, inFusion, Apparel Embroidery, Apparel HXD Metallic, Unimprinted","IMMD:Apparel Transfer, inFusion, Apparel Embroidery, Apparel HXD Metallic, Unimprinted",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"60.00",,,,,,,,,,"Z",,,,,,,,,,"For first locationYou may order less than the minimum quantity                                                        Imprint Method : Unimprinted                                                                                                                                Color : White (125), Team Red Heather (358), Sky Heather (422), New Royal Heather (561), Purple Heather (590), Kelly Heather (638), Medium Heather Grey (939), Heather Dark Charcoal (988)",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667211,"Next Level The CVC Deep V","",,,,,"This Next Level CVC Deep V shirt is made from a 4.3 oz. blend of 60% combed ring-spun cotton/40% polyester jersey. It is fabric laundered for reduced shrinkage. Fetauring 32 singles for extreme softness, this slightly heathered tee has a 1x1 baby rib-knit set-in collar and a tear-away label. Machine wash cold. Do not bleach. Tumble dry low. Please note, apparel pricing changes weekly. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled. Add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Unisex",,"Black,Midnight Navy,Charcoal,White,Dark Heather Gray","Blend: Cotton/Polyester Jersey (60/40)","","","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","10"" W x 10"" H - Optional, 3"" W x 4"" H - Standard","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550787654,"Men's Perfect Blend (R) Crew Tee","",,,,,"The men's Perfect Blend (R) Crew Tee comes in a ton of colors and is great for any outfit you want to throw together. It's made of a lightweight 4.3 oz., 50% combed ring spun cotton and 50% polyester (30 singles) blended fabric. It'll be soft and breathable and you can wear it with jeans or layer a button-up for a more professional look. The heather gray option is made of 90% ring spun combed cotton and 10% polyester, giving you another comfortable option. Silkscreen your logo to this item and have clients wear their brand loyalty on their sleeve!",,,,"T-Shirts-Mens",,"","Blend: Cotton/Polyester (50/50)","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","","",,"Individual Poly Bag, Bulk","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550308089,"UltraClub (R) Ladies' Cool/Dry Sport Perform Interlock Tee","",,,,,"For a must-have wardrobe addition for active and casual use, choose the UltraClub (R) Ladies' Cool/Dry Sport Performance Interlock Tee! Made of polyester, this 4 oz. feminine-cut shirt is a double-needle stitched crewneck and is both snag and pill-resistant. It features open cuffs and hem, UPF 30+ protection and anti-bacterial and moisture-wicking technology. Available in several colors and in sizes from XS to 3XL, it can be customized with a silkscreened brand imprint. Machine wash cold with like colors. Only non-chlorine bleach when needed. Tumble dry low. Cool iron if needed. Please check for current pricing before submitting your order. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"Antibacterial Products-General,PERFORMANCE APPAREL,SUN PROTECTION PRODUCTS,T-Shirts-Womens",,"Black, Charcoal, Columbia Blue, Gray, Navy Blue, Red, Royal Blue, White","Polyester","Standard & Numbered","XS,S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" x 12"", 3 1/2"" x 3 1/2"", 4"" x 4""","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","24:per Box","22.00:in;17.00:in;7.00:in","10:lbs",,"","N","",,,,,,"XS - XL Silk-Screen",,,"96","144","288","504",,,,,,,"14.59","12.68","11.03","9.59",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per Color(if applies), Per LocationYou may order less than the minimum quantity",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757257,"District (R) - Juniors' Very Important Tee (R) V-Neck","",,,,,"You're something special, so get a tee that represents that! Brought to you by District (R), the junior sizing of the Very Important Tee (R) is made to fit you perfectly and you'll love the comfort as well. Most colors are a 100% ring spun combed cotton fabrication of 4.3 oz. and 30 singles, while the light heather grey and other heathers have their own unique make (90/10 and 50/50 cotton/polyester, respectively). Included is a tear away tag, so when your clients see your logo they'll know that you're who to thank for such an amazing shirt!",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","20:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550959105,"District Young (R) Men's The Concert Tee (TM)","",,,,,"For a stylish shirt fit for any wardrobe, look no further than the District young men's The Concert tee. Available in several sizes and colors, this trendy 4.3 oz. top is made from 100% soft-spun cotton (or other fabric blends depending on the color), and it is made with 30 singles and features a tear-away tag.  A classic giveaway item perfect for any event your company may have, it can be customized with a brand logo for maximum exposure.",,,,"Shirts-Mens,T-Shirts-Mens",,"Aquatic Blue,Black,Burnt Orange,Charcoal,Deep Orange,Deep Royal,Forest Green,Gold,Heather Gray,Heathered Charcoal,Kelly Green,Maroon,Neon Blue,Neon Green,Neon Orange,Neon Pink,Neon Yellow,New Navy,New Red,Purple,Silver,White","","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","","",,,"Y",,"3,10","","",,"","72:per Box","25.00:in;17.00:in;13.00:in","30:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550787689,"Men's Tri-Blend Pocket Tee","",,,,,"Clients can put your brand on the radar with this men's Tri-Blend Pocket Tee. Give them a shirt that's lightweight at 4.4 ounces and comfortable with blended 50/38/12 polyester/ring spun cotton/rayon fabric of 30 singles. Adorned on the left chest pocket will be your silkscreened logo so you can be seen by everyone around. Don't hesitate to make the biggest impact possible for your company. Invest in this great gift today!",,,,"T-Shirts-Mens",,"","Blend: Polyester/Cotton (/)-Rayon","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","","",,"Individual Poly Bag, Bulk","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673546,"Delta (R) Ringspun Unisex Adult 30/1's Fitted Tee 4.3 Oz.","",,,,,"Fit this fantastic tee into your next marketing campaign! This Delta (R) Ringspun Unisex Adult 30/1's fitted tee is made from a 4.3 oz. / 146 GSM 100% pre-shrunk ringspun cotton. Available in several different colors and sizes, this shirt features short set-in sleeves, taped neck and shoulder seams for durability, and a 3/4"" seamed rib knit collar. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Add a silkscreen imprint of your logo for brand awareness!",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art charges will be assessed according to time, difficulty and amount of materials ), Paper Proof, Product Proof, Virtual Proof, Electronic Proof","","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","27:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550308041,"Next Level Premium The Sporty V","",,,,,"Keep it comfortable with this Next Level Premium The Sporty V shirt! Featuring 34 singles for extreme softness, this tee is made from 3.8 oz. 100% combed ring-spun cotton soft-wash jersey (blended cotton/polyester in heather colors). It has a front cover-stitched self-fabric set-in collar and a stain label. Available in sizes S-2XL, this shirt is fabric laundered for reduced shrinkage. Machine wash cold. Do not bleach. Tumble dry low. Please note, apparel cost changes weekly. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Womens",,"Black, Dark Gray, Heather Gray, Hot Pink, Purple Rush, Red, Tahiti Blue, White","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" x 12"", 3 1/2"" x 3 1/2"", 4"" x 4"", 8"" x 8""","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","20.00:in;15.00:in;9.00:in","17:lbs",,"","N","",,,,,,"S - XL Silk-Screen",,,"96","144","288","504",,,,,,,"11.24","9.77","8.50","7.39",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667203,"Next Level Men's Premium CVC V","",,,,,"Our Next Level Men's Premium CVC V tee is made from a 4.3 oz. blend of 60% combed ring-spun cotton/40% polyester jersey. Featuring 32 singles for extreme softness, it is slightly heathered and fabric laundered for reduced shrinkage. This shirt features a 1x1 baby rib-knit set-in collar and a tear-away label. Machine wash cold. Do not bleach. Tumble dry low. Please note, apparel cost changes weekly. Please check before ordering. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Mens",,"","Blend: Cotton/Polyester Jersey (60/40)","","","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 3 1/2"" W x 3 1/2"" H - Optional, 4"" W x 4"" H - Standard","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","30:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757242,"District (R) - Young Men's Very Important Tee (R) V-Neck","",,,,,"Dress like a VIP in this young men's Very Important Tee (R) by District(R). It's a V-neck made of 4.3 oz., 100% ring spun combed cotton (30 singles). You get unique fabrications in the light heather grey (90/10 cotton/polyester) and other heathered (50/50 cotton/poly) color options. All of them have a tear away tag so that you can make your branding complete. Your clients already love your business and they'll have no problem supporting you further with a shirt like this!",,,,"T-Shirts-Mens",,"","Cotton","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","30:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667143,"Next Level Men's Premium CVC Crew","",,,,,"Our Next Level Men's Premium CVC Crew features 32 singles for extreme softness. It is made from a 4.3 oz. blend of 60% combed ring-spun cotton/40% polyester jersey. This shirt is slightly heathered and fabric laundered for reduced shrinkage. It has a 1x1 baby rib-knit set-in collar and a tear-away label. Machine wash cold. Do not bleach. Tumble dry low. All colors are available in sizes up to 3XL. Some colors are available up to 4XL. Apparel cost changes weekly. Please check before ordering.  There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Mens",,"","Blend: Cotton/Polyester Jersey (60/40)","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 12"" W x 12"" H - Standard, 3 1/2"" W x 3 1/2"" H - Optional, 4"" W x 4"" H - Optional","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","30:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550314901,"W-Bodie Short Sleeve Tee","",,,,,"Ultra soft and comfortable, the Bodie is an essential tee for any corporate, food services, team and school. The Bodie Short Sleeve Tee features a rib crew neck collar with chain stitch detail. Available in 8 trendy colors, this tee will enhance your brand. Decorate with the new inFusion decoration for maximum brand exposure from seam to seam.",,,,"T-Shirts-Womens",,"White (125),Team Red Heather (358),Sky Heather (422),New Royal Heather (561),Purple Heather (590),Kelly Heather (638),Medium Heather Grey (939),Heather Dark Charcoal (988)","Blend: Polyester/Cotton Jersey (65/35)","Standard & Numbered","XS,S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Apparel Embroidery, Apparel Transfer, inFusion, Unimprinted",,"Paper Proof (First paper proof is free. Additional paper proofs are available upon request for a fee.), Virtual Proof (Request a sample from representative or create your own free sample on our website.)","","Y","Y","10""H x 10""L, 12""H x 14""L, 16""H x 10""L, 2""H x 4""L, 4""H x 4""L, 4""H x 5""L, 6""H x 6""L, 8""H x 10""L","",,,"Y",,"5","Y","",,"Poly Bag","","","",,"","N","",,,,,,"IMPRINTED",,,"24","72","144","288","486",,,,,,"19.34","18.56","16.15","14.13","13.08",,,,,,"R","R","R","R","R",,,,,,,"Blank Product Only",,"USD",,"List","Apparel Transfer, inFusion, Apparel Embroidery, Unimprinted","IMMD:Apparel Transfer, inFusion, Apparel Embroidery, Unimprinted",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"3.44",,,,,,,,,,"Z",,,,,,,,,,"within 10% size reduction or enlargmentYou may order less than the minimum quantity                                                                            Imprint Location : CHEST, Horizontal,Centered on Left Chest",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757299,"Port & Company (R) - Youth Essential Performance Tee","",,,,,"Let the kids roam free in this youth essential performance tee by Port & Company (R). It's made of 3.8 oz., 100% polyester and the tag-free label won't scratch their backs like normal tags, making this one of the most comfortable shirts for school or playtime. Put your stamp on fun when you silkscreen your logo to the front. Parents will love getting this great item for their children and tell others where they got it!",,,,"T-Shirts-Children",,"","Polyester","","","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","11 1/2"" x 11 1/2"", 3"" x 3""","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","20:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"XS - XL Silk-Screen",,,"96","144","288","504",,,,,,,"10.02","8.72","7.58","6.59",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per Color(if applies), Per LocationYou may order less than the minimum quantity",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550751049,"Delta (R) Ringspun Junior 30/1's Junior Tee","",,,,,"Give your little ones a custom wearable that will perfectly ""fit"" in their wardrobe! The Delta (R) Ringspun Junior 30/1's Tee is made using 4.3 oz. / 146 GSM of 100% pre-shrunk ringspun cotton. It features short set-in sleeves, a fitted design for a curved silhouette look, a seamed 5/8"" rib knit collar for shape retention, two-needle hemmed sleeves, a tagless private label option and a bottle that won't unravel. The coverseamed full neck adds durability. Great for uniforms, giveaways and promotional events, make sure to add your logo or company name for maximum brand exposure!",,,,"T-Shirts-Womens",,"White,Red,Black,Grass Green,Lavender,Soft Pink,Hot Pink,Purple Heather,Heliconia Heather,Charcoal Heather,Turquoise Heather,Athletic Heather","Cotton","Standard & Numbered","S,M,L,XL,2XL
+
+
+
+
+
+:S
+
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:S
+
+
+
+
+Color:Red,Black,GrassGreen,Lavender,SoftPink,HotPink,PurpleHeather,HeliconiaHeather,CharcoalHeather,TurquoiseHeather,AthleticHeather
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:Red,Black,GrassGreen,Lavender,SoftPink,HotPink,PurpleHeather,HeliconiaHeather,CharcoalHeather,TurquoiseHeather,AthleticHeather
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:Red,Black,GrassGreen,Lavender,SoftPink,HotPink,PurpleHeather,HeliconiaHeather,CharcoalHeather,TurquoiseHeather,AthleticHeather
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:Red,Black,GrassGreen,Lavender,SoftPink,HotPink,PurpleHeather,HeliconiaHeather,CharcoalHeather,TurquoiseHeather,AthleticHeather
+
+
+
+
+
+
+
+:2XL
+
+
+
+
+Color:Red,Black,GrassGreen,Lavender,SoftPink,HotPink,PurpleHeather,HeliconiaHeather,CharcoalHeather,TurquoiseHeather,AthleticHeather
+
+
+
+
+
+
+
+:2XL
+
+
+
+
+Color:White","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","11 1/2"" W x 11 1/2"" H, 3"" W x 3"" H","Optional - Back, Optional - Left Chest, Standard - Center Chest",,,"Y",,"3,5","Y","",,"","","","",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"White, S, M, L, XL",,,"96","144","288","504",,,,,,,"6.98","6.07","5.28","4.59",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"50.00",,,,,,,,,,"Z",,,,,,,,,,"per color, per locationYou may order less than the minimum quantity",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550751049,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Product Sample","SMPL:Product Sample",,"Sample Charge","Other","Optional","1",,,,,,,,,,"50.00",,,,,,,,,,"Z",,,,,,,,,,"per colorYou may order less than the minimum quantity",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550751049,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","ARTW:Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"40.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550308010,"Next Level Premium Fitted Short-Sleeve Crew","",,,,,"This Next Level Premium Fitted Short-Sleeve Crew shirt is fabric laundered for reduced shrinkage.  Available in sizes S-3XL, this tee is made from 4.3 oz. 100% combed ring-spun cotton high-end jersey (blended cotton/polyester in heather colors). Featuring 32 singles for extreme softness, this shirt also has a 1x1 baby rib-knit set-in collar and a tear-away label. Machine wash cold. Do not bleach. Tumble dry low. Please note, apparel pricing changes weekly. Orders that have entered production cannot be cancelled. Add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Unisex",,"Black, Heather Gray, HEAVY METAL, INDIGO, Midnight Navy, Red, Royal Blue, White","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" x 12"", 3 1/2"" x 3 1/2"", 4"" x 4""","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","30:lbs",,"","N","",,,,,,"S - XL Silk-Screen",,,"96","144","288","504",,,,,,,"10.48","9.11","7.92","6.89",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551134255,"Delta (R) Ringspun 30/1's Unisex Adult Fitted Tee","",,,,,"For a giveaway that will fit right in during your next promotional campaign, look no further than the Delta ringspun 30/1's unisex adult fitted tee! Available in several colors, this trendy top is made from 100% pre-shrunk ringspun cotton (heathered colored have polyester content). It is 4.3 oz./146 GM and features short set-in sleeves, a taped neck and shoulder seams, two-needle hemmed sleeves, a 3/4"" x seamed rib-knit collar and a bottom that won't unravel. Customize with a brand imprint for maximum exposure on a stylish handout.",,,,"T-Shirts-Unisex",,"Athletic Heather,Athletic Navy,Banana Yellow,Black,Brown Heather,Charcoal,Charcoal Heather,Deep Navy,Denim Heather,Kelly,Kelly Heather,Moss,Red,Red Heather,Royal,Royal Heather,Silver,Sky blue,Slate,White,Turquoise","","","","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","","",,,"Y",,"3,10","","",,"","72:per Box","25.00:in;17.00:in;13.00:in","27:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757126,"District Made (R) - Men's Perfect Tri Crew Tee","",,,,,"Grab a top that clients won't mind wearing all over. The men's Perfect Tri Crew Tee by District Made (R) is a lightweight, 4.5 oz., 50/25/25 polyester/ring spun cotton/rayon blend of 32 singles. It's comfortable and fits well when layered under any clothing or worn all by itself. There's a tear away tag for further branding beyond the silkscreen imprinting method. Make this your next promotion and get an increase in style and business!",,,,"T-Shirts-Mens",,"","Blend: Poly/Cotton/Rayon (50/25/25)","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757938,"Port & Company (R) - Long Sleeve All-American Tee","",,,,,"When it's cool outside, keep your arms covered with the long sleeve All-American tee by Port & Company (R). This item is made of 5.5 oz., 100% cotton fabric and was made in the USA. The Athletic Heather option is crafted from 90/10 cotton/polyester while the Safety Green and Safety Orange colors are 50/50 cotton/poly. These two colors are also compliant with ANSI/ISEA high visibility standards for background color. When clients throw this on, your silkscreened logo will show everyone around where to go for a great product.",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk","72:per Box","25.00:in;17.00:in;13.00:in","44:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673576,"Delta (R) Ringspun Unisex Adult 30/1's Snow Heather Fitted T","",,,,,"Keep it casual! This Delta (R) Ringspun Unisex Adult 30/1's Snow Heather Fitted Tee is made from 4.3 oz. / 146 GSM 100% pre-shrunk ringspun cotton. This shirt features short set-in sleeves, a 3/4"" seamed rib knit collar and taped neck and shoulder seams for added durability. A tagless private label option is offered. The two-needle hemmed sleeves and bottom won't unravel. Available in several different colors and sizes, add a silkscreen imprint of your logo for brand awareness!",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"0.25",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550787638,"Ladies Tri-Blend Scoop Tee","",,,,,"Want a shirt that looks and feels great? Look no further than the ladies Tri-blend Scoop Tee! It's lightweight at 4.4 ounces, and has a comfortable blend of 50% polyester, 38% ring spun cotton, and 12% rayon fabric (30 singles). The sleeves are rolled and tacked for style and this item comes in four great colors. Wear this out to the mall, or have it branded as a uniform for your place of business. Either way, your company will start making some noise!",,,,"T-Shirts-Womens",,"","Blend: Polyester/Cotton-Rayon","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","","",,"Individual Poly Bag, Bulk","72:per Box","25.00:in;17.00:in;13.00:in","20:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550650807,"W-Evergreen Roots73 Short Sleeve Tee","",,,,,"The Evergreen Short Sleeve Tee is your basic fit. Made from 100% organic cotton, it has helped preserve the health of the environment. Enjoy the outdoors with this soft and comfortable tee that can be worn as a top or layered under a sweater on cloudy days.",,,,"ENVIRONMENTALLY FRIENDLY PRODUCTS,T-Shirts-Womens",,"White (125),Dark Red (372),Atlantic Navy (574),Black (995)","Organic Cotton","Standard & Numbered","XS,S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Apparel Embroidery, Apparel Transfer, Unimprinted",,"Paper Proof (Blank samples available for most products and can be purchased at catalog EQP, net 30 at 50% off ground shipping.), Virtual Proof (Request a sample from representative or create your own free sample on our website.)","","Y","Y","2""H x 4""L, 3""H x 3""L, 4""H x 4""L, 8""H x 8""L","",,,"Y",,"5","Y","",,"Poly Bag","","","",,"","N","",,,,,,"IMPRINTED",,,"12","48","96","192","324",,,,,,"39.04","37.46","32.58","28.53","26.42",,,,,,"R","R","R","R","R",,,,,,,"Blank Product Only",,"USD",,"List","Apparel Embroidery, Apparel Transfer, Unimprinted","IMMD:Apparel Embroidery, Apparel Transfer, Unimprinted",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"6.88",,,,,,,,,,"Z",,,,,,,,,,"Per color after 5 colorsYou may order less than the minimum quantity                                                                            Imprint Location : IMPACT, BACK, Horizontal,Centered on Back across Shoulders, IMPACT, CHEST, Horizontal,Centered on Front across Chest, SLEEVE, Horizontal,Centered on left sleeve Bicep, Wider, CHEST, Horizontal,Centered on Left Chest                                                                                                                                                                                                            Imprint Method : Unimprinted                                                                                                                                Color : White (125), Dark Red (372), Atlantic Navy (574), Black (995)",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550958955,"Next Level Men's Poly/Cotton Crew","",,,,,"The Next Level men's poly/cotton crew is the perfect wow-worthy wearable to add to your next promotional campaign! Available in several colors and in sizes from S-2XL, this stylish shirt is made from a 3.7 oz. polyester (65%)/cotton (35%) ring-spun blend. It features a front cover-stitched self-fabric collar, a satin label and 40 singles for extreme softness. The fabric is laundered for reduced shrinkage. Customize with an imprint of your brand logo to create a must-have giveaway.",,,,"T-Shirts-Mens",,"","","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","","",,,"Y",,"3,10","","",,"","72:per Box","25.00:in;17.00:in;13.00:in","25:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673584,"Delta (R) Ringspun Junior 30/1's Junior Tee 4.3 Oz.","",,,,,"Made from 4.3 oz. / 146 GSM 100% pre-shrunk ringspun cotton, this Delta (R) Ringspun Junior 30/1's Junior Tee is fitted for a curved silhouette. It features short set-in sleeves, a seamed 5/8"" rib knit collar for shape retention and a coverseamed full neck for durability. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Available in several different colors and size options, add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","Y","11 1/2"" W x 11 1/2"" H, 3"" W x 3"" H","",,,"Y",,"3,10","","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","20:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"0.25",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667321,"Next Level (TM) The Boyfriend Tee","",,,,,"The Boyfriend Tee is made from 4.3 oz. 100% combed ring-spun cotton fine jersey (blended cotton/polyester in heather colors). It is fabric laundered for reduced shrinkage. Featuring 32 singles for extreme softness, this Next Level tee has a 1x1 baby rib-knit set-in collar and a tear-away label. Machine wash cold. Do not bleach. Tumble dry low. Please note, apparel pricing changes weekly. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled. Add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Unisex",,"","Cotton","","","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 3 1/2"" W x 3 1/2"" H - Standard, 4"" W x 4"" H - Standard","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550666575,"Bayside Adult Long-Sleeve Tee","",,,,,"Great for chilly days, this Bayside adult long-sleeve tee is made from preshrunk 100% cotton (blended cotton/polyester in ash colors). A USA made product, this shirt features 5.4 oz. open-end yarn with a full cut, 1"" fashion collar, shoulder-to-shoulder taping and double-needle sleeve and bottom hems. Machine wash cold with like colors. Do not bleach or iron. Tumble dry low. Please note, apparel pricing changes weekly. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 12"" W x 12"" H - Standard, 2"" W x 12"" H - Optional, 4"" W x 4"" H - Optional","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","30:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550308079,"UltraClub (R) Men's Cool/Dry Sport Performance Interlock Tee","",,,,,"The UltraClub (R) Men's Cool/Dry Sport Performance Interlock Tee is a must-have for active and casual use! Made of micro-polyester, this 4 oz. athletic-fit shirt is a double-needle stitched crewneck and is both snag and pill-resistant. It features open cuffs and hem, UPF 30+ protection and anti-bacterial and moisture-wicking technology. Available in several colors and in sizes from S to 6XL, it can be customized with a silkscreened imprint. Machine wash cold with like colors. Only non-chlorine bleach when needed. Tumble dry low. Cool iron if needed. Apparel pricing changes weekly. Please check for current pricing before submitting your order.  There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"Antibacterial Products-General,PERFORMANCE APPAREL,SUN PROTECTION PRODUCTS,T-Shirts-Mens",,"Black, Charcoal, Columbia Blue, Gray, Navy Blue, Red, Royal Blue, White","Micro-Polyester","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL,5XL,6XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" x 12"", 3 1/2"" x 3 1/2"", 4"" x 4""","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","24:per Box","22.00:in;17.00:in;7.00:in","11:lbs",,"","N","",,,,,,"S - XL Silk-Screen",,,"96","144","288","504",,,,,,,"14.59","12.68","11.03","9.59",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per Color, Per PieceYou may order less than the minimum quantity",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757161,"District Made (R) - Ladies' Perfect Tri 3/4 Sleeve Raglan","",,,,,"Get the best fit with the ladies' Perfect Tri 3/4 Sleeve Raglan tee by District Made (R). With a blended 50/25/25 polyester/ring spun cotton/rayon fabric of 32 singles and weight of 4.5 oz., you'll never want to take this off! Put your company's artwork on the shirt and tear away the tag for a complete branding opportunity. When clients get this shirt, they'll soon find out that they received their next favorite top!",,,,"T-Shirts-Womens",,"","Blend: Poly/Cotton/Rayon (50/25/25)","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","24:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757294,"Port & Company (R) - Essential Performance Tee","",,,,,"Both men and women can enjoy the unisex fit of the Port & Company (R) essential performance tee. With a tag-free label and 3.8 oz., 100% polyester fabrication, they'll instantly fall in love! You can imprint your logo via silkscreen and have them choose from up to fourteen different colors. They'll love repping your brand because you offer only the best in quality! Make an investment in this top today!",,,,"T-Shirts-Unisex",,"","Polyester","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550959033,"District Made (R) - Ladies' Perfect Tri (TM) Crew Tee","",,,,,"A stylish shirt fit for any occasion, the District Made ladies' Perfect tri-crew tee is bound to make a lasting impression! Available in several sizes and colors, this wow-worthy wearable is 4.5 oz. and is made from a 50/25/25 blend of polyester/ring-spun cotton/rayon. It features 32 singles for extreme softness, as well as a tear-away tag. Customize with a silkscreened imprint of your company name and logo to create a classic brand giveaway.",,,,"Shirts-Womens,T-Shirts-Womens",,"","","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","","",,,"Y",,"3,10","","",,"","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673542,"Delta Delta-Dri 30/1's 100% Poly Performance Unisex Youth T","",,,,,"The Delta (R) Delta-Dri (TM) 30/1's 100% Poly Performance Unisex Youth Tee is a go-to garment to add to any active wardrobe! This 4.3 oz./146 GSM shirt is made of 100% micro denier jersey knit polyester and features moisture-wicking technology designed to keep you cool and dry. It is anti-microbial treated for odor control and has a 3/4"" seamless rib-knit collar, a taped neck, shoulder seams for durability, two-needle hemmed sleeves and bottoms that won't unravel. There's a tagless private label option and it is CPSIA certified. It is available in several sizes and colors and can be customized with a silkscreened imprint.",,,,"ANTIMICROBIAL ENHANCED PRODUCTS,PERFORMANCE APPAREL,T-Shirts-Children",,"","Jersey Knit-Polyester","","","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","11 1/2"" x 11 1/2"", 3"" x 3""","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","20:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"XS - XL Silk-Screen",,,"96","144","288","504",,,,,,,"7.28","6.33","5.51","4.79",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"Per Color, Per PieceYou may order less than the minimum quantity",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673512,"Delta (R) Magnum Weight (TM) Adult Short Sleeve Tee 6.0 Oz.","",,,,,"Everyone will love wearing this custom printed Delta (R) Magnum Weight (TM) adult short sleeve tee! Made from 6.0 oz. / 203 GSM 100% pre-shrunk cotton, this tee has a seamless rib knit collar and short set-in sleeves. Featuring taped neck and shoulder seams for durability, the coverseamed front neck adds durability as well. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","40:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673595,"Delta (R) Ringspun Junior 30/1's Junior V-Neck Tee 4.3 Oz.","",,,,,"Stay on top of your promotion with this Delta (R) Ringspun Junior 30/1's Junior V-Neck Tee! Made from 4.3 oz. / 146 GSM 100% pre-shrunk ringspun cotton, this tee is fitted for a curved silhouette. It features short set-in sleeves and a seamed 5/8"" rib knit collar for shape retention. The wo-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Available in different colors and size options, add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"","","","Y","11 1/2"" W x 11 1/2"" H, 3"" W x 3"" H","",,,"Y",,"3,10","","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550672898,"Delta (R) Pro Weight (TM) Unisex Short Sleeve Tee 5.2 Oz.","",,,,,"Available in several different colors and sizes, this Delta (R) Pro Weight (TM) Unisex short sleeve tee is made from 5.2 oz. / 176 GSM 100% pre-shrunk cotton. This tee features short set-in sleeves, a seamless rib knit collar and taped neck and shoulder seams for added durability. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Add a silkscreen imprint of your logo for brand awareness!",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL,5XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","38:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673157,"Delta (R) 30/1's Soft Spun Adult Fitted Tee 4.3 Oz.","",,,,,"Add this Delta (R) 30/1's Soft Spun Adult Fitted Tee to your wardrobe! Made from 4.3 oz. / 146 GSM 100% pre-shrunk soft spun cotton, this shirt features short set-in sleeves, a 3/4"" rib knit seamless collar and taped neck and shoulder seams for added durability. A tagless private label option is offered. The two-needle hemmed sleeves and bottom won't unravel. Available in several different colors and sizes, add a silkscreen imprint of your logo for brand awareness!",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673147,"Delta Pro Weight Youth Regular Fit Long Sleeve Tee 5.2 Oz.","",,,,,"All eyes will be on your brand while wearing this Delta (R) Pro Weight (TM) youth regular fit long sleeve tee! Made from 5.2 oz. / 176 GSM 100% pre-shrunk cotton, this shirt features long set-in sleeves with rib knit cuffs for stretch and recovery. It also has a seamless rib knit collar along with a taped neck and shoulder seams for added durability. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is available as well.",,,,"T-Shirts-Children",,"","Cotton","Standard & Numbered","XS,S,M,L,XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","11 1/2"" W x 11 1/2"" H, 3"" W x 3"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","26:lbs",,"C.O.D. SHIPMENT: Not Available","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"0.25",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673122,"Delta Pro Weight (TM) Unisex Adult Long Sleeve Tee 5.2 Oz.","",,,,,"Great for lounging or everyday wear, this Delta (R) Pro Weight (TM) unisex adult long sleeve tee is made from 5.2 oz. / 176 GSM 100% pre-shrunk cotton. It has long set-in sleeves with rib knit cuffs for stretch and recovery. This also shirt features a taped neck and shoulder seams for added durability along with a seamless rib knit collar. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Add a silkscreen imprint of your logo for brand awareness!",,,,"T-Shirts-Unisex",,"Celadon,Royal,Sky Blue,Athletic Navy,Turquoise,Black,Forest,Kelly,Moss,Athletic Heather,White,Purple,Cardinal,Heliconia,Red,Soft Pink,Maroon,Sunflower,Gold,Orange,Safety Green,Safety Pink,Safety Orange,True Navy,Charcoal Heather","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL
+
+
+
+
+
+:S
+
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:S
+
+
+
+
+Color:Celadon,Royal,SkyBlue,AthleticNavy,Turquoise,Black,Forest,Kelly,Moss,AthleticHeather,Purple,Cardinal,Heliconia,Red,SoftPink,Maroon,Sunflower,Gold,Orange,SafetyGreen,SafetyPink,SafetyOrange,TrueNavy,CharcoalHeather
+
+
+
+
+
+
+
+:M
+
+
+
+
+Color:Celadon,Royal,SkyBlue,AthleticNavy,Turquoise,Black,Forest,Kelly,Moss,AthleticHeather,Purple,Cardinal,Heliconia,Red,SoftPink,Maroon,Sunflower,Gold,Orange,SafetyGreen,SafetyPink,SafetyOrange,TrueNavy,CharcoalHeather
+
+
+
+
+
+
+
+:L
+
+
+
+
+Color:Celadon,Royal,SkyBlue,AthleticNavy,Turquoise,Black,Forest,Kelly,Moss,AthleticHeather,Purple,Cardinal,Heliconia,Red,SoftPink,Maroon,Sunflower,Gold,Orange,SafetyGreen,SafetyPink,SafetyOrange,TrueNavy,CharcoalHeather
+
+
+
+
+
+
+
+:XL
+
+
+
+
+Color:Celadon,Royal,SkyBlue,AthleticNavy,Turquoise,Black,Forest,Kelly,Moss,AthleticHeather,Purple,Cardinal,Heliconia,Red,SoftPink,Maroon,Sunflower,Gold,Orange,SafetyGreen,SafetyPink,SafetyOrange,TrueNavy,CharcoalHeather
+
+
+
+
+
+
+
+:2XL
+
+
+
+
+Color:Celadon,Royal,SkyBlue,AthleticNavy,Turquoise,Black,Forest,Kelly,Moss,AthleticHeather,Purple,Cardinal,Heliconia,Red,SoftPink,Maroon,Sunflower,Gold,Orange,SafetyGreen,SafetyPink,SafetyOrange,TrueNavy,CharcoalHeather
+
+
+
+
+
+
+
+:3XL
+
+
+
+
+Color:Celadon,Royal,SkyBlue,AthleticNavy,Turquoise,Black,Forest,Kelly,Moss,AthleticHeather,Purple,Cardinal,Heliconia,Red,SoftPink,Maroon,Sunflower,Gold,Orange,SafetyGreen,SafetyPink,SafetyOrange,TrueNavy,CharcoalHeather
+
+
+
+
+
+
+
+:2XL
+
+
+
+
+Color:White
+
+
+
+
+
+
+
+:3XL
+
+
+
+
+Color:White","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 2"" W x 12"" H, 4"" W x 4"" H","Optional - Back, Optional - Left Chest, Optional - Sleeve, Standard - Center Chest",,,"Y",,"3,5","Y","",,"","72:per Box","25:in;17:in;13:in","44:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"White, S, M, L, XL",,,"96","144","288","504",,,,,,,"9.41","8.19","7.12","6.19",,,,,,,"R","R","R","R",,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673122,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Product Sample","SMPL:Product Sample",,"Sample Charge","Other","Optional","1",,,,,,,,,,"50.00",,,,,,,,,,"Z",,,,,,,,,,"per colorYou may order less than the minimum quantity",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550673122,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","ARTW:Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof",,"Artwork Charge","Other","Optional","1",,,,,,,,,,"40.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+550666563,"Bayside Adult Short-Sleeve Tee","",,,,,"A great choice for keeping it casual, this Bayside adult short-sleeve tee is made from preshrunk 100% cotton (blended cotton/polyester in ash colors). A USA made product, this shirt features 5.4 oz. open-end yarn with a full cut, 1"" fashion collar, shoulder-to-shoulder taping and double-needle sleeve and bottom hems. Machine wash cold with like colors. Do not bleach or iron. Tumble dry low. Please note, apparel cost changes weekly. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 12"" W x 12"" H - Standard, 3 1/2"" W x 3 1/2"" H - Optional, 4"" W x 4"" H - Optional","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","40:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757178,"District (R) - Young Men's Very Important Tee (R)","",,,,,"Few things are as crucial as the way you present yourself. Capitalize on this when you offer clients the young men's Very Important Tee (R) by District (R). They'll love the feel of the 4.3 oz., 100% ring spun, combed cotton on some of the shirts as well as the fabrications of some others. The heather tops are made of 50/50 cotton/polyester while the light heather grey is made of 90/10 cotton/polyester. Silkscreen your brand to the front for a bold display, and remove the tear away tag. You won't regret making this investment!",,,,"T-Shirts-Mens",,"","Cotton","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","30:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667688,"Bella + Canvas Ladies' Jersey Short-Sleeve Deep V-Neck Tee","",,,,,"This Bella + Canvas Ladies' Jersey Short-Sleeve Deep V-Neck Tee is side-seamed with a slim retail fit. It is available in sizes S-2XL. Solid colors are made from 4.2 oz. 30-single 100% combed and ring-spun cotton. Dark gray heather is made from a blend of 30-single 52% combed and ring-spun cotton/48% polyester. Machine wash cold inside out with like colors. Only non-chlorine bleach when needed. Tumble dry low. Medium/hot iron. Do not iron decoration. Please note, apparel cost changes weekly. There is a 15% restocking fee for all cancelled orders that have not reached production.",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 3 1/2"" W x 3 1/2"" H - Optional, 4"" W x 4"" H - Standard","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+551134258,"District Made (R) Ladies' Perfect Tri (TM) V-Neck Tee","",,,,,"Make a victorious addition to your next marketing campaign with help from the Distract Made ladies' perfect tri V-neck tee! Available in several colors, this stylish 4.5 oz. shirt is made from a blend of polyester (50%), ring-spun combed cotton (25%) and rayon (25%). It features 32 singles for extra softness and a tear-away tag. Customize this trendy top with an imprint of your brand logo for a classic promotional giveaway.",,,,"T-Shirts-Womens",,"Black Frost,Fuchsia Frost,Green Frost,Gray Frost,Maritime Frost,Navy Frost,Purple Frost,Red Frost,Royal Frost,Turquoise Frost,White","","","","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","","",,,"Y",,"3,10","","",,"","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757271,"Port & Company (R) - Ladies' Essential Performance Tee","",,,,,"Stay active this Port & Company (R) ladies' essential performance tee. It's got a tag-free label, is super-lightweight at 3.8 oz., and the 100% polyester fabric falls comfortably on your back as you put it on! With fourteen colors to choose from, you can really make your brand stand out. Use our silkscreen imprinting method to add your logo and give these to clients at your next tradeshow. Everyone around will see just how much quality means to you!",,,,"T-Shirts-Womens",,"","Polyester","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","22:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550958974,"Delta (R) Magnum Weight (TM) Adult Long Sleeve Pocket Tee","",,,,,"For a wow-worthy wearable that will showcase your brand in style, look no further than the Delta Magnum Weight adult long sleeve pocket tee! Available in several colors and styles, this trendy top is made from 100% pre-shrunk cotton (50% cotton/50% polyester in safety green and safety orange). It features a 3/4"" rib-knit collar, a 5-point left chest pocket, taped neck and shoulder seams and a double-needle hem. Customize with a brand imprint to create a classic promotional giveaway.",,,,"Shirts-Mens,T-Shirts-Mens",,"","","","","",,,"CHINA",,,,,,,"Silkscreen",,"","","","","","",,,"Y",,"3,10","","",,"","72:per Box","25.00:in;17.00:in;13.00:in","44:lbs",,"","N","",,,,,,"",,,"",,,,,,,,,,"QUR",,,,,,,,,,"R",,,,,,,,,,,"N/A",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550673532,"Delta (R) Magnum Weight (TM) Adult Pocket Tee 6.0 Oz.","",,,,,"A classic, comfortable choice for any event, this Delta (R) Magnum Weight (TM) adult pocket tee is made from 6.0 oz. 100% pre-shrunk cotton. This shirt features a seamless rib knit collar, short set-in sleeves and a 5-point left chest pocket. Featuring taped neck and shoulder seams for durability, the coverseamed front neck adds durability as well. The two-needle hemmed sleeves and bottom won't unravel. A tagless private label option is offered as well. Add a silkscreen imprint for great logo visibility!",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","40:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550666570,"Bayside Adult Short-Sleeve Tee with Pocket","",,,,,"Offered in different size and color options, this Bayside adult short-sleeve tee with pocket is made from preshrunk 100% cotton (blended cotton/polyester in ash colors). A USA made product, this shirt features 5.4 oz. open-end yarn with a full cut, 1"" fashion collar, shoulder-to-shoulder taping and double-needle sleeve and bottom hems. Machine wash cold with like colors. Do not bleach or iron. Tumble dry low. Please note, apparel cost changes weekly. There is a 15% restocking fee for all cancelled orders that have not reached production. Orders that have entered production cannot be cancelled.",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H - Optional, 3 1/2"" W x 3 1/2"" H - Standard, 4"" W x 4"" H - Optional","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","34:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550667681,"Bella + Canvas Unisex Jersey Short-Sleeve V-Neck Tee","",,,,,"Available in sizes S-3XL, this Bella + Canvas Unisex Jersey Short-Sleeve V-Neck Tee features shoulder taping and a side-seamed retail fit. Solid colors are made from 30-single 100% combed and ring-spun cotton (4.2 oz.). Athletic heather shirts are made from a blend of 30-single 90% combed and ring-spun cotton/10% polyester (4.2 oz.). All other heather and blend colors are made from 30-single 52% combed and ring-spun cotton/48% polyester (4.2 oz.). Machine wash cold inside out with like colors. Use only non-chlorine bleach when needed. Tumble dry low. Medium/hot iron. Do not iron decoration. Please note, apparel cost changes weekly.",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H (Small Size:  8"" W x 8"" H) - Optional, 3 1/2"" W x 3 1/2"" H - Optional, 4"" W x 4"" H - Standard","",,,"Y",,"3,10","Y","",,"Bulk, Individually Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","25:lbs",,"","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"0.50",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757215,"District (R) - Juniors' Very Important Tee (R)","",,,,,"The juniors' Very Important Tee (R) by District (R) is one of the best investments you can make in a promotional item. Most color options are made of 4.3 oz., 100% ring spun combed cotton of 30 singles. The light heather grey has its own fabrication of 90/10 cotton/polyester and all other heathers have a blend of 50/50 cotton/poly. Add your logo to the shirt via silkscreen and make the branding complete by removing the tear away tag. Give these away to increase awareness of your company!",,,,"T-Shirts-Womens",,"","Cotton","Standard & Numbered","XS,S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk, Individual Poly Bag","72:per Box","25.00:in;17.00:in;13.00:in","20:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,
+550757815,"Port & Company (R) - All-American Tee","",,,,,"The Port & Company (R) All-American tee has so many uses it would be crazy not to get one. Made in the USA, this 5.5 oz., 100% cotton top can be worn alone or under a sweater for a business casual look. The Safety Green and Safety Orange colors are made of 50/50 cotton/polyester and compliant with ANSI/ISEA high visibility standards for background color, meaning you'll be seen and safe outside! If you need something different try the Athletic Heather option with 90/10 cotton/poly. Clients who get this top will love the range of colors, the fit, and doing business with you!",,,,"T-Shirts-Unisex",,"","Cotton","Standard & Numbered","S,M,L,XL,2XL,3XL,4XL","",,,"CHINA",,,,,,,"Silkscreen",,"Art Services (Art Charges will be assessed according to time, difficulty and amount of materials used. NOTE: All artwork received will be maxed out to our imprint area unless otherwise specified on your artwork and P.O.), Paper Proof (Paper Proofs will be Faxed unless otherwise noted on purchase order. Production begins after receipt of written proof approval. NO CREDIT WILL BE ISSUED FOR ANY ART ERRORS AFTER APPROVAL.), Virtual Proof, Product Proof, Electronic Proof","Athletic Gold, Black, Brown, Burgundy, Forest Green, Gold, Gray, Kelly Green, light blue, Lime Green, Maroon, Navy blue, Orange, Pink, Process Blue, Purple, Red, Royal Blue, Silver, Tan, Teal, White, Yellow","","Y","12"" W x 12"" H, 3 1/2"" w x 3 1/2"" h, 4"" W x 4"" H","",,,"Y",,"3,10","Y","",,"Bulk","72:per Box","25.00:in;17.00:in;13.00:in","34:lbs",,"C.O.D. SHIPMENT: Not Available.","N","",,,,,,"",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"",,"USD",,"List","Silkscreen","IMMD:Silkscreen",,"Set-up Charge","Per Order","Required","1",,,,,,,,,,"25.00",,,,,,,,,,"Z",,,,,,,,,,"",,,,,,,,,,,,,,"N",,,,,,"Promotional","N",,,"Y","None",,,,

@@ -4,11 +4,18 @@ import requests
 import re
 
 import sys
+from random import choice
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+headers_list = [{'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                ,{'user-agent': "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0"}
+                ]
+
 class Prodouct(object):
-    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    headers = headers_list[0]
+    # headers = choice(headers_list)
     url = ""       #  商品页地址
     # bsObj = BeautifulSoup("","html.parser")
     # 第A列XID全空（不预先填值）
@@ -112,7 +119,7 @@ class Prodouct(object):
         csv_row += ","*4          # D, E, F, G列全空
         csv_row += addQuot(self.Description)     #   第H列
         csv_row += ","              # 第I列summary无法得到
-        csv_row += ","               #   第J列Prod_Image要手动填入
+        csv_row += addQuot(self.Prod_Image)               #   第J列Prod_Image要手动填入 # 修改，保留链接供参考
         csv_row += ","               # K列全空
         csv_row += addQuot(self.Category)       #   第L列
         csv_row += ","              # 第M列Keywords无法得到
@@ -461,6 +468,10 @@ def getProductDetail(bsObj):
                 Size_Group = ""
                 rawSize_Values = dataFieldBlock.get_text().strip().replace("Size", "").strip()
                 Size_Values = ""
+
+                NotSimple = dataFieldBlock.find("div", class_="setDetail dataFieldBlock")
+                if NotSimple:
+                    rawSize_Values = NotSimple.get_text().strip().replace("Size", "").strip()
 
                 if "Length" in rawSize_Values or "Width" in rawSize_Values or "Height" in rawSize_Values or '"' in rawSize_Values:
                     Size_Group = "Dimension"
@@ -911,7 +922,7 @@ def getProductionInformation(bsObj):
                         if len(ShippingInfo) > 0:
                             if ShippingInfo[0] == ";":
                                 ShippingInfo = ShippingInfo[1:].strip()
-                        ProductionInformation["Shipping_Info"] = ShippingInfo
+                        ProductionInformation["Shipping_Info"] = ShippingInfo.replace("\n","").strip()
 
         #  顺便把packaging字段获取
         elif "h5" in dataFieldBlock.prettify():

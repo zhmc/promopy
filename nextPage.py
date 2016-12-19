@@ -8,14 +8,19 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+from random import choice
+headers_list = [{'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                ,{'user-agent': "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0"}
+                ]
+
 def getFirstPageContent(url):
-    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    headers =  headers_list[0]
     response = requests.get(url,headers=headers)
     return response.content
 
 
 def getNextPageContent(url, startContent):
-    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    headers = headers_list[0]
     bsObj = BeautifulSoup(startContent, 'html.parser')
     postData = {}
     inputset1 = bsObj.findAll("input", {"type": "hidden"})
@@ -49,8 +54,7 @@ def getNextPageContent(url, startContent):
     return response.content
 
 def get80PerPage(url, startContent):
-    headers = {
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    headers = headers_list[0]
     bsObj = BeautifulSoup(startContent, 'html.parser')
     postData = {}
     inputset1 = bsObj.findAll("input", {"type": "hidden"})
@@ -95,7 +99,7 @@ def getFirstPageContent80(url):
     return FirstPageContent80
 
 def get80NextPageContent(url, startContent):
-    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    headers = headers_list[0]
     bsObj = BeautifulSoup(startContent, 'html.parser')
     postData = {}
     inputset1 = bsObj.findAll("input", {"type": "hidden"})
