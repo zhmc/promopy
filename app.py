@@ -73,11 +73,13 @@ def getTable(prod, page):
     if (keyword, num) in memorydb.keys():
         # test = memorydb[(keyword, 1)]
         pagebean = memorydb[(keyword, num)]
+        return render_template('product.html', prod=prod, page=page,pagebean=pagebean)
     else:
         if num == 1:
             singleBean = getFirstThreadPoolAndEndContentByKeyword(keyword)
             # pagebean = singleBean
             memorydb[(keyword, 1)] = singleBean
+            return render_template('product.html', prod=prod, page=page,pagebean=singleBean)
         else:
             if num > 1:
                 if (keyword, 1) in memorydb.keys():
@@ -90,12 +92,16 @@ def getTable(prod, page):
                         startContent = get80NextPageContent(url, startContent)
 
                     idList = getProdIDList(startContent)
+                    # print "获取idlist完毕" + time.strftime('%Y-%m-%d %H:%M:%S')
                     threadPool = getThreadPoolFromProdIDList(idList)
+                    # print "下载线程池全部下载完毕" + time.strftime('%Y-%m-%d %H:%M:%S')
 
                     package = {}
                     package['threadPool'] = threadPool
                     package['endContent'] = startContent
                     memorydb[(keyword, num)] = package
+                    # print "写入内存对象完毕" + time.strftime('%Y-%m-%d %H:%M:%S')
+                    return render_template('product.html', prod=prod, page=page,pagebean=package)
                 # 在memorydb被清空后，防止从第5页点击上一页到第四页
                 else:
                     new_url = '/' + unicode(keyword) + "/1"
