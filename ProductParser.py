@@ -267,7 +267,7 @@ def parser(productObject):
     requests.adapters.DEFAULT_RETRIES = 10
     session1 = requests.session()
     # session1.keep_alive = False
-    get = session1.get(productObject.url, headers=productObject.headers)
+    get = session1.get(productObject.url, headers=productObject.headers, timeout=120)
     html = get.content
     get.close()
     bsObj = BeautifulSoup(html, 'html.parser')

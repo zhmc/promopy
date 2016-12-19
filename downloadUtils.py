@@ -54,8 +54,13 @@ def getThreadPoolFromProdIDList(ProdIDList):
     for ProdID in ProdIDList:
         mythread = MyThread(ProdID)
         threadPool.append(mythread)
-    for singlethread in threadPool:
-        singlethread.start()
+    # for singlethread in threadPool:
+    #     singlethread.start()
+    for i in xrange(len(threadPool)):
+        # if i > 40:
+        #     time.sleep(1)
+        time.sleep(0.5)
+        threadPool[i].start()
     for singlethread in threadPool:
         singlethread.join()
 
