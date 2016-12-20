@@ -854,10 +854,12 @@ def getProductionInformation(bsObj):
                         else:
                             # if ""
                             if "-" in rawtext:
-                                begin = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(1)
-                                end = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext).group(2)
-                                # print begin,end
-                                ProductionInformation["Production_Time"] = str(begin)+","+str(end)
+                                match_maybe = re.match(r'(\d+?)\D*?(\d+?) business days',rawtext)
+                                if match_maybe:
+                                    begin = match_maybe.group(1)
+                                    end = match_maybe.group(2)
+                                    # print begin,end
+                                    ProductionInformation["Production_Time"] = str(begin)+","+str(end)
                             else:
                                 begin = ""
                                 match1 = re.match(r'(\d+?) business days', rawtext)
