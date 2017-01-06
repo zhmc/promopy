@@ -23,12 +23,12 @@ def get_webservertime():
     #     print "no"
 
     # time a week later
-    if timestamp > 1481894183 + 8 *24* 60 *60:
+    if timestamp > 1482723101 + 3 *24* 60 *60:
         print "yes"
     else:
         print "no"
 
-    leftday = (1481894183 + 8 *24 * 60 *60 - timestamp)/(60 *60*24)
+    leftday = (1482723101 + 3 *24 * 60 *60 - timestamp)/(60 *60*24)
     print "leftday:", leftday
 
     
