@@ -14,17 +14,18 @@ def get_webservertime():
 
     # 1481894183 now 2016-12-16-21-16
     # 1482723101  2016-12-26-11-32
+    # 1483760627  2017-01-07-11-44
     # add 8 hours for beijing time
     timestamp = time.mktime(ltime)  + 8*60*60
     # print int(timestamp)
 
-    # day_left = ((1482723101 + 3 *24* 60 *60) - timestamp) / (24* 60 *60)
+    # day_left = ((1483760627 + 180 *24* 60 *60) - timestamp) / (24* 60 *60)
     # print day_left
     
     # print time.time()
 
     # time a week later
-    if timestamp > 1482723101 + 3 *24* 60 *60:
+    if timestamp > 1483760627 + 180 *24* 60 *60:
         return False
     else:
         return True

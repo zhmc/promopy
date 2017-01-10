@@ -9,7 +9,6 @@ from downloadUtils import getThreadPoolAndStartContentByKeyword80, getFirstThrea
 from nextPage import get80PerPage, getProdIDList, get80NextPageContent
 from browser import get_webservertime, openBrowser
 
-
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
